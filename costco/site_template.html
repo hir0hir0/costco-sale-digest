@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="コストコのセール・クーポン・値下がり情報をまとめたページ">
+<title>コストコ 安売りまとめ</title>
+<style>
+  :root{
+    --bg:#f4f5f7; --card:#fff; --tx:#111827; --sub:#6b7280; --line:#e5e7eb;
+    --accent:#2563eb; --accent-soft:#eff6ff; --hot:#dc2626; --hot-soft:#fef2f2;
+    --good:#15803d; --good-soft:#f0fdf4; --warn:#b45309; --warn-soft:#fffbeb;
+    --chip:#f3f4f6; --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.1);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0b1120; --card:#151d2e; --tx:#e5e7eb; --sub:#94a3b8; --line:#27334a;
+      --accent:#60a5fa; --accent-soft:#17263f; --hot:#f87171; --hot-soft:#2a1616;
+      --good:#4ade80; --good-soft:#12251a; --warn:#fbbf24; --warn-soft:#2a2113;
+      --chip:#1e293b; --shadow:none;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0b1120; --card:#151d2e; --tx:#e5e7eb; --sub:#94a3b8; --line:#27334a;
+    --accent:#60a5fa; --accent-soft:#17263f; --hot:#f87171; --hot-soft:#2a1616;
+    --good:#4ade80; --good-soft:#12251a; --warn:#fbbf24; --warn-soft:#2a2113;
+    --chip:#1e293b; --shadow:none;
+  }
+  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family:system-ui,-apple-system,'Hiragino Sans','Noto Sans JP','Segoe UI',sans-serif;
+    background:var(--bg); color:var(--tx); line-height:1.55;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{ max-width:1100px; margin:0 auto; padding:0 14px; }
+
+  header{ padding:18px 0 10px; }
+  .titlerow{ display:flex; align-items:flex-start; gap:10px; }
+  h1{ font-size:22px; margin:0; letter-spacing:.01em; flex:1; }
+  .tag{ color:var(--sub); font-size:13px; margin:2px 0 0; }
+  .themebtn{ background:var(--chip); border:1px solid var(--line); color:var(--sub);
+    border-radius:10px; padding:7px 11px; font-size:12px; font-weight:600;
+    white-space:nowrap; cursor:pointer; }
+
+  .stats{ display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 0; }
+  .stat{ background:var(--card); border:1px solid var(--line); border-radius:999px;
+    padding:5px 11px; font-size:12px; color:var(--sub); box-shadow:var(--shadow); }
+  .stat b{ color:var(--tx); font-size:13px; }
+
+  .controls{ position:sticky; top:0; z-index:20; background:var(--bg);
+    padding:10px 0 8px; margin-top:12px; border-bottom:1px solid var(--line); }
+  .searchrow{ display:flex; gap:8px; }
+  #q{ flex:1; min-width:0; padding:11px 13px; border:1px solid var(--line);
+    border-radius:11px; background:var(--card); color:var(--tx); font-size:16px; }
+  #q:focus{ outline:2px solid var(--accent); outline-offset:-1px; }
+  #sort{ padding:11px 8px; border:1px solid var(--line); border-radius:11px;
+    background:var(--card); color:var(--tx); font-size:14px; max-width:42%; }
+
+  .tabs{ display:flex; gap:6px; margin-top:9px; }
+  /* min-width:0 が無いとフレックス項目が文字幅より縮まず、狭い画面で横に溢れる */
+  .tab{ flex:1 1 0; min-width:0; padding:8px 4px; border:1px solid var(--line);
+    background:var(--card); color:var(--sub); border-radius:10px; font-size:13px;
+    font-weight:600; cursor:pointer; white-space:nowrap; overflow:hidden;
+    text-overflow:ellipsis; }
+  .tab[aria-selected="true"]{ background:var(--accent); border-color:var(--accent); color:#fff; }
+
+  .cats{ display:flex; gap:6px; overflow-x:auto; padding:9px 0 2px;
+    scrollbar-width:none; -ms-overflow-style:none; }
+  .cats::-webkit-scrollbar{ display:none; }
+  .cat{ flex:0 0 auto; padding:6px 12px; border-radius:999px; border:1px solid var(--line);
+    background:var(--card); color:var(--sub); font-size:13px; cursor:pointer; white-space:nowrap; }
+  .cat[aria-pressed="true"]{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent); font-weight:600; }
+
+  .grid{ display:grid; grid-template-columns:1fr; gap:10px; padding:14px 0 0; }
+  @media (min-width:640px){ .grid{ grid-template-columns:1fr 1fr; } }
+  @media (min-width:980px){ .grid{ grid-template-columns:1fr 1fr 1fr; } }
+
+  .item{ background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:13px 14px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:8px; }
+  .item.dim{ opacity:.72; }
+  .thumb{ display:block; width:100%; height:150px; object-fit:contain; background:#fff;
+    border:1px solid var(--line); border-radius:10px; margin:-2px 0 2px; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .thumb{ background:#f8fafc; } }
+  :root[data-theme="dark"] .thumb{ background:#f8fafc; }
+  .toprow{ display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+  .badge{ font-size:11px; font-weight:700; padding:3px 8px; border-radius:999px; letter-spacing:.02em; }
+  .b-cat{ background:var(--chip); color:var(--sub); font-weight:600; }
+  .b-low{ background:var(--hot-soft); color:var(--hot); }
+  .b-drop{ background:var(--good-soft); color:var(--good); }
+  .b-end{ background:var(--warn-soft); color:var(--warn); }
+  .b-new{ background:var(--accent-soft); color:var(--accent); }
+  .b-cpn{ background:var(--accent); color:#fff; }
+  .name{ font-size:15px; font-weight:600; margin:0; word-break:break-word; }
+  .pricerow{ display:flex; align-items:baseline; gap:9px; flex-wrap:wrap; }
+  .price{ font-size:24px; font-weight:800; letter-spacing:-.02em; }
+  .price .yen{ font-size:15px; font-weight:600; margin-right:1px; }
+  .was{ color:var(--sub); font-size:13px; text-decoration:line-through; }
+  .off{ font-size:12px; font-weight:700; color:var(--hot); background:var(--hot-soft);
+    padding:2px 8px; border-radius:6px; }
+  .noprice{ color:var(--sub); font-size:14px; }
+  .meta{ color:var(--sub); font-size:12px; display:flex; flex-wrap:wrap; gap:4px 10px; }
+  .meta a{ color:var(--accent); text-decoration:none; }
+  .spark{ display:block; width:132px; height:30px; margin:-2px 0 0; }
+  .foot{ display:flex; align-items:center; gap:8px; margin-top:2px; }
+  .add{ flex:1; border:1px solid var(--line); background:transparent; color:var(--sub);
+    border-radius:10px; padding:8px; font-size:13px; font-weight:600; cursor:pointer; }
+  .add[aria-pressed="true"]{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent); }
+  .unsure{ font-size:11px; color:var(--warn); }
+
+  .empty{ text-align:center; color:var(--sub); padding:44px 10px; font-size:14px; }
+  .listbar{ display:none; align-items:center; gap:10px; flex-wrap:wrap; background:var(--card);
+    border:1px solid var(--line); border-radius:12px; padding:11px 13px; margin-top:12px; }
+  .listbar.show{ display:flex; }
+  .listbar b{ font-size:16px; }
+  .listbar button{ border:1px solid var(--line); background:transparent; color:var(--sub);
+    border-radius:9px; padding:7px 11px; font-size:13px; cursor:pointer; white-space:nowrap; }
+  footer{ color:var(--sub); font-size:12px; padding:26px 0 10px; line-height:1.7; }
+  footer a{ color:var(--accent); }
+
+  @media print{
+    .controls,.stats,.themebtn,.add,.spark,footer .noprint{ display:none !important; }
+    body{ background:#fff; color:#000; } .item{ break-inside:avoid; box-shadow:none; }
+    .grid{ grid-template-columns:1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="titlerow">
+    <div style="flex:1">
+      <h1 id="title">コストコ 安売りまとめ</h1>
+      <p class="tag" id="tagline"></p>
+    </div>
+    <button class="themebtn" id="theme" title="配色を切り替える（端末設定 / 明るい / 暗い）">配色</button>
+  </div>
+  <div class="stats" id="stats"></div>
+</header>
+
+<div class="controls">
+  <div class="searchrow">
+    <input id="q" type="search" placeholder="商品名・商品番号" autocomplete="off">
+    <select id="sort">
+      <option value="reco">おすすめ順</option>
+      <option value="rate">割引率が大きい順</option>
+      <option value="off">値引き額が大きい順</option>
+      <option value="end">終了が近い順</option>
+      <option value="cheap">価格が安い順</option>
+      <option value="new">新着順</option>
+    </select>
+  </div>
+  <div class="tabs" id="tabs">
+    <button class="tab" data-kind="all" aria-selected="true">すべて</button>
+    <button class="tab" data-kind="sale" aria-selected="false">セール</button>
+    <button class="tab" data-kind="coupon" aria-selected="false">クーポン</button>
+    <button class="tab" data-kind="list" aria-selected="false">リスト</button>
+  </div>
+  <div class="cats" id="cats"></div>
+</div>
+
+<div class="listbar" id="listbar">
+  <div>買い物リスト <b id="listcount">0</b> 点 ／ 合計 <b id="listtotal">¥0</b></div>
+  <div style="flex:1"></div>
+  <button id="print">印刷</button>
+  <button id="clear">全部外す</button>
+</div>
+
+<div class="grid" id="grid"></div>
+<p class="empty" id="empty" hidden>条件に合う商品がありません。</p>
+
+<footer>
+  <p id="gen"></p>
+  <p class="noprint">
+    価格・期間は公式サイトとメールから自動で読み取ったもので、誤りが含まれることがあります。
+    購入前に必ず店頭・公式サイトでご確認ください。当ページはコストコホールセールジャパン株式会社とは無関係の個人サイトです。
+  </p>
+</footer>
+
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+const $ = (s) => document.querySelector(s);
+const state = { q: "", kind: "all", cat: "", sort: "reco" };
+const LIST_KEY = "costco_list_v1";
+let list = new Set(JSON.parse(localStorage.getItem(LIST_KEY) || "[]"));
+
+/* ---------------------------------------------------------------- テーマ */
+const THEME_KEY = "costco_theme";
+function applyTheme(t){
+  if (t) document.documentElement.setAttribute("data-theme", t);
+  else document.documentElement.removeAttribute("data-theme");
+}
+applyTheme(localStorage.getItem(THEME_KEY));
+$("#theme").onclick = () => {
+  const cur = localStorage.getItem(THEME_KEY);
+  const next = cur === "dark" ? "light" : cur === "light" ? "" : "dark";
+  if (next) localStorage.setItem(THEME_KEY, next); else localStorage.removeItem(THEME_KEY);
+  applyTheme(next);
+};
+
+/* ---------------------------------------------------------------- 小道具 */
+const yen = (n) => n == null ? "" : "¥" + n.toLocaleString("ja-JP");
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g,
+  c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+
+function periodText(o){
+  if (!o.starts_on && !o.ends_on) return "";
+  const f = (s) => s ? s.slice(5).replace("-", "/") : "";
+  if (o.starts_on && o.ends_on) return f(o.starts_on) + "〜" + f(o.ends_on);
+  return o.ends_on ? f(o.ends_on) + " まで" : f(o.starts_on) + " から";
+}
+
+/* 価格履歴のスパークライン。点が2つ以上あるときだけ描く。 */
+function sparkline(points){
+  if (!points || points.length < 2) return "";
+  const vals = points.map(p => p.price);
+  const lo = Math.min(...vals), hi = Math.max(...vals);
+  const span = hi - lo || 1;
+  const w = 100, h = 30, pad = 4;
+  const step = (w - pad * 2) / (points.length - 1);
+  const xy = points.map((p, i) => [
+    pad + i * step,
+    pad + (h - pad * 2) * (1 - (p.price - lo) / span),
+  ]);
+  const line = xy.map(([x, y]) => x.toFixed(1) + "," + y.toFixed(1)).join(" ");
+  const last = xy[xy.length - 1];
+  const down = vals[vals.length - 1] <= vals[0];
+  const col = down ? "var(--good)" : "var(--sub)";
+  const area = `${pad},${h - pad} ${line} ${(w - pad).toFixed(1)},${h - pad}`;
+  const title = `価格の推移 ${yen(vals[0])} → ${yen(vals[vals.length - 1])}`;
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img">
+    <title>${title}</title>
+    <polygon points="${area}" fill="${col}" opacity=".12"/>
+    <polyline points="${line}" fill="none" stroke="${col}" stroke-width="1.8"
+      stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2.6" fill="${col}"/>
+  </svg>`;
+}
+
+/* ---------------------------------------------------------------- 並べ替え */
+function score(o){
+  // 「おすすめ」= 過去最安 > 値下がり > 割引率 > 終了間近
+  let s = 0;
+  if (o.is_lowest) s += 1000;
+  if (o.drop) s += 400 + Math.min(o.drop / 10, 200);
+  if (o.discount_rate) s += o.discount_rate * 600;
+  else if (o.discount) s += Math.min(o.discount / 20, 150);
+  if (o.days_left != null && o.days_left <= 3) s += 120;
+  if (o.is_new) s += 80;
+  s += (o.confidence - 0.5) * 100;
+  return s;
+}
+const SORTS = {
+  reco: (a, b) => score(b) - score(a),
+  rate: (a, b) => (b.discount_rate || 0) - (a.discount_rate || 0),
+  off:  (a, b) => (b.discount || 0) - (a.discount || 0),
+  end:  (a, b) => (a.days_left == null ? 1e9 : a.days_left) - (b.days_left == null ? 1e9 : b.days_left),
+  cheap:(a, b) => (a.price == null ? 1e12 : a.price) - (b.price == null ? 1e12 : b.price),
+  new:  (a, b) => (b.first_seen || "").localeCompare(a.first_seen || ""),
+};
+
+/* ---------------------------------------------------------------- 絞り込み */
+function visible(){
+  const q = state.q.trim().toLowerCase();
+  return DATA.offers.filter(o => {
+    if (state.kind === "list") { if (!list.has(o.key)) return false; }
+    else if (state.kind !== "all" && o.kind !== state.kind) return false;
+    if (state.cat && o.category !== state.cat) return false;
+    if (q) {
+      const hay = (o.name + " " + o.item_no + " " + o.category + " " + (o.note || "")).toLowerCase();
+      if (!q.split(/\s+/).every(w => hay.includes(w))) return false;
+    }
+    return true;
+  }).sort(SORTS[state.sort] || SORTS.reco);
+}
+
+/* ---------------------------------------------------------------- 描画 */
+function card(o){
+  const badges = [];
+  if (o.kind === "coupon") badges.push(`<span class="badge b-cpn">クーポン</span>`);
+  badges.push(`<span class="badge b-cat">${esc(o.category)}</span>`);
+  if (o.is_lowest) badges.push(`<span class="badge b-low">過去最安</span>`);
+  else if (o.drop) badges.push(`<span class="badge b-drop">前回より ${yen(o.drop)} 安い</span>`);
+  if (o.days_left != null && o.days_left <= 3)
+    badges.push(`<span class="badge b-end">${o.days_left <= 0 ? "本日まで" : "あと" + o.days_left + "日"}</span>`);
+  if (o.is_new) badges.push(`<span class="badge b-new">NEW</span>`);
+
+  let price;
+  if (o.price != null) {
+    price = `<span class="price"><span class="yen">¥</span>${o.price.toLocaleString("ja-JP")}</span>`;
+    if (o.regular_price && o.regular_price > o.price)
+      price += `<span class="was">${yen(o.regular_price)}</span>`;
+    if (o.discount)
+      price += `<span class="off">${yen(o.discount)} OFF${
+        o.discount_rate ? " / " + Math.round(o.discount_rate * 100) + "%" : ""}</span>`;
+  } else if (o.discount_rate) {
+    price = `<span class="price">${Math.round(o.discount_rate * 100)}%<span class="yen"> OFF</span></span>`;
+  } else if (o.discount) {
+    price = `<span class="price">${yen(o.discount)}<span class="yen"> 引き</span></span>`;
+  } else {
+    price = `<span class="noprice">価格の記載なし</span>`;
+  }
+
+  const meta = [];
+  const p = periodText(o);
+  if (p) meta.push(esc(p));
+  if (o.item_no) meta.push("商品番号 " + esc(o.item_no));
+  if (o.warehouse && o.warehouse !== "all") meta.push(esc(o.warehouse));
+  if (o.lowest != null && o.history.length > 1) meta.push("過去最安 " + yen(o.lowest));
+  if (o.source_url) meta.push(`<a href="${esc(o.source_url)}" target="_blank" rel="noopener">出典</a>`);
+  else if (o.source_label) meta.push(esc(o.source_label));
+
+  const on = list.has(o.key);
+  // 画像はリンク参照のことがある（コストコ側で消えると壊れる）ので、
+  // 読み込みに失敗したら枠ごと消す
+  const thumb = o.image_src
+    ? `<img class="thumb" src="${esc(o.image_src)}" alt="" loading="lazy" decoding="async"
+         referrerpolicy="no-referrer" onerror="this.remove()">`
+    : "";
+  return `<article class="item${o.confidence < 0.5 ? " dim" : ""}">
+    ${thumb}
+    <div class="toprow">${badges.join("")}</div>
+    <h2 class="name">${esc(o.name)}</h2>
+    <div class="pricerow">${price}</div>
+    <div class="meta">${meta.join("<span>·</span>")}</div>
+    ${sparkline(o.history)}
+    ${o.confidence < 0.5 ? '<div class="unsure">⚠ 自動抽出の確度が低い項目です</div>' : ""}
+    <div class="foot">
+      <button class="add" data-key="${esc(o.key)}" aria-pressed="${on}">${on ? "★ リストから外す" : "☆ 買い物リストに入れる"}</button>
+    </div>
+  </article>`;
+}
+
+function renderList(){
+  const items = DATA.offers.filter(o => list.has(o.key));
+  const total = items.reduce((s, o) => s + (o.price || 0), 0);
+  $("#listcount").textContent = items.length;
+  $("#listtotal").textContent = yen(total) || "¥0";
+  $("#listbar").classList.toggle("show", items.length > 0);
+  const tab = document.querySelector('.tab[data-kind="list"]');
+  tab.textContent = items.length ? `リスト (${items.length})` : "リスト";
+}
+
+function render(){
+  const items = visible();
+  $("#grid").innerHTML = items.map(card).join("");
+  $("#empty").hidden = items.length > 0;
+  $("#empty").textContent = state.kind === "list"
+    ? "買い物リストは空です。各商品の「☆ 買い物リストに入れる」で追加できます。"
+    : "条件に合う商品がありません。";
+  renderList();
+  document.querySelectorAll(".add").forEach(b => {
+    b.onclick = () => {
+      const k = b.dataset.key;
+      if (list.has(k)) list.delete(k); else list.add(k);
+      localStorage.setItem(LIST_KEY, JSON.stringify([...list]));
+      render();
+    };
+  });
+}
+
+/* ---------------------------------------------------------------- 起動 */
+function boot(){
+  document.title = DATA.title;
+  $("#title").textContent = DATA.title;
+  $("#tagline").textContent = DATA.tagline;
+
+  const s = DATA.stats;
+  $("#stats").innerHTML = [
+    `掲載 <b>${s.total}</b> 件`,
+    s.coupon ? `クーポン <b>${s.coupon}</b>` : "",
+    s.lowest ? `過去最安 <b>${s.lowest}</b>` : "",
+    s.ending_soon ? `まもなく終了 <b>${s.ending_soon}</b>` : "",
+  ].filter(Boolean).map(t => `<span class="stat">${t}</span>`).join("");
+
+  $("#cats").innerHTML = [`<button class="cat" data-cat="" aria-pressed="true">すべて</button>`]
+    .concat(DATA.categories.map(c =>
+      `<button class="cat" data-cat="${esc(c)}" aria-pressed="false">${esc(c)}</button>`)).join("");
+  document.querySelectorAll(".cat").forEach(b => {
+    b.onclick = () => {
+      state.cat = b.dataset.cat;
+      document.querySelectorAll(".cat").forEach(x =>
+        x.setAttribute("aria-pressed", String(x === b)));
+      render();
+    };
+  });
+  document.querySelectorAll(".tab").forEach(b => {
+    b.onclick = () => {
+      state.kind = b.dataset.kind;
+      document.querySelectorAll(".tab").forEach(x =>
+        x.setAttribute("aria-selected", String(x === b)));
+      render();
+    };
+  });
+
+  let timer;
+  $("#q").oninput = (e) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { state.q = e.target.value; render(); }, 120);
+  };
+  $("#sort").onchange = (e) => { state.sort = e.target.value; render(); };
+  $("#print").onclick = () => window.print();
+  $("#clear").onclick = () => {
+    list = new Set();
+    localStorage.setItem(LIST_KEY, "[]");
+    render();
+  };
+
+  const gen = DATA.generated_at.replace("T", " ").slice(0, 16);
+  $("#gen").textContent = `最終更新 ${gen}（日本時間）／ 基準日 ${DATA.today}`;
+  render();
+}
+
+if (DATA) boot();
+else document.body.innerHTML = "<p class='empty'>データがまだありません。</p>";
+</script>
+</body>
+</html>

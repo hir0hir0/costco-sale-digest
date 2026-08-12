@@ -1,0 +1,15 @@
+{
+  "_note": "web は discover で登録する。2026-08-12時点では、拾えたセール系ページが JS描画で静的取得では中身が空だったため空にしてある。",
+  "base_url": "https://www.costco.co.jp/",
+  "images": "link",
+  "mail": {
+    "enabled": true,
+    "folder": "INBOX",
+    "from_contains": [
+      "costco"
+    ],
+    "since_days": 21,
+    "subject_contains": []
+  },
+  "web": []
+}
