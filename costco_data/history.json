@@ -7,7 +7,7 @@
         "price": 1978,
         "regular_price": 2398,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -26,7 +26,7 @@
         "price": 1780,
         "regular_price": 2180,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -74,7 +74,7 @@
         "price": 3298,
         "regular_price": 5980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -86,7 +86,7 @@
         "price": 1888,
         "regular_price": 2398,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -97,7 +97,8 @@
         "on": "2026-08-25",
         "price": 2148,
         "regular_price": 2698,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -109,7 +110,7 @@
         "price": 9999,
         "regular_price": 11580,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -144,7 +145,8 @@
         "on": "2026-08-25",
         "price": 148800,
         "regular_price": 199800,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -168,7 +170,7 @@
         "price": 119800,
         "regular_price": 149800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -180,7 +182,7 @@
         "price": 1998,
         "regular_price": 2598,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -210,7 +212,7 @@
         "price": 2988,
         "regular_price": 5488,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -234,7 +236,7 @@
         "price": 1118,
         "regular_price": 1398,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -246,7 +248,7 @@
         "price": 19480,
         "regular_price": 27480,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -258,7 +260,7 @@
         "price": 288000,
         "regular_price": 348000,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -270,7 +272,7 @@
         "price": 22980,
         "regular_price": 25980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -282,7 +284,7 @@
         "price": 2818,
         "regular_price": 3498,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -293,7 +295,8 @@
         "on": "2026-08-25",
         "price": 1798,
         "regular_price": null,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -317,7 +320,7 @@
         "price": 2198,
         "regular_price": 2798,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -340,7 +343,7 @@
         "price": 3598,
         "regular_price": 4598,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -359,7 +362,7 @@
         "price": 1688,
         "regular_price": 2198,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -371,7 +374,7 @@
         "price": 3288,
         "regular_price": 4128,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -383,7 +386,7 @@
         "price": 1498,
         "regular_price": 1898,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -395,7 +398,7 @@
         "price": 1558,
         "regular_price": 1958,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -431,7 +434,7 @@
         "price": 3358,
         "regular_price": 4198,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -455,7 +458,7 @@
         "price": 1338,
         "regular_price": 1678,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -467,7 +470,7 @@
         "price": 3150,
         "regular_price": 5480,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -490,7 +493,8 @@
         "on": "2026-08-25",
         "price": 1698,
         "regular_price": null,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -502,7 +506,7 @@
         "price": 998,
         "regular_price": 1758,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -514,7 +518,7 @@
         "price": 6280,
         "regular_price": 6480,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -538,7 +542,7 @@
         "price": 2478,
         "regular_price": 3098,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -550,7 +554,7 @@
         "price": 1488,
         "regular_price": 1848,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -562,7 +566,7 @@
         "price": 2698,
         "regular_price": 3298,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -574,7 +578,7 @@
         "price": 35980,
         "regular_price": 71800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -585,7 +589,8 @@
         "on": "2026-08-25",
         "price": 6280,
         "regular_price": 6980,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -609,7 +614,7 @@
         "price": 4798,
         "regular_price": 4880,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -621,7 +626,7 @@
         "price": 1998,
         "regular_price": 3480,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -656,7 +661,8 @@
         "on": "2026-08-25",
         "price": 745800,
         "regular_price": 829800,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -692,7 +698,7 @@
         "price": 1548,
         "regular_price": 1948,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -704,7 +710,7 @@
         "price": 7480,
         "regular_price": 9480,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -716,7 +722,7 @@
         "price": 349800,
         "regular_price": 499800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -728,7 +734,7 @@
         "price": 500,
         "regular_price": 680,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -752,7 +758,7 @@
         "price": 1838,
         "regular_price": 2158,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -764,7 +770,7 @@
         "price": 1598,
         "regular_price": 2148,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -800,7 +806,7 @@
         "price": 1358,
         "regular_price": 1698,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -842,7 +848,8 @@
         "on": "2026-08-25",
         "price": 2818,
         "regular_price": 3498,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -866,7 +873,7 @@
         "price": 1428,
         "regular_price": 1788,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -878,7 +885,7 @@
         "price": 898,
         "regular_price": 1098,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -890,7 +897,7 @@
         "price": 8480,
         "regular_price": 9780,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -950,7 +957,7 @@
         "price": 13800,
         "regular_price": 21980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -962,7 +969,7 @@
         "price": 2559,
         "regular_price": 4800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -974,7 +981,7 @@
         "price": 68800,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -986,7 +993,7 @@
         "price": 1038,
         "regular_price": 1298,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -998,7 +1005,7 @@
         "price": 5698,
         "regular_price": 10398,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1033,7 +1040,8 @@
         "on": "2026-08-25",
         "price": 5180,
         "regular_price": 5980,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1057,7 +1065,7 @@
         "price": 3878,
         "regular_price": 4798,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1068,7 +1076,8 @@
         "on": "2026-08-25",
         "price": 3108,
         "regular_price": 3658,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1080,7 +1089,7 @@
         "price": 1098,
         "regular_price": 1398,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1092,7 +1101,7 @@
         "price": 1778,
         "regular_price": 2238,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1116,7 +1125,7 @@
         "price": 698,
         "regular_price": 958,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1140,7 +1149,7 @@
         "price": 32780,
         "regular_price": 39780,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1152,7 +1161,7 @@
         "price": 1358,
         "regular_price": 1698,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1164,7 +1173,7 @@
         "price": 16580,
         "regular_price": 20980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1199,7 +1208,7 @@
         "price": 2078,
         "regular_price": 2598,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1217,7 +1226,8 @@
         "on": "2026-08-25",
         "price": 1748,
         "regular_price": 2298,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1229,7 +1239,7 @@
         "price": 1438,
         "regular_price": 1798,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1248,7 +1258,7 @@
         "price": 2398,
         "regular_price": 2998,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1260,7 +1270,7 @@
         "price": 898,
         "regular_price": 1198,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1272,7 +1282,7 @@
         "price": 7480,
         "regular_price": 13580,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1284,7 +1294,7 @@
         "price": 4580,
         "regular_price": 5680,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1296,7 +1306,7 @@
         "price": 6530,
         "regular_price": 7280,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1308,7 +1318,7 @@
         "price": 1878,
         "regular_price": 2138,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1331,7 +1341,7 @@
         "price": 5580,
         "regular_price": 9980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1343,7 +1353,7 @@
         "price": 2638,
         "regular_price": 3298,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1391,7 +1401,7 @@
         "price": 1848,
         "regular_price": 1880,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1403,7 +1413,7 @@
         "price": 23780,
         "regular_price": 29880,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1415,7 +1425,7 @@
         "price": 8480,
         "regular_price": 9980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1427,7 +1437,7 @@
         "price": 2400,
         "regular_price": 2980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1475,7 +1485,7 @@
         "price": 3398,
         "regular_price": 4898,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1487,7 +1497,7 @@
         "price": 2498,
         "regular_price": 3498,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1534,7 +1544,7 @@
         "price": 7358,
         "regular_price": 9958,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1546,7 +1556,7 @@
         "price": 4598,
         "regular_price": 5128,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1558,7 +1568,7 @@
         "price": 5968,
         "regular_price": 9998,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1594,7 +1604,7 @@
         "price": 1439,
         "regular_price": 1799,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1606,7 +1616,7 @@
         "price": 745800,
         "regular_price": 829800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1630,7 +1640,7 @@
         "price": 128000,
         "regular_price": 158000,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1642,7 +1652,7 @@
         "price": 3028,
         "regular_price": 3788,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1654,7 +1664,7 @@
         "price": 1898,
         "regular_price": 2798,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1678,7 +1688,7 @@
         "price": 49980,
         "regular_price": 68980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1690,7 +1700,7 @@
         "price": 4768,
         "regular_price": 5948,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1720,7 +1730,7 @@
         "price": 1598,
         "regular_price": 1998,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1732,7 +1742,7 @@
         "price": 59800,
         "regular_price": 99800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1756,7 +1766,7 @@
         "price": 329800,
         "regular_price": 459800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1780,7 +1790,7 @@
         "price": 29998,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1816,7 +1826,7 @@
         "price": 2158,
         "regular_price": 2698,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1852,7 +1862,7 @@
         "price": 138800,
         "regular_price": 189800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1864,7 +1874,7 @@
         "price": 3298,
         "regular_price": 4098,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1888,7 +1898,7 @@
         "price": 3288,
         "regular_price": 4128,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1912,7 +1922,7 @@
         "price": 2498,
         "regular_price": 3298,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1924,7 +1934,7 @@
         "price": 33480,
         "regular_price": 35980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1935,7 +1945,8 @@
         "on": "2026-08-25",
         "price": 3898,
         "regular_price": 4997,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1947,7 +1958,7 @@
         "price": 345800,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1959,7 +1970,7 @@
         "price": 2999,
         "regular_price": 3498,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1982,7 +1993,8 @@
         "on": "2026-08-25",
         "price": 998,
         "regular_price": 1598,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -1994,7 +2006,7 @@
         "price": 4780,
         "regular_price": 5980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2006,7 +2018,7 @@
         "price": 2148,
         "regular_price": 2698,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2018,7 +2030,7 @@
         "price": 1628,
         "regular_price": 1998,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2029,7 +2041,8 @@
         "on": "2026-08-25",
         "price": 225000,
         "regular_price": 278000,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2041,7 +2054,7 @@
         "price": 2758,
         "regular_price": 3458,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2053,7 +2066,7 @@
         "price": 46380,
         "regular_price": 58980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2077,7 +2090,7 @@
         "price": 9500,
         "regular_price": 11180,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2101,7 +2114,7 @@
         "price": 1618,
         "regular_price": 1998,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2113,7 +2126,7 @@
         "price": 3500,
         "regular_price": 3500,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2125,7 +2138,7 @@
         "price": 3958,
         "regular_price": 4180,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2148,7 +2161,7 @@
         "price": 372800,
         "regular_price": 467800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2160,7 +2173,7 @@
         "price": 137800,
         "regular_price": 184800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2207,7 +2220,7 @@
         "price": 2798,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2219,7 +2232,7 @@
         "price": 1998,
         "regular_price": 3798,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2255,7 +2268,7 @@
         "price": 4398,
         "regular_price": 5398,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2267,7 +2280,7 @@
         "price": 2568,
         "regular_price": 3198,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2279,7 +2292,7 @@
         "price": 3098,
         "regular_price": 3898,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2297,7 +2310,8 @@
         "on": "2026-08-25",
         "price": 34980,
         "regular_price": 38680,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2309,7 +2323,7 @@
         "price": 1980,
         "regular_price": 3380,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2321,7 +2335,7 @@
         "price": 1598,
         "regular_price": 1998,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2357,7 +2371,7 @@
         "price": 9800,
         "regular_price": 15800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2404,7 +2418,7 @@
         "price": 149800,
         "regular_price": 189800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2416,7 +2430,7 @@
         "price": 129800,
         "regular_price": 164800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2428,7 +2442,7 @@
         "price": 1180,
         "regular_price": 1480,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2440,7 +2454,7 @@
         "price": 2998,
         "regular_price": 4198,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2475,7 +2489,8 @@
         "on": "2026-08-25",
         "price": 1988,
         "regular_price": null,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2487,7 +2502,7 @@
         "price": 55580,
         "regular_price": 60980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2511,7 +2526,7 @@
         "price": 3598,
         "regular_price": 4498,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2523,7 +2538,7 @@
         "price": 3038,
         "regular_price": 3798,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2546,7 +2561,7 @@
         "price": 2818,
         "regular_price": 3498,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2558,7 +2573,7 @@
         "price": 1298,
         "regular_price": 2298,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2570,7 +2585,7 @@
         "price": 29800,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2581,7 +2596,8 @@
         "on": "2026-08-25",
         "price": 4418,
         "regular_price": 5198,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2593,7 +2609,7 @@
         "price": 2498,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2605,7 +2621,7 @@
         "price": 9980,
         "regular_price": 11480,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2617,7 +2633,7 @@
         "price": 2598,
         "regular_price": 3298,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2641,7 +2657,7 @@
         "price": 7898,
         "regular_price": 12388,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2653,7 +2669,7 @@
         "price": 2898,
         "regular_price": 3498,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2677,7 +2693,7 @@
         "price": 3478,
         "regular_price": 5088,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2689,7 +2705,7 @@
         "price": 65800,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2769,7 +2785,7 @@
         "price": 2798,
         "regular_price": 3598,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2781,7 +2797,7 @@
         "price": 1398,
         "regular_price": 2398,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2805,7 +2821,7 @@
         "price": 4180,
         "regular_price": 4780,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2817,7 +2833,7 @@
         "price": 19980,
         "regular_price": 32980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2829,7 +2845,7 @@
         "price": 43980,
         "regular_price": 54980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2884,7 +2900,7 @@
         "price": 3798,
         "regular_price": 4748,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2896,7 +2912,7 @@
         "price": 3500,
         "regular_price": 4998,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2907,7 +2923,8 @@
         "on": "2026-08-25",
         "price": 13480,
         "regular_price": 16980,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2919,7 +2936,7 @@
         "price": 1488,
         "regular_price": 1998,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2955,7 +2972,7 @@
         "price": 10280,
         "regular_price": 13980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2967,7 +2984,7 @@
         "price": 11000,
         "regular_price": 12980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -2979,7 +2996,7 @@
         "price": 3598,
         "regular_price": 4498,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3003,7 +3020,7 @@
         "price": 3438,
         "regular_price": 4298,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3039,7 +3056,7 @@
         "price": 1798,
         "regular_price": 2258,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3051,7 +3068,7 @@
         "price": 105800,
         "regular_price": 119800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3063,7 +3080,7 @@
         "price": 79980,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3086,7 +3103,7 @@
         "price": 1758,
         "regular_price": 2198,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3098,7 +3115,7 @@
         "price": 1698,
         "regular_price": 2138,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3109,7 +3126,8 @@
         "on": "2026-08-25",
         "price": 126800,
         "regular_price": 139800,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3144,7 +3162,7 @@
         "price": 2559,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3168,7 +3186,7 @@
         "price": 251800,
         "regular_price": 252100,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3180,7 +3198,7 @@
         "price": 66880,
         "regular_price": 84800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3191,7 +3209,8 @@
         "on": "2026-08-25",
         "price": 12380,
         "regular_price": 15580,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3203,7 +3222,7 @@
         "price": 17980,
         "regular_price": 33980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3215,7 +3234,7 @@
         "price": 119800,
         "regular_price": 149800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3227,7 +3246,7 @@
         "price": 84800,
         "regular_price": 129800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3274,7 +3293,7 @@
         "price": 2398,
         "regular_price": 2598,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3293,7 +3312,7 @@
         "price": 11780,
         "regular_price": 16800,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3305,7 +3324,7 @@
         "price": 13480,
         "regular_price": 16980,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3317,7 +3336,7 @@
         "price": 34980,
         "regular_price": 38680,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3329,7 +3348,7 @@
         "price": 4898,
         "regular_price": 7998,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3341,7 +3360,7 @@
         "price": 132800,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3353,7 +3372,7 @@
         "price": 155800,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3377,7 +3396,7 @@
         "price": 105800,
         "regular_price": null,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3389,7 +3408,7 @@
         "price": 46380,
         "regular_price": 63180,
         "source": "mail",
-        "until": "2026-08-25"
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3436,7 +3455,8 @@
         "on": "2026-08-25",
         "price": 149800,
         "regular_price": 169800,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   },
@@ -3447,7 +3467,8 @@
         "on": "2026-08-25",
         "price": 126800,
         "regular_price": null,
-        "source": "mail"
+        "source": "mail",
+        "until": "2026-08-26"
       }
     ]
   }
