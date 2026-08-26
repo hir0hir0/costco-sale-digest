@@ -1,8 +1,364 @@
 [
   {
+    "subject": "オンラインで出会える限定セレクション",
+    "date": "Sat, 15 Aug 2026 02:10:51 +0200",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021105-mail-_.html",
+    "html_bytes": 58270,
+    "text_lines": 146,
+    "first_lines": [
+      "CostcoEDM_20260815",
+      "Members' Favorites",
+      "メールが正しく表示されない方は、こちら をご覧ください。",
+      "Costco",
+      "Costco Wholesale",
+      "title",
+      "東芝 601L 冷蔵庫",
+      "K18イエローゴールド シグネットリング 12号 約4.8g スクエア型",
+      "NEW",
+      "東芝 601L 冷蔵庫",
+      "ITEM #89557 ※他色あり",
+      "Shop Now >",
+      "NEW",
+      "K18イエローゴールド シグネットリング 12号 約4.8g スクエア型",
+      "ITEM #88842",
+      "Shop Now >",
+      "AUTHOR アラーム 自動車盗難防止 カーセキュリティ セット",
+      "PHILIPS LEDデスクライト 面発光モデル",
+      "AUTHOR アラーム 自動車盗難防止 カーセキュリティ セット",
+      "ITEM #195201"
+    ],
+    "price_line_groups": [],
+    "offers_extracted": 20,
+    "offer_samples": [
+      {
+        "name": "東芝 601L 冷蔵庫",
+        "price": null,
+        "regular_price": null,
+        "item_no": "89557",
+        "period": "2026-08-15〜"
+      },
+      {
+        "name": "K18イエローゴールド シグネットリング 12号 約4.8g スクエア型",
+        "price": null,
+        "regular_price": null,
+        "item_no": "88842",
+        "period": "2026-08-15〜"
+      },
+      {
+        "name": "AUTHOR アラーム 自動車盗難防止 カーセキュリティ セット",
+        "price": null,
+        "regular_price": null,
+        "item_no": "195201",
+        "period": "2026-08-15〜"
+      },
+      {
+        "name": "PHILIPS LEDデスクライト 面発光モデル",
+        "price": null,
+        "regular_price": null,
+        "item_no": "88836",
+        "period": "2026-08-15〜"
+      },
+      {
+        "name": "EKO デオドライザー ゴミ箱消臭剤 4個セット",
+        "price": null,
+        "regular_price": null,
+        "item_no": "86543",
+        "period": "2026-08-15〜"
+      },
+      {
+        "name": "山本珈琲 有機栽培珈琲 無糖1L x6本",
+        "price": null,
+        "regular_price": null,
+        "item_no": "13220",
+        "period": "2026-08-15〜"
+      },
+      {
+        "name": "揖保乃糸 手延素麺 食べ比べセット 50g x15束",
+        "price": null,
+        "regular_price": null,
+        "item_no": "55187",
+        "period": "2026-08-15〜"
+      },
+      {
+        "name": "横田屋本店 三陸産 カットくきわかめ 100g",
+        "price": null,
+        "regular_price": null,
+        "item_no": "11142",
+        "period": "2026-08-15〜"
+      }
+    ]
+  },
+  {
+    "subject": "もしもの時に備えよう / Disaster Prevention",
+    "date": "Mon, 17 Aug 2026 11:15:23 +0200",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021105-mail-_Disaster_Prevention.html",
+    "html_bytes": 101726,
+    "text_lines": 423,
+    "first_lines": [
+      "CostcoEDM_20260817",
+      "【 Hot Buys / Canada Focus 】",
+      "メールが正しく表示されない方は、こちら をご覧ください。",
+      "Costco",
+      "Costco Wholesale",
+      "auto",
+      "EcoFlow ポータブル電源 DELTA 3 Max 容量2,048Wh",
+      "RHYTHM 防災スピーカー",
+      "EcoFlow ポータブル電源 DELTA 3 Max 容量2,048Wh",
+      "DELTA 3 Max EFD3M-G-JP-CBOX",
+      "ITEM #84629",
+      "HOT BUY ONLINE ONLY",
+      "RHYTHM 防災スピーカー",
+      "Crank Speaker",
+      "ITEM #80428 ※他色あり",
+      "¥91,980",
+      "Shop Now >",
+      "Price",
+      "¥11,480",
+      "Off"
+    ],
+    "price_line_groups": [],
+    "offers_extracted": 44,
+    "offer_samples": [
+      {
+        "name": "EcoFlow ポータブル電源 DELTA 3 Max 容量2,048Wh",
+        "price": null,
+        "regular_price": null,
+        "item_no": "84629",
+        "period": "2026-08-17〜"
+      },
+      {
+        "name": "RHYTHM 防災スピーカー",
+        "price": 9980,
+        "regular_price": 11480,
+        "item_no": "80428",
+        "period": "2026-08-17〜"
+      },
+      {
+        "name": "IGLOO マックスコールド クーラーボックス 142L",
+        "price": null,
+        "regular_price": null,
+        "item_no": "1872195",
+        "period": "2026-08-17〜"
+      },
+      {
+        "name": "Coleman コンバーター コット2",
+        "price": 29800,
+        "regular_price": null,
+        "item_no": "80315",
+        "period": "2026-08-17〜"
+      },
+      {
+        "name": "Iwatani カセットガス スモークレスグリル やきまるビッグ",
+        "price": null,
+        "regular_price": null,
+        "item_no": "84884",
+        "period": "2026-08-17〜"
+      },
+      {
+        "name": "Iwatani カセットガスコンロ 風まるIII",
+        "price": 5698,
+        "regular_price": 10398,
+        "item_no": "55719",
+        "period": "2026-08-17〜"
+      },
+      {
+        "name": "Iwatani ガスボンベ 12本入",
+        "price": null,
+        "regular_price": null,
+        "item_no": "535557",
+        "period": "2026-08-17〜"
+      },
+      {
+        "name": "カメリオン ライト付キャンプ ファン 3段階調節",
+        "price": 2988,
+        "regular_price": 5488,
+        "item_no": "1819576",
+        "period": "2026-08-17〜"
+      }
+    ]
+  },
+  {
+    "subject": "今週の新商品をご紹介 / New Items",
+    "date": "Tue, 18 Aug 2026 11:11:55 +0200",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021106-mail-_New_Items.html",
+    "html_bytes": 50099,
+    "text_lines": 123,
+    "first_lines": [
+      "CostcoEDM_20260818",
+      "あなたの暮らしに、新しいお気に入りを。",
+      "メールが正しく表示されない方は、こちら をご覧ください。",
+      "Costco",
+      "Costco Wholesale",
+      "auto",
+      "日立 735L冷蔵庫 R-WXC74W-X",
+      "シャープ 11kg ドラム式洗濯乾燥機 ES-11K1",
+      "日立 735L冷蔵庫 R-WXC74W-X",
+      "ITEM #88695",
+      "Shop",
+      "Now >",
+      "シャープ 11kg ドラム式洗濯乾燥機 ES-11K1",
+      "ITEM #89260",
+      "Shop",
+      "Now >",
+      "アラジン グラファイトトースター",
+      "カーナビがスマホに早変わり OTTOCAST P3 PRO AI ボックス",
+      "アラジン グラファイトトースター",
+      "ITEM #88173 ※他色あり"
+    ],
+    "price_line_groups": [],
+    "offers_extracted": 16,
+    "offer_samples": [
+      {
+        "name": "日立 735L冷蔵庫 R-WXC74W-X",
+        "price": null,
+        "regular_price": null,
+        "item_no": "88695",
+        "period": "2026-08-18〜"
+      },
+      {
+        "name": "シャープ 11kg ドラム式洗濯乾燥機 ES-11K1",
+        "price": null,
+        "regular_price": null,
+        "item_no": "89260",
+        "period": "2026-08-18〜"
+      },
+      {
+        "name": "アラジン グラファイトトースター",
+        "price": null,
+        "regular_price": null,
+        "item_no": "88173",
+        "period": "2026-08-18〜"
+      },
+      {
+        "name": "OTTOCAST P3 PRO AI ボックス",
+        "price": null,
+        "regular_price": null,
+        "item_no": "923151",
+        "period": "2026-08-18〜"
+      },
+      {
+        "name": "GUCCI サングラス GG1897SK-54-002",
+        "price": null,
+        "regular_price": null,
+        "item_no": "626707",
+        "period": "2026-08-18〜"
+      },
+      {
+        "name": "南洋真珠ピアス 18K イエローゴールド",
+        "price": null,
+        "regular_price": null,
+        "item_no": "563011",
+        "period": "2026-08-18〜"
+      },
+      {
+        "name": "グリムストーンガーゴイル 約2.2m",
+        "price": null,
+        "regular_price": null,
+        "item_no": "1851577",
+        "period": "2026-08-18〜"
+      },
+      {
+        "name": "ベストウェイ ファンタスティック アクアリウム プレイセンター",
+        "price": null,
+        "regular_price": null,
+        "item_no": "88653",
+        "period": "2026-08-18〜"
+      }
+    ]
+  },
+  {
+    "subject": "ベビーグッズ特集 / Baby Fair",
+    "date": "Wed, 19 Aug 2026 11:09:03 +0200",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021106-mail-_Baby_Fair.html",
+    "html_bytes": 100749,
+    "text_lines": 459,
+    "first_lines": [
+      "CostcoEDMTemplateWednesday",
+      "【 Back to School / Hot Deals 】",
+      "メールが正しく表示されない方は、こちら をご覧ください。",
+      "Costco",
+      "Costco Wholesale",
+      "auto",
+      "メリーズ 素肌さらさらエアスルー パンツ Mサイズ 186枚",
+      "パンパース さらさらケアEXパンツ Lサイズ (9-14kg) 180枚 (60枚x3パック)",
+      "HOT BUY",
+      "メリーズ 素肌さらさらエアスルー パンツ M/L/ビッグ 各サイズ",
+      "MERRIES DIAPER PANTS M/L/XL",
+      "ITEM #67490 #67491 #67492",
+      "パンパース さらさらケアEXパンツ Lサイズ (9-14kg) 180枚 (60枚x3パック)",
+      "Pampers Sarasara EX Pants L",
+      "ITEM #82786",
+      "Price",
+      "¥4,780",
+      "Off",
+      "¥600",
+      "¥4,180"
+    ],
+    "price_line_groups": [],
+    "offers_extracted": 44,
+    "offer_samples": [
+      {
+        "name": "メリーズ 素肌さらさらエアスルー パンツ M/L/ビッグ 各サイズ",
+        "price": null,
+        "regular_price": null,
+        "item_no": "67490",
+        "period": "2026-08-19〜"
+      },
+      {
+        "name": "パンパース さらさらケアEXパンツ Lサイズ (9-14kg) 180枚 (60枚x3パック)",
+        "price": 4180,
+        "regular_price": 4780,
+        "item_no": "82786",
+        "period": "2026-08-19〜"
+      },
+      {
+        "name": "水99.9%ふんわりプラスおしりふき 70枚x15個パック 1050枚",
+        "price": null,
+        "regular_price": null,
+        "item_no": "14110",
+        "period": "2026-08-19〜"
+      },
+      {
+        "name": "Baby Pure UVクリーム 50g",
+        "price": 1848,
+        "regular_price": 1880,
+        "item_no": "62344",
+        "period": "2026-08-19〜"
+      },
+      {
+        "name": "森永 やさいジュレ 24個セット",
+        "price": null,
+        "regular_price": null,
+        "item_no": "59415",
+        "period": "2026-08-19〜"
+      },
+      {
+        "name": "セノビック 84g x4袋 各種",
+        "price": 1998,
+        "regular_price": 3480,
+        "item_no": "44848",
+        "period": "2026-08-19〜"
+      },
+      {
+        "name": "ディズニー ぬいぐるみ バッグ 各種",
+        "price": null,
+        "regular_price": null,
+        "item_no": "82855",
+        "period": "2026-08-19〜"
+      },
+      {
+        "name": "あつまれどうぶつの森 キャリー バッグ ぬいぐるみ & キーチェーン 5個セット",
+        "price": 2898,
+        "regular_price": 3498,
+        "item_no": "81352",
+        "period": "2026-08-19〜"
+      }
+    ]
+  },
+  {
     "subject": "週末のお買得商品 / Weekend Pick Up",
     "date": "Fri, 21 Aug 2026 11:16:41 +0200",
-    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-020744-mail-_Weekend_Pick_Up.html",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021106-mail-_Weekend_Pick_Up.html",
     "html_bytes": 98734,
     "text_lines": 498,
     "first_lines": [
@@ -27,148 +383,7 @@
       "Off",
       "¥60,000"
     ],
-    "price_line_groups": [
-      {
-        "at": 17,
-        "lines": [
-          "Outdoor Dining 7-piece Set",
-          "ITEM #1933965",
-          "Price",
-          "¥348,000",
-          "Off"
-        ]
-      },
-      {
-        "at": 19,
-        "lines": [
-          "Price",
-          "¥348,000",
-          "Off",
-          "¥60,000",
-          "¥288,000"
-        ]
-      },
-      {
-        "at": 20,
-        "lines": [
-          "¥348,000",
-          "Off",
-          "¥60,000",
-          "¥288,000",
-          "Shop Now >"
-        ]
-      },
-      {
-        "at": 23,
-        "lines": [
-          "¥288,000",
-          "Shop Now >",
-          "Price",
-          "¥169,800",
-          "Off"
-        ]
-      },
-      {
-        "at": 25,
-        "lines": [
-          "Price",
-          "¥169,800",
-          "Off",
-          "¥30,000",
-          "¥139,800"
-        ]
-      },
-      {
-        "at": 26,
-        "lines": [
-          "¥169,800",
-          "Off",
-          "¥30,000",
-          "¥139,800",
-          "Shop Now >"
-        ]
-      },
-      {
-        "at": 39,
-        "lines": [
-          "3-piece Fabric Sectional Sofa",
-          "ITEM #78522",
-          "Price",
-          "¥189,800",
-          "Off"
-        ]
-      },
-      {
-        "at": 41,
-        "lines": [
-          "Price",
-          "¥189,800",
-          "Off",
-          "¥40,000",
-          "¥149,800"
-        ]
-      },
-      {
-        "at": 42,
-        "lines": [
-          "¥189,800",
-          "Off",
-          "¥40,000",
-          "¥149,800",
-          "Shop Now >"
-        ]
-      },
-      {
-        "at": 45,
-        "lines": [
-          "¥149,800",
-          "Shop Now >",
-          "Price",
-          "¥139,800",
-          "Off"
-        ]
-      },
-      {
-        "at": 47,
-        "lines": [
-          "Price",
-          "¥139,800",
-          "Off",
-          "¥40,000",
-          "¥99,800"
-        ]
-      },
-      {
-        "at": 48,
-        "lines": [
-          "¥139,800",
-          "Off",
-          "¥40,000",
-          "¥99,800",
-          "Shop Now >"
-        ]
-      },
-      {
-        "at": 61,
-        "lines": [
-          "White Plus 8P HX6068/82",
-          "ITEM #74223",
-          "Price",
-          "¥11,180",
-          "Off"
-        ]
-      },
-      {
-        "at": 63,
-        "lines": [
-          "Price",
-          "¥11,180",
-          "Off",
-          "¥1,680",
-          "¥9,500"
-        ]
-      }
-    ],
+    "price_line_groups": [],
     "offers_extracted": 44,
     "offer_samples": [
       {
@@ -232,7 +447,7 @@
   {
     "subject": "オンラインで出会える限定セレクション",
     "date": "Sat, 22 Aug 2026 02:06:39 +0200",
-    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-020745-mail-_.html",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021107-mail-_.html",
     "html_bytes": 63079,
     "text_lines": 150,
     "first_lines": [
@@ -321,7 +536,7 @@
   {
     "subject": "お得に新学期の準備をするならコストコで / Back to School",
     "date": "Mon, 24 Aug 2026 11:19:40 +0200",
-    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-020745-mail-_Back_to_School.html",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021107-mail-_Back_to_School.html",
     "html_bytes": 101750,
     "text_lines": 486,
     "first_lines": [
@@ -348,143 +563,81 @@
     ],
     "price_line_groups": [
       {
-        "at": 16,
+        "at": 253,
         "lines": [
-          "ACER ノートPC/14.0インチ/Core Ultra5 115U/メモリ 16GB/SSD 512GB/SF",
-          "Laptop / 14.0-inch / Ultra 5 115U / 16GB Memory / 512GB /SFL14-54MP-F56Y/SF",
-          "ITEM #86792",
-          "¥165,997",
-          "Shop Now >"
+          "253: Shop Now >",
+          "254: Price",
+          "255: ¥275,800",
+          "256: Off",
+          "257: ¥24,000",
+          "258: ¥251,800",
+          "259: Shop Now >",
+          "260: BRAUN 光美容器 シルクエキスパート",
+          "261: SALONIA シャワーヘッド ファインバブル クリア シルバー セット",
+          "262: HOT BUY",
+          "263: BRAUN 光美容器 シルクエキスパート",
+          "264: SILK EXPERT PL-5243",
+          "265: ITEM #62471",
+          "266: HOT BUY",
+          "267: SALONIA シャワーヘッド ファインバブル クリア シルバー セット",
+          "268: Shower Head Fine Bubble Clear Silver Set SAL23303SS",
+          "269: ITEM #77438",
+          "270: Price",
+          "271: ¥38,680",
+          "272: Off",
+          "273: ¥3,700",
+          "274: ¥34,980",
+          "275: Shop Now >",
+          "276: Price",
+          "277: ¥13,980"
         ]
       },
       {
-        "at": 19,
+        "at": 359,
         "lines": [
-          "¥165,997",
-          "Shop Now >",
-          "Price",
-          "¥139,800",
-          "Off"
-        ]
-      },
-      {
-        "at": 21,
-        "lines": [
-          "Price",
-          "¥139,800",
-          "Off",
-          "¥13,000",
-          "¥126,800"
-        ]
-      },
-      {
-        "at": 22,
-        "lines": [
-          "¥139,800",
-          "Off",
-          "¥13,000",
-          "¥126,800",
-          "Shop Now >"
-        ]
-      },
-      {
-        "at": 32,
-        "lines": [
-          "HP ノートPC / OMNIBOOK3 / 14\" / Core Ultra 5 225U / メモリー16GB / SSD 512GB / グレイシャーシルバー",
-          "HP laptop/OMNIBOOK3/14inch/Core Ultra 5 225U/Memory 16GB/SSD 512GB/Glacier Silver/ DD1V1PA-AAAG",
-          "ITEM #90271",
-          "¥169,800",
-          "Shop Now >"
-        ]
-      },
-      {
-        "at": 34,
-        "lines": [
-          "ITEM #90271",
-          "¥169,800",
-          "Shop Now >",
-          "¥149,800",
-          "Shop Now >"
-        ]
-      },
-      {
-        "at": 47,
-        "lines": [
-          "Opendots ONE SE",
-          "ITEM #83664",
-          "Price",
-          "¥16,980",
-          "Off"
-        ]
-      },
-      {
-        "at": 49,
-        "lines": [
-          "Price",
-          "¥16,980",
-          "Off",
-          "¥3,500",
-          "¥13,480"
-        ]
-      },
-      {
-        "at": 50,
-        "lines": [
-          "¥16,980",
-          "Off",
-          "¥3,500",
-          "¥13,480",
-          "Shop Now >"
-        ]
-      },
-      {
-        "at": 53,
-        "lines": [
-          "¥13,480",
-          "Shop Now >",
-          "Price",
-          "¥20,980",
-          "Off"
-        ]
-      },
-      {
-        "at": 55,
-        "lines": [
-          "Price",
-          "¥20,980",
-          "Off",
-          "¥4,200",
-          "¥16,780"
-        ]
-      },
-      {
-        "at": 56,
-        "lines": [
-          "¥20,980",
-          "Off",
-          "¥4,200",
-          "¥16,780",
-          "Shop Now >"
-        ]
-      },
-      {
-        "at": 68,
-        "lines": [
-          "ビオレ Zero シート 20枚入x4",
-          "Biore Bodysheet",
-          "ITEM #66901",
-          "¥7,880",
-          "Shop Now >"
-        ]
-      },
-      {
-        "at": 71,
-        "lines": [
-          "¥7,880",
-          "Shop Now >",
-          "Price",
-          "¥1,799",
-          "Off"
+          "359: Shop Now >",
+          "360: Price",
+          "361: ¥13,980",
+          "362: Off",
+          "363: ¥3,000",
+          "364: ¥10,980",
+          "365: Shop Now >",
+          "366: 西川 のびのびクイック シーツ シングルサイズ",
+          "367: TEMPUR オリジナルネックピロー",
+          "368: HOT BUY",
+          "369: 西川 のびのびクイック シーツ シングルサイズ 各色",
+          "370: Nishikawa Stretchable Quick Sheet",
+          "371: ITEM #68380",
+          "372: HOT BUY",
+          "373: TEMPUR オリジナルネックピロー",
+          "374: Original Neck Pillow",
+          "375: ITEM #587900",
+          "376: Price",
+          "377: ¥2,298",
+          "378: Off",
+          "379: ¥550",
+          "380: ¥1,748",
+          "381: Shop Now >",
+          "382: ¥ 1,440 OFF",
+          "383: Shop Now >",
+          "384: オキシクリーン 5.26kg",
+          "385: ミューズ 泡ハンドソープ 詰替え用 4.8L",
+          "386: HOT BUY",
+          "387: オキシクリーン 5.26kg",
+          "388: Oxiclean Max Efficiency",
+          "389: ITEM #28137",
+          "390: HOT BUY",
+          "391: ミューズ 泡ハンドソープ 詰替え用 4.8L",
+          "392: MUSE Foam Hand Soap Refill 4.8L",
+          "393: ITEM #53223",
+          "394: Price",
+          "395: ¥3,498",
+          "396: Off",
+          "397: ¥680",
+          "398: ¥2,818",
+          "399: 定期購入対象",
+          "400: Shop Now >",
+          "401: Price"
         ]
       }
     ],
@@ -551,7 +704,7 @@
   {
     "subject": "今週の新商品をご紹介 / New Items",
     "date": "Tue, 25 Aug 2026 11:12:36 +0200",
-    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-020745-mail-_New_Items.html",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021107-mail-_New_Items.html",
     "html_bytes": 50265,
     "text_lines": 109,
     "first_lines": [
