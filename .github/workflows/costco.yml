@@ -20,6 +20,9 @@ on:
       url:
         description: "probe のときに調べるURL"
         type: string
+      grep:
+        description: "mailprobe のとき、この語（カンマ区切り）の周辺だけ抜く"
+        type: string
       mail_only:
         description: "update のとき、メールだけ取り込む"
         type: boolean
@@ -81,7 +84,7 @@ jobs:
           COSTCO_IMAP_HOST: ${{ secrets.COSTCO_IMAP_HOST }}
           COSTCO_IMAP_USER: ${{ secrets.COSTCO_IMAP_USER }}
           COSTCO_IMAP_PASSWORD: ${{ secrets.COSTCO_IMAP_PASSWORD }}
-        run: python -m costco.cli mailprobe --limit 4 --out costco_data/_probe.json
+        run: python -m costco.cli mailprobe --limit 8 --grep "${{ inputs.grep }}" --out costco_data/_probe.json
 
       - name: 指定URLの構造を調べる
         if: inputs.mode == 'probe'

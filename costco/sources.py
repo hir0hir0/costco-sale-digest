@@ -472,12 +472,16 @@ def collect_mail(conf: dict, *, base: date | None = None) -> tuple[list[Offer], 
 
 
 def mail_probe(conf: dict, *, limit: int = 6, context: int = 3,
-               max_groups: int = 14) -> list[dict]:
+               max_groups: int = 14, grep: str = "") -> list[dict]:
     """メルマガの中身を要約して返す（本文は captures/ に保存）。
 
     レイアウトが分からないと抽出規則が書けないので、価格を含む行とその前後だけを
     抜き出す。全文をログに流すのは無駄が多いうえ読みにくい。
+
+    `grep` にカンマ区切りの語（商品名の一部や商品番号）を渡すと、要約の代わりに
+    **その語を含む行の前後±8行**を返す。特定の商品の誤抽出を調べる用。
     """
+    terms = [t.strip() for t in grep.split(",") if t.strip()]
     out = []
     for msg in iter_mail(conf, limit=limit):
         subject = _decode_header(msg.get("Subject"))
@@ -488,9 +492,22 @@ def mail_probe(conf: dict, *, limit: int = 6, context: int = 3,
         lines = html_to_lines(html)
 
         groups = []
-        for i, ln in enumerate(lines):
-            if find_prices(ln) and len(groups) < max_groups:
-                groups.append({"at": i, "lines": lines[max(0, i - context):i + 2]})
+        if terms:
+            spans = []
+            for i, ln in enumerate(lines):
+                if any(t.lower() in ln.lower() for t in terms):
+                    lo, hi = max(0, i - 8), min(len(lines), i + 9)
+                    if spans and lo <= spans[-1][1]:      # 重なる窓は繋げる
+                        spans[-1] = (spans[-1][0], hi)
+                    else:
+                        spans.append((lo, hi))
+            for lo, hi in spans[:max_groups]:
+                groups.append({"at": lo,
+                               "lines": [f"{j}: {lines[j]}" for j in range(lo, hi)]})
+        else:
+            for i, ln in enumerate(lines):
+                if find_prices(ln) and len(groups) < max_groups:
+                    groups.append({"at": i, "lines": lines[max(0, i - context):i + 2]})
         got = offers_from_message(msg, base=today_jst())
         out.append({
             "subject": subject,

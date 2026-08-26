@@ -83,7 +83,8 @@ def cmd_mailprobe(args) -> int:
     load_dotenv()
     conf = load_sources()
     try:
-        info = mail_probe(conf.get("mail") or {}, limit=args.limit)
+        info = mail_probe(conf.get("mail") or {}, limit=args.limit,
+                          grep=args.grep or "")
     except MailSkipped as e:
         _p(f"メールを読めません: {e}")
         return 1
@@ -261,6 +262,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser("mailprobe", help="メルマガの中身を調べる")
     p.add_argument("--limit", type=int, default=6, help="新しい方から何通見るか")
+    p.add_argument("--grep", help="この語（カンマ区切り）を含む行の前後だけを抜く")
     p.add_argument("--out", help="結果をこのファイルにも書き出す")
     p.set_defaults(func=cmd_mailprobe)
 
