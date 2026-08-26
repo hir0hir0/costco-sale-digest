@@ -634,14 +634,60 @@ def offers_from_item_numbers(lines: list[str], *, source: str, source_url: str =
     if not anchors:
         return []
 
+    def _has_money(ln: str) -> bool:
+        if find_prices(ln):
+            return True
+        a, r = find_discount(ln)
+        return a is not None or r is not None
+
+    # 商品番号どうしが金額を挟まず隣接していたら「複数列レイアウト」。
+    #   名前A / 名前B / …A… ITEM #A / …B… ITEM #B / Aの価格 / Shop Now / Bの価格
+    # と、価格ブロックが**まとめて後ろに**左から順で並ぶ（実物で確認）。
+    # 「商品番号の直後の価格＝その商品」の仮定だと、Aの価格がBに付き、
+    # TEMPURの枕が隣のシーツの1,748円になった。
+    runs: list[list[int]] = [[0]]
+    for n in range(1, len(anchors)):
+        between = lines[anchors[n - 1][0] + 1:anchors[n][0]]
+        if len(between) <= 5 and not any(_has_money(ln) for ln in between):
+            runs[-1].append(n)
+        else:
+            runs.append([n])
+
+    _SHOPNOW_RE = re.compile(r"shop\s*now|詳しくはこちら|購入はこちら", re.I)
+
+    # 各 run の価格ブロック（run内の各商品ぶん、左から順）
+    run_segments: dict[int, list[list[str]]] = {}
+    for run in runs:
+        if len(run) < 2:
+            continue
+        last_i = anchors[run[-1]][0]
+        stop = anchors[run[-1] + 1][0] if run[-1] + 1 < len(anchors) else len(lines)
+        segs: list[list[str]] = []
+        cur: list[str] = []
+        for ln in lines[last_i + 1:stop]:
+            if _SHOPNOW_RE.search(ln):
+                if cur:
+                    segs.append(cur)
+                cur = []
+                continue
+            cur.append(ln)
+        if cur:
+            segs.append(cur)
+        money_segs = [sg for sg in segs if any(_has_money(ln) for ln in sg)]
+        for k, n in enumerate(run):
+            run_segments[n] = [money_segs[k]] if k < len(money_segs) else []
+
     out: list[Offer] = []
     for n, (i, item_no) in enumerate(anchors):
-        # 価格は商品番号の後ろに並ぶ。次の商品番号か9行先までを読む。
-        # 多少はみ出しても prices_from_block が「最初のラベルが有効」で拾うので
-        # 隣の商品の値に引きずられない。
         nxt = anchors[n + 1][0] if n + 1 < len(anchors) else len(lines)
-        hi = max(i + 1, min(nxt, i + 9))
-        block = lines[i:hi]
+        if n in run_segments:
+            block = run_segments[n][0] if run_segments[n] else []
+        else:
+            # 単列レイアウト: 価格は商品番号の後ろに並ぶ。次の商品番号か
+            # 9行先までを読む。多少はみ出しても prices_from_block が
+            # 「最初のラベルが有効」で拾うので隣の商品の値に引きずられない。
+            hi = max(i + 1, min(nxt, i + 9))
+            block = lines[i:hi]
 
         # 名前は商品番号の直前から遡って探す。英語名が併記されるので
         # 「日本語を含む行」を優先し、無ければ名前らしい最後の行を使う。
@@ -653,9 +699,10 @@ def offers_from_item_numbers(lines: list[str], *, source: str, source_url: str =
             continue
 
         price, regular, amount = prices_from_block(block)
-        if price is None and regular is None:
+        if price is None and regular is None and n not in run_segments:
             # 価格が商品番号より前に書かれている号もある。後ろで取れなければ
-            # 商品名から商品番号までを読み直す。
+            # 商品名から商品番号までを読み直す。複数列の商品では前を読むと
+            # 前のペアの価格を掴むのでやらない。
             price, regular, amount = prices_from_block(lines[lo:i + 1])
         blob = " ".join(block)
         if amount is None:

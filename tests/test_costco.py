@@ -236,6 +236,84 @@ class TestRealNewsletterShape(unittest.TestCase):
         self.assertNotEqual(got["80015"].price, 178000)
 
 
+class TestTwoColumnLayout(unittest.TestCase):
+    """2列レイアウトのメルマガ（2026-08-24「Back to School」で実際に踏んだ形）。
+
+    商品番号が金額を挟まず隣接し、価格ブロックは**まとめて後ろに左から順**で
+    並ぶ。「商品番号の直後の価格＝その商品」と読むと、1番目の価格が2番目に
+    付き、TEMPURの枕が隣のシーツの1,748円になった。
+    """
+
+    LINES = [
+        "西川 のびのびクイック シーツ シングルサイズ",
+        "TEMPUR オリジナルネックピロー",
+        "HOT BUY",
+        "西川 のびのびクイック シーツ シングルサイズ 各色",
+        "Nishikawa Stretchable Quick Sheet",
+        "ITEM #68380",
+        "HOT BUY",
+        "TEMPUR オリジナルネックピロー",
+        "Original Neck Pillow",
+        "ITEM #587900",
+        "Price",
+        "¥2,298",
+        "Off",
+        "¥550",
+        "¥1,748",
+        "Shop Now >",
+        "¥ 1,440 OFF",
+        "Shop Now >",
+        "オキシクリーン 5.26kg",
+        "ミューズ 泡ハンドソープ 詰替え用 4.8L",
+        "HOT BUY",
+        "オキシクリーン 5.26kg",
+        "Oxiclean Max Efficiency",
+        "ITEM #28137",
+        "HOT BUY",
+        "ミューズ 泡ハンドソープ 詰替え用 4.8L",
+        "MUSE Foam Hand Soap Refill 4.8L",
+        "ITEM #53223",
+        "Price",
+        "¥3,498",
+        "Off",
+        "¥680",
+        "¥2,818",
+        "定期購入対象",
+        "Shop Now >",
+        "Price",
+        "¥4,198",
+        "Off",
+        "¥840",
+        "¥3,358",
+        "Shop Now >",
+    ]
+
+    def setUp(self):
+        self.got = {o.item_no: o for o in parse.offers_from_item_numbers(
+            self.LINES, source="mail", base=BASE)}
+
+    def test_first_of_pair_gets_the_first_price_block(self):
+        o = self.got["68380"]   # 西川シーツ
+        self.assertEqual((o.price, o.regular_price, o.discount), (1748, 2298, 550))
+        o = self.got["28137"]   # オキシクリーン
+        self.assertEqual((o.price, o.regular_price, o.discount), (2818, 3498, 680))
+
+    def test_second_of_pair_gets_the_second_price_block(self):
+        o = self.got["587900"]  # TEMPUR: 値引きだけの号
+        self.assertEqual(o.price, None)
+        self.assertEqual(o.discount, 1440)
+        o = self.got["53223"]   # ミューズ
+        self.assertEqual((o.price, o.regular_price, o.discount), (3358, 4198, 840))
+
+    def test_temppur_does_not_steal_the_sheets_price(self):
+        # まさに起きた誤り: TEMPURの枕が隣のシーツの1,748円になる
+        self.assertNotEqual(self.got["587900"].price, 1748)
+
+    def test_names_are_right(self):
+        self.assertIn("シーツ", self.got["68380"].name)
+        self.assertIn("TEMPUR", self.got["587900"].name)
+
+
 class TestImages(unittest.TestCase):
     HTML = (
         "<div><img src='https://cdn.example.com/oxi.jpg' alt='オキシクリーン'></div>"
