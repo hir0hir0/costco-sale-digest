@@ -1,0 +1,640 @@
+[
+  {
+    "subject": "週末のお買得商品 / Weekend Pick Up",
+    "date": "Fri, 21 Aug 2026 11:16:41 +0200",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-020744-mail-_Weekend_Pick_Up.html",
+    "html_bytes": 98734,
+    "text_lines": 498,
+    "first_lines": [
+      "CostcoEDM_20260821",
+      "【 Last Minute Summer Outdoor 】",
+      "メールが正しく表示されない方は、こちら をご覧ください。",
+      "Costco",
+      "Costco Wholesale",
+      "auto",
+      "Yardistry グリーンハウス 木製温室 2.4x3.0m",
+      "アジオ Stinsley 屋外用 ダイニング 7点セット",
+      "HOT BUY ONLINE ONLY",
+      "Yardistry グリーンハウス 木製温室 2.4x3.0m",
+      "8x10' Cedar Greenhouse",
+      "ITEM #1713422",
+      "HOT BUY ONLINE ONLY",
+      "Agio Stinsley 屋外用 ダイニング 7点セット",
+      "Outdoor Dining 7-piece Set",
+      "ITEM #1933965",
+      "Price",
+      "¥348,000",
+      "Off",
+      "¥60,000"
+    ],
+    "price_line_groups": [
+      {
+        "at": 17,
+        "lines": [
+          "Outdoor Dining 7-piece Set",
+          "ITEM #1933965",
+          "Price",
+          "¥348,000",
+          "Off"
+        ]
+      },
+      {
+        "at": 19,
+        "lines": [
+          "Price",
+          "¥348,000",
+          "Off",
+          "¥60,000",
+          "¥288,000"
+        ]
+      },
+      {
+        "at": 20,
+        "lines": [
+          "¥348,000",
+          "Off",
+          "¥60,000",
+          "¥288,000",
+          "Shop Now >"
+        ]
+      },
+      {
+        "at": 23,
+        "lines": [
+          "¥288,000",
+          "Shop Now >",
+          "Price",
+          "¥169,800",
+          "Off"
+        ]
+      },
+      {
+        "at": 25,
+        "lines": [
+          "Price",
+          "¥169,800",
+          "Off",
+          "¥30,000",
+          "¥139,800"
+        ]
+      },
+      {
+        "at": 26,
+        "lines": [
+          "¥169,800",
+          "Off",
+          "¥30,000",
+          "¥139,800",
+          "Shop Now >"
+        ]
+      },
+      {
+        "at": 39,
+        "lines": [
+          "3-piece Fabric Sectional Sofa",
+          "ITEM #78522",
+          "Price",
+          "¥189,800",
+          "Off"
+        ]
+      },
+      {
+        "at": 41,
+        "lines": [
+          "Price",
+          "¥189,800",
+          "Off",
+          "¥40,000",
+          "¥149,800"
+        ]
+      },
+      {
+        "at": 42,
+        "lines": [
+          "¥189,800",
+          "Off",
+          "¥40,000",
+          "¥149,800",
+          "Shop Now >"
+        ]
+      },
+      {
+        "at": 45,
+        "lines": [
+          "¥149,800",
+          "Shop Now >",
+          "Price",
+          "¥139,800",
+          "Off"
+        ]
+      },
+      {
+        "at": 47,
+        "lines": [
+          "Price",
+          "¥139,800",
+          "Off",
+          "¥40,000",
+          "¥99,800"
+        ]
+      },
+      {
+        "at": 48,
+        "lines": [
+          "¥139,800",
+          "Off",
+          "¥40,000",
+          "¥99,800",
+          "Shop Now >"
+        ]
+      },
+      {
+        "at": 61,
+        "lines": [
+          "White Plus 8P HX6068/82",
+          "ITEM #74223",
+          "Price",
+          "¥11,180",
+          "Off"
+        ]
+      },
+      {
+        "at": 63,
+        "lines": [
+          "Price",
+          "¥11,180",
+          "Off",
+          "¥1,680",
+          "¥9,500"
+        ]
+      }
+    ],
+    "offers_extracted": 44,
+    "offer_samples": [
+      {
+        "name": "Yardistry グリーンハウス 木製温室 2.4x3.0m",
+        "price": null,
+        "regular_price": null,
+        "item_no": "1713422",
+        "period": "2026-08-21〜"
+      },
+      {
+        "name": "Agio Stinsley 屋外用 ダイニング 7点セット",
+        "price": 288000,
+        "regular_price": 348000,
+        "item_no": "1933965",
+        "period": "2026-08-21〜"
+      },
+      {
+        "name": "Thomasville 布製モジュラーソファ6ピース ダークグレイ 収納オットマン付",
+        "price": null,
+        "regular_price": null,
+        "item_no": "1782774",
+        "period": "2026-08-21〜"
+      },
+      {
+        "name": "AIDEN & IVY ファブリックセクショナルソファ",
+        "price": 149800,
+        "regular_price": 189800,
+        "item_no": "78522",
+        "period": "2026-08-21〜"
+      },
+      {
+        "name": "ACE EXACT カーボン柄スーツケース 機内持込みサイズ",
+        "price": null,
+        "regular_price": null,
+        "item_no": "84145",
+        "period": "2026-08-21〜"
+      },
+      {
+        "name": "Sonicare ホワイトプラス ブラシヘッド 8本",
+        "price": 9500,
+        "regular_price": 11180,
+        "item_no": "74223",
+        "period": "2026-08-21〜"
+      },
+      {
+        "name": "Thermoflask 真空断熱ステンレスボトル 0.71L 2本セット 各色",
+        "price": null,
+        "regular_price": null,
+        "item_no": "1730866",
+        "period": "2026-08-21〜"
+      },
+      {
+        "name": "ムーミン 小皿 8枚",
+        "price": 2999,
+        "regular_price": 3498,
+        "item_no": "73256",
+        "period": "2026-08-21〜"
+      }
+    ]
+  },
+  {
+    "subject": "オンラインで出会える限定セレクション",
+    "date": "Sat, 22 Aug 2026 02:06:39 +0200",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-020745-mail-_.html",
+    "html_bytes": 63079,
+    "text_lines": 150,
+    "first_lines": [
+      "CostcoEDM_20260725",
+      "Big and Bulky",
+      "メールが正しく表示されない方は、こちら をご覧ください。",
+      "Costco",
+      "Costco Wholesale",
+      "title",
+      "ピュア 電動キックボード アドヴァンス",
+      "DJI Power 1000 Mini ポータブル電源 ホワイト 1008Wh",
+      "ピュア 電動キックボード アドヴァンス",
+      "ITEM #78984",
+      "Shop Now >",
+      "DJI Power 1000 Mini ポータブル電源 ホワイト 1008Wh",
+      "ITEM #87145",
+      "Shop Now >",
+      "SUZUKID SPADA15フォルテ エアープラズマ切断機 100V専用 APC-15S",
+      "SPICERR ポケッタブル高圧洗浄機",
+      "SUZUKID SPADA15フォルテ エアープラズマ切断機 100V専用 APC-15S",
+      "ITEM #46451",
+      "Shop Now >",
+      "SPICERR ポケッタブル高圧洗浄機"
+    ],
+    "price_line_groups": [],
+    "offers_extracted": 23,
+    "offer_samples": [
+      {
+        "name": "ピュア 電動キックボード アドヴァンス",
+        "price": null,
+        "regular_price": null,
+        "item_no": "78984",
+        "period": "2026-08-22〜"
+      },
+      {
+        "name": "DJI Power 1000 Mini ポータブル電源 ホワイト 1008Wh",
+        "price": null,
+        "regular_price": null,
+        "item_no": "87145",
+        "period": "2026-08-22〜"
+      },
+      {
+        "name": "SUZUKID SPADA15フォルテ エアープラズマ切断機 100V専用 APC-15S",
+        "price": null,
+        "regular_price": null,
+        "item_no": "46451",
+        "period": "2026-08-22〜"
+      },
+      {
+        "name": "SPICERR ポケッタブル高圧洗浄機",
+        "price": null,
+        "regular_price": null,
+        "item_no": "80614",
+        "period": "2026-08-22〜"
+      },
+      {
+        "name": "PETKIT ペットドライヤーボックス オゾン殺菌モード COPD10PRO",
+        "price": null,
+        "regular_price": null,
+        "item_no": "75574",
+        "period": "2026-08-22〜"
+      },
+      {
+        "name": "LG 空気清浄機 PuriCareTM Pet Gen3 AS657DWT2",
+        "price": null,
+        "regular_price": null,
+        "item_no": "88528",
+        "period": "2026-08-22〜"
+      },
+      {
+        "name": "スコッティ トイレットティシュー フラワーパック 3倍長持ち 12ロール",
+        "price": null,
+        "regular_price": null,
+        "item_no": "29145",
+        "period": "2026-08-22〜"
+      },
+      {
+        "name": "エルモア ティシュー 200組 1ケース5箱入り x 12パック",
+        "price": null,
+        "regular_price": null,
+        "item_no": "58147",
+        "period": "2026-08-22〜"
+      }
+    ]
+  },
+  {
+    "subject": "お得に新学期の準備をするならコストコで / Back to School",
+    "date": "Mon, 24 Aug 2026 11:19:40 +0200",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-020745-mail-_Back_to_School.html",
+    "html_bytes": 101750,
+    "text_lines": 486,
+    "first_lines": [
+      "CostcoEDM_20250804",
+      "【 Hot Buys 】",
+      "メールが正しく表示されない方は、こちら をご覧ください。",
+      "Costco",
+      "Costco Wholesale",
+      "auto",
+      "ASUS ノートPC/Vivoboook S/15.6”/Copilot+/Snapdragon X Plus 1TB",
+      "ACER ノートPC/14.0インチ/Core Ultra5 115U/メモリ 16GB/SSD 512GB/-/SF",
+      "LAST CHANCE",
+      "ASUS ノートPC/Vivoboook S/15.6”/Copilot+/Snapdragon X Plus 1TB",
+      "Laptop/Vivobook S/15.6\"/Snapdragon X1P-42-100/16GB/SSD 1TB/S5507QA-PUCOSI",
+      "ITEM #70994",
+      "HOT BUY NEW",
+      "ACER ノートPC/14.0インチ/Core Ultra5 115U/メモリ 16GB/SSD 512GB/SF",
+      "Laptop / 14.0-inch / Ultra 5 115U / 16GB Memory / 512GB /SFL14-54MP-F56Y/SF",
+      "ITEM #86792",
+      "¥165,997",
+      "Shop Now >",
+      "Price",
+      "¥139,800"
+    ],
+    "price_line_groups": [
+      {
+        "at": 16,
+        "lines": [
+          "ACER ノートPC/14.0インチ/Core Ultra5 115U/メモリ 16GB/SSD 512GB/SF",
+          "Laptop / 14.0-inch / Ultra 5 115U / 16GB Memory / 512GB /SFL14-54MP-F56Y/SF",
+          "ITEM #86792",
+          "¥165,997",
+          "Shop Now >"
+        ]
+      },
+      {
+        "at": 19,
+        "lines": [
+          "¥165,997",
+          "Shop Now >",
+          "Price",
+          "¥139,800",
+          "Off"
+        ]
+      },
+      {
+        "at": 21,
+        "lines": [
+          "Price",
+          "¥139,800",
+          "Off",
+          "¥13,000",
+          "¥126,800"
+        ]
+      },
+      {
+        "at": 22,
+        "lines": [
+          "¥139,800",
+          "Off",
+          "¥13,000",
+          "¥126,800",
+          "Shop Now >"
+        ]
+      },
+      {
+        "at": 32,
+        "lines": [
+          "HP ノートPC / OMNIBOOK3 / 14\" / Core Ultra 5 225U / メモリー16GB / SSD 512GB / グレイシャーシルバー",
+          "HP laptop/OMNIBOOK3/14inch/Core Ultra 5 225U/Memory 16GB/SSD 512GB/Glacier Silver/ DD1V1PA-AAAG",
+          "ITEM #90271",
+          "¥169,800",
+          "Shop Now >"
+        ]
+      },
+      {
+        "at": 34,
+        "lines": [
+          "ITEM #90271",
+          "¥169,800",
+          "Shop Now >",
+          "¥149,800",
+          "Shop Now >"
+        ]
+      },
+      {
+        "at": 47,
+        "lines": [
+          "Opendots ONE SE",
+          "ITEM #83664",
+          "Price",
+          "¥16,980",
+          "Off"
+        ]
+      },
+      {
+        "at": 49,
+        "lines": [
+          "Price",
+          "¥16,980",
+          "Off",
+          "¥3,500",
+          "¥13,480"
+        ]
+      },
+      {
+        "at": 50,
+        "lines": [
+          "¥16,980",
+          "Off",
+          "¥3,500",
+          "¥13,480",
+          "Shop Now >"
+        ]
+      },
+      {
+        "at": 53,
+        "lines": [
+          "¥13,480",
+          "Shop Now >",
+          "Price",
+          "¥20,980",
+          "Off"
+        ]
+      },
+      {
+        "at": 55,
+        "lines": [
+          "Price",
+          "¥20,980",
+          "Off",
+          "¥4,200",
+          "¥16,780"
+        ]
+      },
+      {
+        "at": 56,
+        "lines": [
+          "¥20,980",
+          "Off",
+          "¥4,200",
+          "¥16,780",
+          "Shop Now >"
+        ]
+      },
+      {
+        "at": 68,
+        "lines": [
+          "ビオレ Zero シート 20枚入x4",
+          "Biore Bodysheet",
+          "ITEM #66901",
+          "¥7,880",
+          "Shop Now >"
+        ]
+      },
+      {
+        "at": 71,
+        "lines": [
+          "¥7,880",
+          "Shop Now >",
+          "Price",
+          "¥1,799",
+          "Off"
+        ]
+      }
+    ],
+    "offers_extracted": 44,
+    "offer_samples": [
+      {
+        "name": "ASUS ノートPC/Vivoboook S/15.6”/Copilot+/Snapdragon X Plus 1TB",
+        "price": null,
+        "regular_price": null,
+        "item_no": "70994",
+        "period": "2026-08-24〜"
+      },
+      {
+        "name": "ACER ノートPC/14.0インチ/Core Ultra5 115U/メモリ 16GB/SSD 512GB/SF",
+        "price": 126800,
+        "regular_price": 139800,
+        "item_no": "86792",
+        "period": "2026-08-24〜"
+      },
+      {
+        "name": "NEW ONLINE ONLY",
+        "price": 126800,
+        "regular_price": null,
+        "item_no": "90273",
+        "period": "2026-03-14〜"
+      },
+      {
+        "name": "NEW ONLINE ONLY",
+        "price": 149800,
+        "regular_price": 169800,
+        "item_no": "90271",
+        "period": "2026-08-24〜"
+      },
+      {
+        "name": "GTRACING エルゴノミックゲーミングチェア",
+        "price": null,
+        "regular_price": null,
+        "item_no": "77029",
+        "period": "2026-08-24〜"
+      },
+      {
+        "name": "Shokz オープンイヤー型イヤホン Shokz Opendots ONE SE",
+        "price": 13480,
+        "regular_price": 16980,
+        "item_no": "83664",
+        "period": "2026-08-24〜"
+      },
+      {
+        "name": "Belkin BoostCharge Pro Qi2 2-in-1 ワイヤレス充電パッド 15W",
+        "price": null,
+        "regular_price": null,
+        "item_no": "61657",
+        "period": "2026-08-24〜"
+      },
+      {
+        "name": "ビオレ Zero シート 20枚入x4",
+        "price": 1439,
+        "regular_price": 1799,
+        "item_no": "66901",
+        "period": "2026-08-24〜"
+      }
+    ]
+  },
+  {
+    "subject": "今週の新商品をご紹介 / New Items",
+    "date": "Tue, 25 Aug 2026 11:12:36 +0200",
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-020745-mail-_New_Items.html",
+    "html_bytes": 50265,
+    "text_lines": 109,
+    "first_lines": [
+      "CostcoEDM_20260825",
+      "あなたの暮らしに、新しいお気に入りを。",
+      "メールが正しく表示されない方は、こちら をご覧ください。",
+      "Costco",
+      "Costco Wholesale",
+      "auto",
+      "純金 バングルリング",
+      "ITEM #660196",
+      "Shop",
+      "Now >",
+      "黒蝶真珠 18Kホワイトゴールド 0.24ct ピアス",
+      "ITEM #537625",
+      "Shop",
+      "Now >",
+      "ONLINE ONLY",
+      "U-NEXT ギフトコード 50,000ポイント",
+      "ITEM #89251",
+      "Shop",
+      "Now >",
+      "ONLINE ONLY"
+    ],
+    "price_line_groups": [],
+    "offers_extracted": 16,
+    "offer_samples": [
+      {
+        "name": "純金 バングルリング",
+        "price": null,
+        "regular_price": null,
+        "item_no": "660196",
+        "period": "2026-08-25〜"
+      },
+      {
+        "name": "黒蝶真珠 18Kホワイトゴールド 0.24ct ピアス",
+        "price": null,
+        "regular_price": null,
+        "item_no": "537625",
+        "period": "2026-08-25〜"
+      },
+      {
+        "name": "U-NEXT ギフトコード 50,000ポイント",
+        "price": null,
+        "regular_price": null,
+        "item_no": "89251",
+        "period": "2026-08-25〜"
+      },
+      {
+        "name": "ソノス Sonos PLAY ポータブルスピーカー",
+        "price": null,
+        "regular_price": null,
+        "item_no": "87358",
+        "period": "2026-08-25〜"
+      },
+      {
+        "name": "クイジナート アイスクリームメーカー コンプレッサー式 ICE-90PCJ",
+        "price": null,
+        "regular_price": null,
+        "item_no": "90548",
+        "period": "2026-08-25〜"
+      },
+      {
+        "name": "マルチシェフ 1.2L 3スピードブレンダー MC-123DBL",
+        "price": null,
+        "regular_price": null,
+        "item_no": "90547",
+        "period": "2026-08-25〜"
+      },
+      {
+        "name": "ブラウン 電動シェーバー シリーズ8 8663CC",
+        "price": null,
+        "regular_price": null,
+        "item_no": "89184",
+        "period": "2026-08-25〜"
+      },
+      {
+        "name": "Bebird スマート 耳かき Note 6 コストコモデル",
+        "price": null,
+        "regular_price": null,
+        "item_no": "90723",
+        "period": "2026-08-25〜"
+      }
+    ]
+  }
+]
