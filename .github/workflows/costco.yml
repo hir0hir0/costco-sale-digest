@@ -17,6 +17,7 @@ on:
           - discover    # 巡回先を探して登録し、各ページの構造をログに出す
           - probe       # 指定URL1本の構造だけ調べる
           - mailprobe   # メルマガの価格行とその前後を調べる
+          - backfill    # 過去メールから蓄積と履歴を作り直す（第2アカウント可）
       url:
         description: "probe のときに調べるURL"
         type: string
@@ -94,6 +95,17 @@ jobs:
           fi
           python -m costco.cli probe "${{ inputs.url }}" --out costco_data/_probe.json
 
+      - name: 過去メールから作り直す
+        if: inputs.mode == 'backfill'
+        env:
+          COSTCO_IMAP_HOST: ${{ secrets.COSTCO_IMAP_HOST }}
+          COSTCO_IMAP_USER: ${{ secrets.COSTCO_IMAP_USER }}
+          COSTCO_IMAP_PASSWORD: ${{ secrets.COSTCO_IMAP_PASSWORD }}
+          COSTCO_IMAP_HOST_2: ${{ secrets.COSTCO_IMAP_HOST_2 }}
+          COSTCO_IMAP_USER_2: ${{ secrets.COSTCO_IMAP_USER_2 }}
+          COSTCO_IMAP_PASSWORD_2: ${{ secrets.COSTCO_IMAP_PASSWORD_2 }}
+        run: python -m costco.cli backfill --since-days 60
+
       # ---- 通常の更新 --------------------------------------------------
       - name: 収集してサイトを生成
         if: inputs.mode == '' || inputs.mode == 'update'
@@ -128,20 +140,20 @@ jobs:
           fi
 
       - name: Pages を有効化
-        if: inputs.mode == '' || inputs.mode == 'update'
+        if: inputs.mode == '' || inputs.mode == 'update' || inputs.mode == 'backfill'
         uses: actions/configure-pages@v5
         with:
           enablement: true
 
       - name: Pages 用にアップロード
-        if: inputs.mode == '' || inputs.mode == 'update'
+        if: inputs.mode == '' || inputs.mode == 'update' || inputs.mode == 'backfill'
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
   deploy:
     needs: update
-    if: inputs.mode == '' || inputs.mode == 'update'
+    if: inputs.mode == '' || inputs.mode == 'update' || inputs.mode == 'backfill'
     runs-on: ubuntu-latest
     permissions:
       pages: write

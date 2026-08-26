@@ -413,17 +413,25 @@ class MailSkipped(RuntimeError):
     """認証情報が無い等で、メール取り込みを黙って飛ばす場合。"""
 
 
-def iter_mail(conf: dict, *, limit: int | None = None):
-    """コストコからのメールを新しい順の逆（古い順）に返す。読むだけで既読にしない。"""
-    host = os.environ.get("COSTCO_IMAP_HOST")
-    user = os.environ.get("COSTCO_IMAP_USER")
-    password = os.environ.get("COSTCO_IMAP_PASSWORD")
+def iter_mail(conf: dict, *, limit: int | None = None, account: str = "",
+              since_days: int | None = None):
+    """コストコからのメールを新しい順の逆（古い順）に返す。読むだけで既読にしない。
+
+    `account` に "_2" 等を渡すと COSTCO_IMAP_USER_2 / COSTCO_IMAP_PASSWORD_2 /
+    （あれば）COSTCO_IMAP_HOST_2 を使う。バックフィルで別メールボックスを
+    一時的に読むためのもの。
+    """
+    host = (os.environ.get("COSTCO_IMAP_HOST" + account)
+            or os.environ.get("COSTCO_IMAP_HOST"))
+    user = os.environ.get("COSTCO_IMAP_USER" + account)
+    password = os.environ.get("COSTCO_IMAP_PASSWORD" + account)
     if not conf.get("enabled", True):
         raise MailSkipped("設定で無効になっています")
     if not (host and user and password):
-        raise MailSkipped("COSTCO_IMAP_HOST/USER/PASSWORD が未設定")
+        raise MailSkipped(f"COSTCO_IMAP_HOST/USER/PASSWORD{account} が未設定")
 
-    since = today_jst() - timedelta(days=int(conf.get("since_days", 21)))
+    days = since_days if since_days is not None else int(conf.get("since_days", 21))
+    since = today_jst() - timedelta(days=days)
     folder = conf.get("folder") or "INBOX"
     want = conf.get("subject_contains") or []
 
@@ -448,6 +456,43 @@ def iter_mail(conf: dict, *, limit: int | None = None):
             if want and not any(w in _decode_header(msg.get("Subject")) for w in want):
                 continue
             yield msg
+
+
+def backfill_mail(conf: dict, *, since_days: int = 60) -> tuple[dict, list[SourceReport]]:
+    """過去メールを全部読み、**メールの日付ごと**に Offer をまとめて返す。
+
+    普段の収集は「今日観測した」として履歴に積むが、バックフィルは昔のメールを
+    当時の日付として時系列順に流し込みたい。戻り値は {date: [Offer, ...]}。
+
+    普段のアカウントに加えて、COSTCO_IMAP_USER_2/PASSWORD_2 があればそちらも
+    読む（転送を始める前のメールが元のメールボックスにしか無いため）。
+    同じメールが両方にあっても、同日マージで1件に潰れる。
+    """
+    reports: list[SourceReport] = []
+    by_day: dict[date, list[Offer]] = {}
+    accounts = [""]
+    if os.environ.get("COSTCO_IMAP_USER_2") and os.environ.get("COSTCO_IMAP_PASSWORD_2"):
+        accounts.append("_2")
+    for account in accounts:
+        label = os.environ.get("COSTCO_IMAP_USER" + account, "?")
+        try:
+            n = 0
+            for msg in iter_mail(conf, account=account, since_days=since_days):
+                offers = offers_from_message(msg)
+                if not offers:
+                    n += 1
+                    continue
+                d = date.fromisoformat(offers[0].first_seen)
+                by_day.setdefault(d, []).extend(offers)
+                n += 1
+            reports.append(SourceReport(f"メール({label})", "", True,
+                                        sum(len(v) for v in by_day.values()),
+                                        f"{n}通を確認"))
+        except MailSkipped as e:
+            reports.append(SourceReport(f"メール({label})", "", True, 0, f"{e} のためスキップ"))
+        except Exception as e:
+            reports.append(SourceReport(f"メール({label})", "", False, 0, f"取り込み失敗: {e}"))
+    return by_day, reports
 
 
 def collect_mail(conf: dict, *, base: date | None = None) -> tuple[list[Offer], list[SourceReport]]:

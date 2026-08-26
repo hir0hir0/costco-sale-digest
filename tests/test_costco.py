@@ -532,6 +532,42 @@ class TestStore(unittest.TestCase):
         self.assertEqual(self.store.price_stats("no:1234567")["count"], 1)
 
 
+class TestBackfill(unittest.TestCase):
+    def test_chronological_merge_dates_the_history_correctly(self):
+        # バックフィルは昔のメールを当時の日付で時系列に流し込む。
+        # 履歴の点にメールの日付が付き、値下がりも当時の日付間で検知される。
+        with tempfile.TemporaryDirectory() as d:
+            store = Store(Path(d))
+            def offer(price):
+                return Offer(name="ミックスナッツ", item_no="1234567",
+                             price=price, ends_on="2026-08-31", source="mail")
+            store.merge([offer(1980)], date(2026, 7, 25))
+            r = store.merge([offer(1780)], date(2026, 8, 10))
+            store.merge([offer(1780)], date(2026, 8, 24))
+            pts = store.price_stats("no:1234567")["points"]
+            self.assertEqual([(p["on"], p["price"]) for p in pts],
+                             [("2026-07-25", 1980), ("2026-08-10", 1780)])
+            self.assertEqual([x for _, x in r.price_drops], [200])
+
+
+class TestStaleHiding(unittest.TestCase):
+    def test_endless_offers_disappear_after_30_days_unseen(self):
+        # 終了日の無いセールは、30日メールに現れなければサイトから外す
+        with tempfile.TemporaryDirectory() as d:
+            store = Store(Path(d) / "data")
+            store.merge([Offer(name="古いセール", item_no="1", price=100)],
+                        date(2026, 7, 1))
+            store.merge([Offer(name="新しいセール", item_no="2", price=200)],
+                        date(2026, 8, 20))
+            out = Path(d) / "site"
+            build_site(store, out, on=BASE)   # BASE = 2026-08-12 → 古い方は42日前
+            data = json.loads((out / "data.json").read_text(encoding="utf-8"))
+            names = [o["name"] for o in data["offers"]]
+            self.assertIn("新しいセール", names)
+            self.assertNotIn("古いセール", names)
+            self.assertEqual(data["hidden_stale"], 1)
+
+
 class TestMail(unittest.TestCase):
     RAW = (
         "From: Costco Japan <news@costco.co.jp>\r\n"

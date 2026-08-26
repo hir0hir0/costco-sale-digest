@@ -17,7 +17,7 @@
 from __future__ import annotations
 
 import json
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 from .models import CATEGORIES, KIND_COUPON, KIND_SALE, now_jst_iso, today_jst
@@ -58,8 +58,13 @@ def site_data(store: Store, on: date | None = None,
     on = on or today_jst()
     offers = []
     # 価格も値引きも読めなかったものは「安売りまとめ」として意味がないので載せない。
+    # 終了日の書かれていないセールは、30日以上どのメールにも現れなくなったら
+    # 終わったとみなして外す（バックフィルで古いセールが並び続けるのを防ぐ）。
     # 捨てた件数は build 時に表示する（黙って減らさない）。
-    listed = [o for o in store.active(on) if o.price is not None or o.discount is not None]
+    stale_cut = (on - timedelta(days=30)).isoformat()
+    active = [o for o in store.active(on)
+              if o.ends_on or (o.last_seen and o.last_seen >= stale_cut)]
+    listed = [o for o in active if o.price is not None or o.discount is not None]
     for o in sorted(listed, key=lambda x: (x.ends_on or "9999-12-31", x.name)):
         stats = store.price_stats(o.key)
         prev = stats["prev"]
@@ -90,7 +95,8 @@ def site_data(store: Store, on: date | None = None,
         "today": on.isoformat(),
         "categories": used,
         "offers": offers,
-        "hidden_no_price": len(store.active(on)) - len(listed),
+        "hidden_no_price": len(active) - len(listed),
+        "hidden_stale": len(store.active(on)) - len(active),
         "stats": {
             "total": len(offers),
             "sale": sum(1 for o in offers if o["kind"] == KIND_SALE),

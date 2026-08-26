@@ -20,10 +20,10 @@ from pathlib import Path
 from .build import (DEFAULT_OUT, IMAGES_DOWNLOAD, IMAGES_LINK, build_site,
                     images_mode)
 from .models import today_jst
-from .sources import (BASE_URL, MailSkipped, collect_mail, collect_web,
-                      discover, fetch_images, load_dotenv, load_sources,
-                      mail_probe, offers_from_eml, probe, prune_images,
-                      save_sources)
+from .sources import (BASE_URL, MailSkipped, backfill_mail, collect_mail,
+                      collect_web, discover, fetch_images, load_dotenv,
+                      load_sources, mail_probe, offers_from_eml, probe,
+                      prune_images, save_sources)
 from .store import DEFAULT_ROOT, Store
 
 
@@ -183,6 +183,33 @@ def cmd_import_eml(args) -> int:
     return 0
 
 
+def cmd_backfill(args) -> int:
+    """過去メールから蓄積と価格履歴を作り直す（履歴は当時の日付が付く）。"""
+    load_dotenv()
+    conf = load_sources()
+    by_day, reports = backfill_mail(conf.get("mail") or {}, since_days=args.since_days)
+    _p("読み込み:")
+    for r in reports:
+        _p(r.line())
+    if not by_day:
+        _p("メールから何も取れませんでした。中断します（既存データは触っていません）。")
+        return 1
+
+    store = Store(args.data)          # 空の状態から時系列で作り直す
+    for d in sorted(by_day):
+        res = store.merge(by_day[d], d)
+        _p(f"  {d}: {len(by_day[d])}件観測 → {res.summary()}")
+    removed = store.prune()
+    if removed:
+        _p(f"終了済み {removed} 件を一覧から外しました。")
+    if args.dry_run:
+        _p("\n--dry-run のため保存しませんでした。")
+        return 0
+    store.save()
+    _p(f"\n保存しました: {store.root}")
+    return cmd_build(args)
+
+
 def cmd_build(args) -> int:
     store = Store.load(args.data)
     path = build_site(store, args.out,
@@ -276,6 +303,12 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("paths", nargs="+")
     p.add_argument("--dry-run", action="store_true")
     p.set_defaults(func=cmd_import_eml)
+
+    p = sub.add_parser("backfill", help="過去メールから蓄積と履歴を作り直す")
+    p.add_argument("--since-days", type=int, default=60, help="何日前まで遡るか")
+    p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--out", default=str(DEFAULT_OUT))
+    p.set_defaults(func=cmd_backfill)
 
     p = sub.add_parser("build", help="site/ を書き出す")
     p.add_argument("--out", default=str(DEFAULT_OUT))
