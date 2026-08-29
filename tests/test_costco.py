@@ -550,6 +550,52 @@ class TestBackfill(unittest.TestCase):
             self.assertEqual([x for _, x in r.price_drops], [200])
 
 
+class TestReceipts(unittest.TestCase):
+    PURCHASES = [{
+        "date": "2026-08-01", "store": "◯◯", "total": 3000,
+        "items": [
+            {"item_no": "588141", "name": "ハンドソープ 4P", "price": 1998, "coupon": 420},
+            {"item_no": "30669", "name": "バナナ", "price": 328},
+        ],
+    }]
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.store = Store(Path(self.tmp.name) / "data")
+        self.store.root.mkdir(parents=True)
+        (self.store.root / "purchases.json").write_text(
+            json.dumps(self.PURCHASES, ensure_ascii=False), encoding="utf-8")
+
+    def test_receipt_prices_enter_history_dated_and_idempotent(self):
+        self.assertEqual(self.store.merge_receipts(), 2)
+        self.assertEqual(self.store.merge_receipts(), 2)   # 二度読んでも増えない
+        pts = self.store.price_stats("no:588141")["points"]
+        self.assertEqual([(p["on"], p["price"]) for p in pts], [("2026-08-01", 1998)])
+
+    def test_historical_insert_keeps_points_sorted(self):
+        # 先にメルマガの点（8/12）があり、後からレシート（8/1）を入れても順序が保たれ、
+        # 偽の値下がり通知は出ない
+        self.store.merge([Offer(name="ハンドソープ 4P", item_no="588141",
+                                price=2298, source="mail")], BASE)
+        self.store.merge_receipts()
+        pts = self.store.price_stats("no:588141")["points"]
+        self.assertEqual([p["on"] for p in pts], ["2026-08-01", "2026-08-12"])
+
+    def test_site_shows_last_bought_and_badge(self):
+        # クーポン込みの実質額（1998-420=1578）より安いセールにだけバッジが付く
+        self.store.merge([Offer(name="ハンドソープ 4P", item_no="588141",
+                                price=1498, ends_on="2026-08-31", source="mail")], BASE)
+        out = Path(self.tmp.name) / "site"
+        build_site(self.store, out, on=BASE)
+        data = json.loads((out / "data.json").read_text(encoding="utf-8"))
+        o = next(x for x in data["offers"] if x["item_no"] == "588141")
+        self.assertEqual(o["last_bought"], {"on": "2026-08-01", "price": 1578})
+        self.assertTrue(o["below_last_buy"])
+        html = (out / "index.html").read_text(encoding="utf-8")
+        self.assertIn("前回購入より安い", html)
+
+
 class TestStaleHiding(unittest.TestCase):
     def test_endless_offers_disappear_after_30_days_unseen(self):
         # 終了日の無いセールは、30日メールに現れなければサイトから外す

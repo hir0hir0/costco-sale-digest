@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import tempfile
 from dataclasses import dataclass, field
 from datetime import date, timedelta
@@ -19,6 +20,7 @@ DEFAULT_ROOT = Path(__file__).resolve().parent.parent / "costco_data"
 
 OFFERS_FILE = "offers.json"
 HISTORY_FILE = "history.json"
+PURCHASES_FILE = "purchases.json"
 META_FILE = "meta.json"
 
 
@@ -130,11 +132,13 @@ class Store:
         return res
 
     def _record_price(self, o: Offer, on: date) -> tuple[int | None, bool]:
-        """価格履歴に追記し、(前回からの下げ幅, 過去最安か) を返す。
+        """価格履歴に観測を1つ入れ、(前回からの下げ幅, 過去最安か) を返す。
 
-        履歴は**1日1点まで**。同じ日に何度収集しても点は増えず、その日の点を
-        上書きする。値下がり・過去最安の判定は前日以前の点とだけ比較する
-        （同じ日の観測どうしを比べても意味がない）。
+        履歴は日付順・**1日1点**。同じ日の再観測は点を上書きする。
+        レシート取り込みで過去の日付が後から入ることがあるので、末尾追記では
+        なく日付順の位置へ挿入する。値下がり・過去最安の判定は「これが最新の
+        観測」のときだけ、前日以前の点と比較して返す（過去への挿入で今さら
+        通知を出しても意味がないため）。
         """
         if o.price is None:
             return None, False
@@ -142,34 +146,84 @@ class Store:
         entry["name"] = o.name or entry.get("name", "")
         points = entry["points"]
         today = on.isoformat()
+        is_latest = not points or today >= points[-1].get("on", "")
 
-        if points and points[-1].get("on") == today:
-            prior = points[:-1]
-            if points[-1].get("price") != o.price:
-                points[-1].update({"price": o.price,
-                                   "regular_price": o.regular_price,
-                                   "source": o.source})
-                points[-1].pop("until", None)
-        else:
-            prior = list(points)
-            last_price = next((p["price"] for p in reversed(prior)
-                               if isinstance(p.get("price"), int)), None)
-            if last_price != o.price:
-                points.append({
-                    "on": today,
-                    "price": o.price,
-                    "regular_price": o.regular_price,
-                    "source": o.source,
-                })
-            elif points:
-                # 同じ価格が続いている間は点を増やさず、最後に見た日だけ延ばす
-                points[-1]["until"] = today
-
-        prev_prices = [p["price"] for p in prior if isinstance(p.get("price"), int)]
+        idx = next((j for j, pt in enumerate(points)
+                    if pt.get("on", "") >= today), len(points))
+        prior = points[:idx]
+        prev_prices = [pt["price"] for pt in prior if isinstance(pt.get("price"), int)]
         last = prev_prices[-1] if prev_prices else None
+
+        if idx < len(points) and points[idx].get("on") == today:
+            if points[idx].get("price") != o.price:
+                points[idx].update({"price": o.price,
+                                    "regular_price": o.regular_price,
+                                    "source": o.source})
+                points[idx].pop("until", None)
+        elif idx == len(points) and last == o.price:
+            # 末尾に同じ価格が続くだけなら点を増やさず、最後に見た日を延ばす
+            if points:
+                points[-1]["until"] = today
+        else:
+            points.insert(idx, {
+                "on": today,
+                "price": o.price,
+                "regular_price": o.regular_price,
+                "source": o.source,
+            })
+
+        if not is_latest:
+            return None, False
         drop = (last - o.price) if (last is not None and o.price < last) else None
         lowest = bool(prev_prices) and o.price < min(prev_prices)
         return drop, lowest
+
+    # ------------------------------------------------------------ レシート
+    def load_purchases(self) -> list[dict]:
+        return _read_json(self.root / PURCHASES_FILE, [])
+
+    def merge_receipts(self, purchases: list[dict] | None = None) -> int:
+        """レシートの明細を「店頭で実際に付いていた価格」として履歴に入れる。
+
+        一覧(offers)には足さない — レシートはセール情報ではない。
+        同じレシートを何度取り込んでも結果は変わらない（同日上書き）。
+        戻り値は履歴に入れた明細の数。
+        """
+        if purchases is None:
+            purchases = self.load_purchases()
+        n = 0
+        for r in purchases:
+            try:
+                d = date.fromisoformat(str(r.get("date", "")))
+            except ValueError:
+                continue
+            for it in r.get("items", []):
+                no = re.sub(r"\D", "", str(it.get("item_no", "")))
+                price = it.get("price")
+                if not no or not isinstance(price, int):
+                    continue
+                o = Offer(name=str(it.get("name", "")), item_no=no,
+                          price=price, source="receipt").normalize(d)
+                self._record_price(o, d)
+                n += 1
+        return n
+
+    def last_purchases(self) -> dict:
+        """商品キー → 最後に買った記録 {on, price, coupon, effective}。"""
+        out: dict[str, dict] = {}
+        for r in self.load_purchases():
+            day = str(r.get("date", ""))
+            for it in r.get("items", []):
+                no = re.sub(r"\D", "", str(it.get("item_no", "")))
+                price = it.get("price")
+                if not no or not isinstance(price, int):
+                    continue
+                coupon = it.get("coupon") if isinstance(it.get("coupon"), int) else 0
+                cur = out.get("no:" + no)
+                if cur is None or day >= cur["on"]:
+                    out["no:" + no] = {"on": day, "price": price, "coupon": coupon,
+                                       "effective": price - coupon}
+        return out
 
     # ------------------------------------------------------------ 参照
     def price_stats(self, key: str) -> dict:

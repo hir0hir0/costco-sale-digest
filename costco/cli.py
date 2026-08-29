@@ -130,6 +130,10 @@ def _collect(args, store: Store) -> int:
     if removed:
         _p(f"終了済み {removed} 件を一覧から外しました（価格履歴は残しています）。")
 
+    got = store.merge_receipts()
+    if got:
+        _p(f"レシート: {got} 明細を価格履歴に反映")
+
     mode = images_mode(conf.get("images"))
     if mode == IMAGES_DOWNLOAD:
         got, failed = fetch_images(store.offers)
@@ -202,6 +206,9 @@ def cmd_backfill(args) -> int:
     removed = store.prune()
     if removed:
         _p(f"終了済み {removed} 件を一覧から外しました。")
+    got = store.merge_receipts()
+    if got:
+        _p(f"レシート: {got} 明細を価格履歴に反映")
     if args.dry_run:
         _p("\n--dry-run のため保存しませんでした。")
         return 0

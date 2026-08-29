@@ -56,6 +56,7 @@ def site_data(store: Store, on: date | None = None,
               images: str = IMAGES_LINK) -> dict:
     """サイトが読むJSONを組み立てる。並べ替えや絞り込みはブラウザ側でやる。"""
     on = on or today_jst()
+    bought = store.last_purchases()
     offers = []
     # 価格も値引きも読めなかったものは「安売りまとめ」として意味がないので載せない。
     # 終了日の書かれていないセールは、30日以上どのメールにも現れなくなったら
@@ -82,6 +83,11 @@ def site_data(store: Store, on: date | None = None,
             "history": stats["points"],
             "image_src": _image_src(o, images),
         })
+        lb = bought.get(o.key)
+        if lb:
+            d["last_bought"] = {"on": lb["on"], "price": lb["effective"]}
+            d["below_last_buy"] = bool(o.price is not None
+                                       and o.price < lb["effective"])
         # サイトが使うのは組み立て済みの image_src だけ
         d.pop("image_url", None)
         d.pop("image", None)

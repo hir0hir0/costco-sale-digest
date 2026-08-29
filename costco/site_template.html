@@ -91,6 +91,7 @@
   .b-end{ background:var(--warn-soft); color:var(--warn); }
   .b-new{ background:var(--accent-soft); color:var(--accent); }
   .b-cpn{ background:var(--accent); color:#fff; }
+  .b-buy{ background:var(--good-soft); color:var(--good); border:1px solid var(--good); }
   .name{ font-size:15px; font-weight:600; margin:0; word-break:break-word; }
   .pricerow{ display:flex; align-items:baseline; gap:9px; flex-wrap:wrap; }
   .price{ font-size:24px; font-weight:800; letter-spacing:-.02em; }
@@ -287,6 +288,8 @@ function card(o){
   else if (o.drop) badges.push(`<span class="badge b-drop">前回より ${yen(o.drop)} 安い</span>`);
   if (o.days_left != null && o.days_left <= 3)
     badges.push(`<span class="badge b-end">${o.days_left <= 0 ? "本日まで" : "あと" + o.days_left + "日"}</span>`);
+  if (o.below_last_buy)
+    badges.push(`<span class="badge b-buy">前回購入より安い</span>`);
   if (o.is_new) badges.push(`<span class="badge b-new">NEW</span>`);
 
   let price;
@@ -311,6 +314,8 @@ function card(o){
   if (o.item_no) meta.push("商品番号 " + esc(o.item_no));
   if (o.warehouse && o.warehouse !== "all") meta.push(esc(o.warehouse));
   if (o.lowest != null && o.history.length > 1) meta.push("過去最安 " + yen(o.lowest));
+  if (o.last_bought)
+    meta.push(`前回購入 ${yen(o.last_bought.price)} (${o.last_bought.on.slice(5).replace("-", "/")})`);
   if (o.source_url) meta.push(`<a href="${esc(o.source_url)}" target="_blank" rel="noopener">出典</a>`);
   else if (o.source_label) meta.push(esc(o.source_label));
 
