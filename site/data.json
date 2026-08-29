@@ -18,7 +18,7 @@
     "家電・雑貨",
     "その他"
   ],
-  "generated_at": "2026-08-29T12:25:51+09:00",
+  "generated_at": "2026-08-29T20:51:47+09:00",
   "hidden_no_price": 143,
   "hidden_stale": 513,
   "offers": [
@@ -12528,6 +12528,7 @@
       "warehouse": "all"
     },
     {
+      "below_last_buy": false,
       "category": "日用品",
       "confidence": 0.8,
       "days_left": null,
@@ -12540,19 +12541,27 @@
         {
           "on": "2026-07-13",
           "price": 1678
+        },
+        {
+          "on": "2026-08-29",
+          "price": 1998
         }
       ],
       "image_src": "https://www.costco.co.jp/medias/sys_master/images/h73/hfc/467171019292702.webp",
-      "is_lowest": false,
+      "is_lowest": true,
       "is_new": false,
       "item_no": "588141",
       "key": "no:588141",
       "kind": "sale",
+      "last_bought": {
+        "on": "2026-08-29",
+        "price": 1578
+      },
       "last_seen": "2026-08-28",
       "lowest": 1678,
       "name": "ミューズ ノータッチ 泡ハンドソープ 詰替え 250ml x4",
       "note": "",
-      "prev_price": null,
+      "prev_price": 1678,
       "price": 1678,
       "regular_price": 2098,
       "source": "mail",
@@ -16020,7 +16029,7 @@
   "stats": {
     "coupon": 0,
     "ending_soon": 3,
-    "lowest": 28,
+    "lowest": 29,
     "sale": 467,
     "total": 467
   },

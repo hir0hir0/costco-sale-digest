@@ -274,6 +274,17 @@
       }
     ]
   },
+  "no:153845": {
+    "name": "サンチュ 根付き",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 399,
+        "regular_price": null,
+        "source": "receipt"
+      }
+    ]
+  },
   "no:156047": {
     "name": "天板角度調整 昇降式テーブル",
     "points": [
@@ -1547,6 +1558,17 @@
       }
     ]
   },
+  "no:30669": {
+    "name": "バナナ 1.36kg",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 328,
+        "regular_price": null,
+        "source": "receipt"
+      }
+    ]
+  },
   "no:30912": {
     "name": "Ziploc コンテナー アソートセット 24組",
     "points": [
@@ -2489,6 +2511,17 @@
       }
     ]
   },
+  "no:515685": {
+    "name": "(判読不明)スティック 10PC",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 780,
+        "regular_price": null,
+        "source": "receipt"
+      }
+    ]
+  },
   "no:517611": {
     "name": "コントレックス ミネラルウォーター 1.5L x12本(硬水)",
     "points": [
@@ -2726,6 +2759,17 @@
         "regular_price": null,
         "source": "mail",
         "until": "2026-08-29"
+      }
+    ]
+  },
+  "no:53899": {
+    "name": "ソニャりんご",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 998,
+        "regular_price": null,
+        "source": "receipt"
       }
     ]
   },
@@ -3794,7 +3838,7 @@
     ]
   },
   "no:588141": {
-    "name": "ミューズ ノータッチ 泡ハンドソープ 詰替え 250ml x4",
+    "name": "MUSE ハンドソープ 4P",
     "points": [
       {
         "on": "2026-07-13",
@@ -3802,6 +3846,12 @@
         "regular_price": 2098,
         "source": "mail",
         "until": "2026-08-28"
+      },
+      {
+        "on": "2026-08-29",
+        "price": 1998,
+        "regular_price": null,
+        "source": "receipt"
       }
     ]
   },
@@ -4325,6 +4375,17 @@
       }
     ]
   },
+  "no:62295": {
+    "name": "(判読不明)1L×6",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 1788,
+        "regular_price": null,
+        "source": "receipt"
+      }
+    ]
+  },
   "no:62299": {
     "name": "スクラビングバブル最強トイレスタンプ本体 + 替7つ",
     "points": [
@@ -4838,6 +4899,17 @@
         "regular_price": 1398,
         "source": "mail",
         "until": "2026-08-29"
+      }
+    ]
+  },
+  "no:65997": {
+    "name": "栃木産コシヒカリ 5kg",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 2198,
+        "regular_price": null,
+        "source": "receipt"
       }
     ]
   },
@@ -10265,6 +10337,17 @@
       }
     ]
   },
+  "no:88880": {
+    "name": "国産鶏もも 2.5kg",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 2468,
+        "regular_price": null,
+        "source": "receipt"
+      }
+    ]
+  },
   "no:89015": {
     "name": "ビバリーヒルズ ポロ クラブ トートバッグ L 各色",
     "points": [
@@ -10548,6 +10631,39 @@
       }
     ]
   },
+  "no:90072": {
+    "name": "三元豚バラしゃぶしゃぶ",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 2953,
+        "regular_price": null,
+        "source": "receipt"
+      }
+    ]
+  },
+  "no:90150": {
+    "name": "四角ピザ パンチェッタ",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 1580,
+        "regular_price": null,
+        "source": "receipt"
+      }
+    ]
+  },
+  "no:90223": {
+    "name": "カルビ焼肉",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 2374,
+        "regular_price": null,
+        "source": "receipt"
+      }
+    ]
+  },
   "no:90271": {
     "name": "NEW ONLINE ONLY",
     "points": [
@@ -10638,6 +10754,17 @@
       }
     ]
   },
+  "no:93326": {
+    "name": "ミニバタークロワッサン 20P",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 899,
+        "regular_price": null,
+        "source": "receipt"
+      }
+    ]
+  },
   "no:99133": {
     "name": "【冷凍】さくらどり挽肉 2kg x3パック",
     "points": [
@@ -10646,6 +10773,17 @@
         "price": 7180,
         "regular_price": 7380,
         "source": "mail"
+      }
+    ]
+  },
+  "no:99604": {
+    "name": "豚焼肉赤身80%",
+    "points": [
+      {
+        "on": "2026-08-29",
+        "price": 1931,
+        "regular_price": null,
+        "source": "receipt"
       }
     ]
   }
