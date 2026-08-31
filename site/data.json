@@ -18,7 +18,7 @@
     "家電・雑貨",
     "その他"
   ],
-  "generated_at": "2026-08-31T09:03:11+09:00",
+  "generated_at": "2026-08-31T09:49:52+09:00",
   "hidden_no_price": 143,
   "hidden_stale": 545,
   "offers": [
@@ -14822,6 +14822,127 @@
       "source_url": "",
       "starts_on": "2026-08-17",
       "warehouse": "all"
+    }
+  ],
+  "purchases": [
+    {
+      "date": "2026-08-29",
+      "items": [
+        {
+          "coupon": 0,
+          "effective": 899,
+          "item_no": "93326",
+          "name": "ミニバタークロワッサン 20P",
+          "now": null,
+          "price": 899
+        },
+        {
+          "coupon": 0,
+          "effective": 2468,
+          "item_no": "88880",
+          "name": "国産鶏もも 2.5kg",
+          "now": null,
+          "price": 2468
+        },
+        {
+          "coupon": 0,
+          "effective": 2198,
+          "item_no": "65997",
+          "name": "栃木産コシヒカリ 5kg",
+          "now": null,
+          "price": 2198
+        },
+        {
+          "coupon": 0,
+          "effective": 780,
+          "item_no": "515685",
+          "name": "（判読不明）スティック 10PC",
+          "now": null,
+          "price": 780
+        },
+        {
+          "coupon": 0,
+          "effective": 1788,
+          "item_no": "62295",
+          "name": "（判読不明）1L×6",
+          "now": null,
+          "price": 1788
+        },
+        {
+          "coupon": 150,
+          "effective": 2803,
+          "item_no": "90072",
+          "name": "三元豚バラしゃぶしゃぶ",
+          "now": null,
+          "price": 2953
+        },
+        {
+          "coupon": 0,
+          "effective": 1931,
+          "item_no": "99604",
+          "name": "豚焼肉赤身80%",
+          "now": null,
+          "price": 1931
+        },
+        {
+          "coupon": 300,
+          "effective": 2013,
+          "item_no": "90223",
+          "name": "カルビ焼肉",
+          "now": null,
+          "price": 2313
+        },
+        {
+          "coupon": 300,
+          "effective": 2074,
+          "item_no": "90223",
+          "name": "カルビ焼肉",
+          "now": null,
+          "price": 2374
+        },
+        {
+          "coupon": 300,
+          "effective": 1280,
+          "item_no": "90150",
+          "name": "四角ピザ パンチェッタ",
+          "now": null,
+          "price": 1580
+        },
+        {
+          "coupon": 0,
+          "effective": 399,
+          "item_no": "153845",
+          "name": "サンチュ 根付き",
+          "now": null,
+          "price": 399
+        },
+        {
+          "coupon": 0,
+          "effective": 998,
+          "item_no": "53899",
+          "name": "ソニャりんご",
+          "now": null,
+          "price": 998
+        },
+        {
+          "coupon": 420,
+          "effective": 1578,
+          "item_no": "588141",
+          "name": "MUSE ハンドソープ 4P",
+          "now": 1678,
+          "price": 1998
+        },
+        {
+          "coupon": 0,
+          "effective": 328,
+          "item_no": "30669",
+          "name": "バナナ 1.36kg",
+          "now": null,
+          "price": 328
+        }
+      ],
+      "store": "◯◯倉庫店",
+      "total": *****
     }
   ],
   "stats": {
