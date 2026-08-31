@@ -93,6 +93,35 @@ def site_data(store: Store, on: date | None = None,
         d.pop("image", None)
         offers.append(d)
 
+    # 購入履歴タブ用。新しい順。掲載中のセールがあれば現在価格を並記する
+    now_price = {o["key"]: o["price"] for o in offers if o.get("price") is not None}
+    purchases = []
+    for r in sorted(store.load_purchases(), key=lambda x: str(x.get("date", "")),
+                    reverse=True):
+        items = []
+        for it in r.get("items", []):
+            no = "".join(ch for ch in str(it.get("item_no", "")) if ch.isdigit())
+            price = it.get("price")
+            if not isinstance(price, int):
+                continue
+            coupon = it.get("coupon") if isinstance(it.get("coupon"), int) else 0
+            items.append({
+                "item_no": no,
+                "name": str(it.get("name", "")),
+                "price": price,
+                "coupon": coupon,
+                "effective": price - coupon,
+                "now": now_price.get("no:" + no) if no else None,
+            })
+        if items:
+            purchases.append({
+                "date": str(r.get("date", "")),
+                "store": str(r.get("store", "")),
+                "total": r.get("total") if isinstance(r.get("total"), int) else
+                         sum(i["effective"] for i in items),
+                "items": items,
+            })
+
     used = [c for c in CATEGORIES if any(o["category"] == c for o in offers)]
     return {
         "title": SITE_TITLE,
@@ -101,6 +130,7 @@ def site_data(store: Store, on: date | None = None,
         "today": on.isoformat(),
         "categories": used,
         "offers": offers,
+        "purchases": purchases,
         "hidden_no_price": len(active) - len(listed),
         "hidden_stale": len(store.active(on)) - len(active),
         "stats": {

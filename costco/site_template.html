@@ -92,6 +92,24 @@
   .b-new{ background:var(--accent-soft); color:var(--accent); }
   .b-cpn{ background:var(--accent); color:#fff; }
   .b-buy{ background:var(--good-soft); color:var(--good); border:1px solid var(--good); }
+  /* 購入履歴 */
+  .rc{ background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:13px 14px; box-shadow:var(--shadow); }
+  .rc-head{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+    border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:4px; }
+  .rc-date{ font-size:15px; font-weight:700; }
+  .rc-store{ color:var(--sub); font-size:12px; }
+  .rc-total{ margin-left:auto; font-weight:800; font-variant-numeric:tabular-nums; }
+  .rc-row{ display:flex; align-items:baseline; gap:8px; padding:6px 0;
+    border-bottom:1px dashed var(--line); font-size:14px; }
+  .rc-row:last-child{ border-bottom:0; }
+  .rc-name{ flex:1; min-width:0; }
+  .rc-name small{ color:var(--sub); font-size:11px; margin-left:6px; }
+  .rc-cpn{ color:var(--good); font-size:12px; white-space:nowrap; }
+  .rc-price{ font-weight:600; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .rc-now{ font-size:11px; white-space:nowrap; color:var(--sub); }
+  .rc-now.cheap{ color:var(--good); font-weight:700; }
+  .msum{ display:flex; gap:7px; flex-wrap:wrap; margin-bottom:10px; }
   .name{ font-size:15px; font-weight:600; margin:0; word-break:break-word; }
   .pricerow{ display:flex; align-items:baseline; gap:9px; flex-wrap:wrap; }
   .price{ font-size:24px; font-weight:800; letter-spacing:-.02em; }
@@ -157,6 +175,7 @@
     <button class="tab" data-kind="sale" aria-selected="false">セール</button>
     <button class="tab" data-kind="coupon" aria-selected="false">クーポン</button>
     <button class="tab" data-kind="list" aria-selected="false">リスト</button>
+    <button class="tab" data-kind="bought" aria-selected="false">購入履歴</button>
   </div>
   <div class="cats" id="cats"></div>
 </div>
@@ -340,6 +359,62 @@ function card(o){
   </article>`;
 }
 
+function renderPurchases(){
+  const q = state.q.trim().toLowerCase();
+  const receipts = (DATA.purchases || []).map(r => {
+    const items = q
+      ? r.items.filter(i => q.split(/\s+/).every(
+          w => (i.name + " " + i.item_no).toLowerCase().includes(w)))
+      : r.items;
+    return { ...r, items };
+  }).filter(r => r.items.length);
+
+  // 月別合計（検索で絞っていないときだけ）
+  let head = "";
+  if (!q) {
+    const bym = {};
+    (DATA.purchases || []).forEach(r => {
+      const m = r.date.slice(0, 7);
+      bym[m] = bym[m] || { total: 0, n: 0 };
+      bym[m].total += r.total; bym[m].n += 1;
+    });
+    head = `<div class="msum">` + Object.keys(bym).sort().reverse().map(m =>
+      `<span class="stat">${m.replace("-", "/")}　<b>${yen(bym[m].total)}</b> / ${bym[m].n}回</span>`
+    ).join("") + `</div>`;
+  }
+
+  const cards = receipts.map(r => {
+    const rows = r.items.map(i => {
+      let now = "";
+      if (i.now != null) {
+        const cheap = i.now < i.effective;
+        now = `<span class="rc-now${cheap ? " cheap" : ""}">いま${yen(i.now)}${cheap ? "▼" : ""}</span>`;
+      }
+      const cpn = i.coupon ? `<span class="rc-cpn">−${yen(i.coupon)}</span>` : "";
+      const shown = i.coupon ? i.effective : i.price;
+      return `<div class="rc-row">
+        <span class="rc-name">${esc(i.name)}<small>#${esc(i.item_no)}</small></span>
+        ${now}${cpn}<span class="rc-price">${yen(shown)}</span>
+      </div>`;
+    }).join("");
+    const [y, mo, d] = r.date.split("-");
+    return `<article class="rc">
+      <div class="rc-head">
+        <span class="rc-date">${y}/${mo}/${d}</span>
+        <span class="rc-store">${esc(r.store)}・${r.items.length}点</span>
+        <span class="rc-total">${yen(r.total)}</span>
+      </div>${rows}</article>`;
+  }).join("");
+
+  const grid = $("#grid");
+  grid.style.display = "block";
+  grid.innerHTML = head + (cards ||
+    `<p class="empty">購入履歴はまだありません。レシートを写真に撮って Claude に「レシート取り込んで」と頼むと、ここに溜まっていきます。</p>`);
+  grid.querySelectorAll(".rc").forEach(el => { el.style.marginBottom = "10px"; });
+  $("#empty").hidden = true;
+  $("#listbar").classList.remove("show");
+}
+
 function renderList(){
   const items = DATA.offers.filter(o => list.has(o.key));
   const total = items.reduce((s, o) => s + (o.price || 0), 0);
@@ -351,6 +426,8 @@ function renderList(){
 }
 
 function render(){
+  if (state.kind === "bought") { renderPurchases(); return; }
+  $("#grid").style.display = "";
   const items = visible();
   $("#grid").innerHTML = items.map(card).join("");
   $("#empty").hidden = items.length > 0;
