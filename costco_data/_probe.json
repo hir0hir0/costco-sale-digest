@@ -1,566 +1,469 @@
 [
   {
-    "subject": "オンラインで出会える限定セレクション",
-    "date": "Sat, 15 Aug 2026 02:10:51 +0200",
     "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021105-mail-_.html",
+    "date": "Sat, 15 Aug 2026 02:10:51 +0200",
     "html_bytes": 58270,
-    "text_lines": 146,
-    "first_lines": [
-      "CostcoEDM_20260815",
-      "Members' Favorites",
-      "メールが正しく表示されない方は、こちら をご覧ください。",
-      "Costco",
-      "Costco Wholesale",
-      "title",
-      "東芝 601L 冷蔵庫",
-      "K18イエローゴールド シグネットリング 12号 約4.8g スクエア型",
-      "NEW",
-      "東芝 601L 冷蔵庫",
-      "ITEM #89557 ※他色あり",
-      "Shop Now >",
-      "NEW",
-      "K18イエローゴールド シグネットリング 12号 約4.8g スクエア型",
-      "ITEM #88842",
-      "Shop Now >",
-      "AUTHOR アラーム 自動車盗難防止 カーセキュリティ セット",
-      "PHILIPS LEDデスクライト 面発光モデル",
-      "AUTHOR アラーム 自動車盗難防止 カーセキュリティ セット",
-      "ITEM #195201"
-    ],
-    "price_line_groups": [],
-    "offers_extracted": 20,
     "offer_samples": [
       {
-        "name": "東芝 601L 冷蔵庫",
-        "price": null,
-        "regular_price": null,
         "item_no": "89557",
-        "period": "2026-08-15〜"
+        "name": "東芝 601L 冷蔵庫",
+        "period": "2026-08-15〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "K18イエローゴールド シグネットリング 12号 約4.8g スクエア型",
-        "price": null,
-        "regular_price": null,
         "item_no": "88842",
-        "period": "2026-08-15〜"
+        "name": "K18イエローゴールド シグネットリング 12号 約4.8g スクエア型",
+        "period": "2026-08-15〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "AUTHOR アラーム 自動車盗難防止 カーセキュリティ セット",
-        "price": null,
-        "regular_price": null,
         "item_no": "195201",
-        "period": "2026-08-15〜"
+        "name": "AUTHOR アラーム 自動車盗難防止 カーセキュリティ セット",
+        "period": "2026-08-15〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "PHILIPS LEDデスクライト 面発光モデル",
-        "price": null,
-        "regular_price": null,
         "item_no": "88836",
-        "period": "2026-08-15〜"
+        "name": "PHILIPS LEDデスクライト 面発光モデル",
+        "period": "2026-08-15〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "EKO デオドライザー ゴミ箱消臭剤 4個セット",
-        "price": null,
-        "regular_price": null,
         "item_no": "86543",
-        "period": "2026-08-15〜"
+        "name": "EKO デオドライザー ゴミ箱消臭剤 4個セット",
+        "period": "2026-08-15〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "山本珈琲 有機栽培珈琲 無糖1L x6本",
-        "price": null,
-        "regular_price": null,
         "item_no": "13220",
-        "period": "2026-08-15〜"
+        "name": "山本珈琲 有機栽培珈琲 無糖1L x6本",
+        "period": "2026-08-15〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "揖保乃糸 手延素麺 食べ比べセット 50g x15束",
-        "price": null,
-        "regular_price": null,
         "item_no": "55187",
-        "period": "2026-08-15〜"
+        "name": "揖保乃糸 手延素麺 食べ比べセット 50g x15束",
+        "period": "2026-08-15〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "横田屋本店 三陸産 カットくきわかめ 100g",
-        "price": null,
-        "regular_price": null,
         "item_no": "11142",
-        "period": "2026-08-15〜"
+        "name": "横田屋本店 三陸産 カットくきわかめ 100g",
+        "period": "2026-08-15〜",
+        "price": null,
+        "regular_price": null
       }
-    ]
-  },
-  {
-    "subject": "もしもの時に備えよう / Disaster Prevention",
-    "date": "Mon, 17 Aug 2026 11:15:23 +0200",
-    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021105-mail-_Disaster_Prevention.html",
-    "html_bytes": 101726,
-    "text_lines": 423,
-    "first_lines": [
-      "CostcoEDM_20260817",
-      "【 Hot Buys / Canada Focus 】",
-      "メールが正しく表示されない方は、こちら をご覧ください。",
-      "Costco",
-      "Costco Wholesale",
-      "auto",
-      "EcoFlow ポータブル電源 DELTA 3 Max 容量2,048Wh",
-      "RHYTHM 防災スピーカー",
-      "EcoFlow ポータブル電源 DELTA 3 Max 容量2,048Wh",
-      "DELTA 3 Max EFD3M-G-JP-CBOX",
-      "ITEM #84629",
-      "HOT BUY ONLINE ONLY",
-      "RHYTHM 防災スピーカー",
-      "Crank Speaker",
-      "ITEM #80428 ※他色あり",
-      "¥91,980",
-      "Shop Now >",
-      "Price",
-      "¥11,480",
-      "Off"
     ],
+    "offers_extracted": 20,
     "price_line_groups": [],
-    "offers_extracted": 44,
-    "offer_samples": [
-      {
-        "name": "EcoFlow ポータブル電源 DELTA 3 Max 容量2,048Wh",
-        "price": null,
-        "regular_price": null,
-        "item_no": "84629",
-        "period": "2026-08-17〜"
-      },
-      {
-        "name": "RHYTHM 防災スピーカー",
-        "price": 9980,
-        "regular_price": 11480,
-        "item_no": "80428",
-        "period": "2026-08-17〜"
-      },
-      {
-        "name": "IGLOO マックスコールド クーラーボックス 142L",
-        "price": null,
-        "regular_price": null,
-        "item_no": "1872195",
-        "period": "2026-08-17〜"
-      },
-      {
-        "name": "Coleman コンバーター コット2",
-        "price": 29800,
-        "regular_price": null,
-        "item_no": "80315",
-        "period": "2026-08-17〜"
-      },
-      {
-        "name": "Iwatani カセットガス スモークレスグリル やきまるビッグ",
-        "price": null,
-        "regular_price": null,
-        "item_no": "84884",
-        "period": "2026-08-17〜"
-      },
-      {
-        "name": "Iwatani カセットガスコンロ 風まるIII",
-        "price": 5698,
-        "regular_price": 10398,
-        "item_no": "55719",
-        "period": "2026-08-17〜"
-      },
-      {
-        "name": "Iwatani ガスボンベ 12本入",
-        "price": null,
-        "regular_price": null,
-        "item_no": "535557",
-        "period": "2026-08-17〜"
-      },
-      {
-        "name": "カメリオン ライト付キャンプ ファン 3段階調節",
-        "price": 2988,
-        "regular_price": 5488,
-        "item_no": "1819576",
-        "period": "2026-08-17〜"
-      }
-    ]
-  },
-  {
-    "subject": "今週の新商品をご紹介 / New Items",
-    "date": "Tue, 18 Aug 2026 11:11:55 +0200",
-    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021106-mail-_New_Items.html",
-    "html_bytes": 50099,
-    "text_lines": 123,
-    "first_lines": [
-      "CostcoEDM_20260818",
-      "あなたの暮らしに、新しいお気に入りを。",
-      "メールが正しく表示されない方は、こちら をご覧ください。",
-      "Costco",
-      "Costco Wholesale",
-      "auto",
-      "日立 735L冷蔵庫 R-WXC74W-X",
-      "シャープ 11kg ドラム式洗濯乾燥機 ES-11K1",
-      "日立 735L冷蔵庫 R-WXC74W-X",
-      "ITEM #88695",
-      "Shop",
-      "Now >",
-      "シャープ 11kg ドラム式洗濯乾燥機 ES-11K1",
-      "ITEM #89260",
-      "Shop",
-      "Now >",
-      "アラジン グラファイトトースター",
-      "カーナビがスマホに早変わり OTTOCAST P3 PRO AI ボックス",
-      "アラジン グラファイトトースター",
-      "ITEM #88173 ※他色あり"
-    ],
-    "price_line_groups": [],
-    "offers_extracted": 16,
-    "offer_samples": [
-      {
-        "name": "日立 735L冷蔵庫 R-WXC74W-X",
-        "price": null,
-        "regular_price": null,
-        "item_no": "88695",
-        "period": "2026-08-18〜"
-      },
-      {
-        "name": "シャープ 11kg ドラム式洗濯乾燥機 ES-11K1",
-        "price": null,
-        "regular_price": null,
-        "item_no": "89260",
-        "period": "2026-08-18〜"
-      },
-      {
-        "name": "アラジン グラファイトトースター",
-        "price": null,
-        "regular_price": null,
-        "item_no": "88173",
-        "period": "2026-08-18〜"
-      },
-      {
-        "name": "OTTOCAST P3 PRO AI ボックス",
-        "price": null,
-        "regular_price": null,
-        "item_no": "923151",
-        "period": "2026-08-18〜"
-      },
-      {
-        "name": "GUCCI サングラス GG1897SK-54-002",
-        "price": null,
-        "regular_price": null,
-        "item_no": "626707",
-        "period": "2026-08-18〜"
-      },
-      {
-        "name": "南洋真珠ピアス 18K イエローゴールド",
-        "price": null,
-        "regular_price": null,
-        "item_no": "563011",
-        "period": "2026-08-18〜"
-      },
-      {
-        "name": "グリムストーンガーゴイル 約2.2m",
-        "price": null,
-        "regular_price": null,
-        "item_no": "1851577",
-        "period": "2026-08-18〜"
-      },
-      {
-        "name": "ベストウェイ ファンタスティック アクアリウム プレイセンター",
-        "price": null,
-        "regular_price": null,
-        "item_no": "88653",
-        "period": "2026-08-18〜"
-      }
-    ]
-  },
-  {
-    "subject": "ベビーグッズ特集 / Baby Fair",
-    "date": "Wed, 19 Aug 2026 11:09:03 +0200",
-    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021106-mail-_Baby_Fair.html",
-    "html_bytes": 100749,
-    "text_lines": 459,
-    "first_lines": [
-      "CostcoEDMTemplateWednesday",
-      "【 Back to School / Hot Deals 】",
-      "メールが正しく表示されない方は、こちら をご覧ください。",
-      "Costco",
-      "Costco Wholesale",
-      "auto",
-      "メリーズ 素肌さらさらエアスルー パンツ Mサイズ 186枚",
-      "パンパース さらさらケアEXパンツ Lサイズ (9-14kg) 180枚 (60枚x3パック)",
-      "HOT BUY",
-      "メリーズ 素肌さらさらエアスルー パンツ M/L/ビッグ 各サイズ",
-      "MERRIES DIAPER PANTS M/L/XL",
-      "ITEM #67490 #67491 #67492",
-      "パンパース さらさらケアEXパンツ Lサイズ (9-14kg) 180枚 (60枚x3パック)",
-      "Pampers Sarasara EX Pants L",
-      "ITEM #82786",
-      "Price",
-      "¥4,780",
-      "Off",
-      "¥600",
-      "¥4,180"
-    ],
-    "price_line_groups": [],
-    "offers_extracted": 44,
-    "offer_samples": [
-      {
-        "name": "メリーズ 素肌さらさらエアスルー パンツ M/L/ビッグ 各サイズ",
-        "price": null,
-        "regular_price": null,
-        "item_no": "67490",
-        "period": "2026-08-19〜"
-      },
-      {
-        "name": "パンパース さらさらケアEXパンツ Lサイズ (9-14kg) 180枚 (60枚x3パック)",
-        "price": 4180,
-        "regular_price": 4780,
-        "item_no": "82786",
-        "period": "2026-08-19〜"
-      },
-      {
-        "name": "水99.9%ふんわりプラスおしりふき 70枚x15個パック 1050枚",
-        "price": null,
-        "regular_price": null,
-        "item_no": "14110",
-        "period": "2026-08-19〜"
-      },
-      {
-        "name": "Baby Pure UVクリーム 50g",
-        "price": 1848,
-        "regular_price": 1880,
-        "item_no": "62344",
-        "period": "2026-08-19〜"
-      },
-      {
-        "name": "森永 やさいジュレ 24個セット",
-        "price": null,
-        "regular_price": null,
-        "item_no": "59415",
-        "period": "2026-08-19〜"
-      },
-      {
-        "name": "セノビック 84g x4袋 各種",
-        "price": 1998,
-        "regular_price": 3480,
-        "item_no": "44848",
-        "period": "2026-08-19〜"
-      },
-      {
-        "name": "ディズニー ぬいぐるみ バッグ 各種",
-        "price": null,
-        "regular_price": null,
-        "item_no": "82855",
-        "period": "2026-08-19〜"
-      },
-      {
-        "name": "あつまれどうぶつの森 キャリー バッグ ぬいぐるみ & キーチェーン 5個セット",
-        "price": 2898,
-        "regular_price": 3498,
-        "item_no": "81352",
-        "period": "2026-08-19〜"
-      }
-    ]
-  },
-  {
-    "subject": "週末のお買得商品 / Weekend Pick Up",
-    "date": "Fri, 21 Aug 2026 11:16:41 +0200",
-    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021106-mail-_Weekend_Pick_Up.html",
-    "html_bytes": 98734,
-    "text_lines": 498,
-    "first_lines": [
-      "CostcoEDM_20260821",
-      "【 Last Minute Summer Outdoor 】",
-      "メールが正しく表示されない方は、こちら をご覧ください。",
-      "Costco",
-      "Costco Wholesale",
-      "auto",
-      "Yardistry グリーンハウス 木製温室 2.4x3.0m",
-      "アジオ Stinsley 屋外用 ダイニング 7点セット",
-      "HOT BUY ONLINE ONLY",
-      "Yardistry グリーンハウス 木製温室 2.4x3.0m",
-      "8x10' Cedar Greenhouse",
-      "ITEM #1713422",
-      "HOT BUY ONLINE ONLY",
-      "Agio Stinsley 屋外用 ダイニング 7点セット",
-      "Outdoor Dining 7-piece Set",
-      "ITEM #1933965",
-      "Price",
-      "¥348,000",
-      "Off",
-      "¥60,000"
-    ],
-    "price_line_groups": [],
-    "offers_extracted": 44,
-    "offer_samples": [
-      {
-        "name": "Yardistry グリーンハウス 木製温室 2.4x3.0m",
-        "price": null,
-        "regular_price": null,
-        "item_no": "1713422",
-        "period": "2026-08-21〜"
-      },
-      {
-        "name": "Agio Stinsley 屋外用 ダイニング 7点セット",
-        "price": 288000,
-        "regular_price": 348000,
-        "item_no": "1933965",
-        "period": "2026-08-21〜"
-      },
-      {
-        "name": "Thomasville 布製モジュラーソファ6ピース ダークグレイ 収納オットマン付",
-        "price": null,
-        "regular_price": null,
-        "item_no": "1782774",
-        "period": "2026-08-21〜"
-      },
-      {
-        "name": "AIDEN & IVY ファブリックセクショナルソファ",
-        "price": 149800,
-        "regular_price": 189800,
-        "item_no": "78522",
-        "period": "2026-08-21〜"
-      },
-      {
-        "name": "ACE EXACT カーボン柄スーツケース 機内持込みサイズ",
-        "price": null,
-        "regular_price": null,
-        "item_no": "84145",
-        "period": "2026-08-21〜"
-      },
-      {
-        "name": "Sonicare ホワイトプラス ブラシヘッド 8本",
-        "price": 9500,
-        "regular_price": 11180,
-        "item_no": "74223",
-        "period": "2026-08-21〜"
-      },
-      {
-        "name": "Thermoflask 真空断熱ステンレスボトル 0.71L 2本セット 各色",
-        "price": null,
-        "regular_price": null,
-        "item_no": "1730866",
-        "period": "2026-08-21〜"
-      },
-      {
-        "name": "ムーミン 小皿 8枚",
-        "price": 2999,
-        "regular_price": 3498,
-        "item_no": "73256",
-        "period": "2026-08-21〜"
-      }
-    ]
-  },
-  {
     "subject": "オンラインで出会える限定セレクション",
-    "date": "Sat, 22 Aug 2026 02:06:39 +0200",
-    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021107-mail-_.html",
-    "html_bytes": 63079,
-    "text_lines": 150,
-    "first_lines": [
-      "CostcoEDM_20260725",
-      "Big and Bulky",
-      "メールが正しく表示されない方は、こちら をご覧ください。",
-      "Costco",
-      "Costco Wholesale",
-      "title",
-      "ピュア 電動キックボード アドヴァンス",
-      "DJI Power 1000 Mini ポータブル電源 ホワイト 1008Wh",
-      "ピュア 電動キックボード アドヴァンス",
-      "ITEM #78984",
-      "Shop Now >",
-      "DJI Power 1000 Mini ポータブル電源 ホワイト 1008Wh",
-      "ITEM #87145",
-      "Shop Now >",
-      "SUZUKID SPADA15フォルテ エアープラズマ切断機 100V専用 APC-15S",
-      "SPICERR ポケッタブル高圧洗浄機",
-      "SUZUKID SPADA15フォルテ エアープラズマ切断機 100V専用 APC-15S",
-      "ITEM #46451",
-      "Shop Now >",
-      "SPICERR ポケッタブル高圧洗浄機"
-    ],
-    "price_line_groups": [],
-    "offers_extracted": 23,
-    "offer_samples": [
-      {
-        "name": "ピュア 電動キックボード アドヴァンス",
-        "price": null,
-        "regular_price": null,
-        "item_no": "78984",
-        "period": "2026-08-22〜"
-      },
-      {
-        "name": "DJI Power 1000 Mini ポータブル電源 ホワイト 1008Wh",
-        "price": null,
-        "regular_price": null,
-        "item_no": "87145",
-        "period": "2026-08-22〜"
-      },
-      {
-        "name": "SUZUKID SPADA15フォルテ エアープラズマ切断機 100V専用 APC-15S",
-        "price": null,
-        "regular_price": null,
-        "item_no": "46451",
-        "period": "2026-08-22〜"
-      },
-      {
-        "name": "SPICERR ポケッタブル高圧洗浄機",
-        "price": null,
-        "regular_price": null,
-        "item_no": "80614",
-        "period": "2026-08-22〜"
-      },
-      {
-        "name": "PETKIT ペットドライヤーボックス オゾン殺菌モード COPD10PRO",
-        "price": null,
-        "regular_price": null,
-        "item_no": "75574",
-        "period": "2026-08-22〜"
-      },
-      {
-        "name": "LG 空気清浄機 PuriCareTM Pet Gen3 AS657DWT2",
-        "price": null,
-        "regular_price": null,
-        "item_no": "88528",
-        "period": "2026-08-22〜"
-      },
-      {
-        "name": "スコッティ トイレットティシュー フラワーパック 3倍長持ち 12ロール",
-        "price": null,
-        "regular_price": null,
-        "item_no": "29145",
-        "period": "2026-08-22〜"
-      },
-      {
-        "name": "エルモア ティシュー 200組 1ケース5箱入り x 12パック",
-        "price": null,
-        "regular_price": null,
-        "item_no": "58147",
-        "period": "2026-08-22〜"
-      }
-    ]
+    "text_lines": 146
   },
   {
-    "subject": "お得に新学期の準備をするならコストコで / Back to School",
-    "date": "Mon, 24 Aug 2026 11:19:40 +0200",
-    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021107-mail-_Back_to_School.html",
-    "html_bytes": 101750,
-    "text_lines": 486,
-    "first_lines": [
-      "CostcoEDM_20250804",
-      "【 Hot Buys 】",
-      "メールが正しく表示されない方は、こちら をご覧ください。",
-      "Costco",
-      "Costco Wholesale",
-      "auto",
-      "ASUS ノートPC/Vivoboook S/15.6”/Copilot+/Snapdragon X Plus 1TB",
-      "ACER ノートPC/14.0インチ/Core Ultra5 115U/メモリ 16GB/SSD 512GB/-/SF",
-      "LAST CHANCE",
-      "ASUS ノートPC/Vivoboook S/15.6”/Copilot+/Snapdragon X Plus 1TB",
-      "Laptop/Vivobook S/15.6\"/Snapdragon X1P-42-100/16GB/SSD 1TB/S5507QA-PUCOSI",
-      "ITEM #70994",
-      "HOT BUY NEW",
-      "ACER ノートPC/14.0インチ/Core Ultra5 115U/メモリ 16GB/SSD 512GB/SF",
-      "Laptop / 14.0-inch / Ultra 5 115U / 16GB Memory / 512GB /SFL14-54MP-F56Y/SF",
-      "ITEM #86792",
-      "¥165,997",
-      "Shop Now >",
-      "Price",
-      "¥139,800"
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021105-mail-_Disaster_Prevention.html",
+    "date": "Mon, 17 Aug 2026 11:15:23 +0200",
+    "html_bytes": 101726,
+    "offer_samples": [
+      {
+        "item_no": "84629",
+        "name": "EcoFlow ポータブル電源 DELTA 3 Max 容量2,048Wh",
+        "period": "2026-08-17〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "80428",
+        "name": "RHYTHM 防災スピーカー",
+        "period": "2026-08-17〜",
+        "price": 9980,
+        "regular_price": 11480
+      },
+      {
+        "item_no": "1872195",
+        "name": "IGLOO マックスコールド クーラーボックス 142L",
+        "period": "2026-08-17〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "80315",
+        "name": "Coleman コンバーター コット2",
+        "period": "2026-08-17〜",
+        "price": 29800,
+        "regular_price": null
+      },
+      {
+        "item_no": "84884",
+        "name": "Iwatani カセットガス スモークレスグリル やきまるビッグ",
+        "period": "2026-08-17〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "55719",
+        "name": "Iwatani カセットガスコンロ 風まるIII",
+        "period": "2026-08-17〜",
+        "price": 5698,
+        "regular_price": 10398
+      },
+      {
+        "item_no": "535557",
+        "name": "Iwatani ガスボンベ 12本入",
+        "period": "2026-08-17〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "1819576",
+        "name": "カメリオン ライト付キャンプ ファン 3段階調節",
+        "period": "2026-08-17〜",
+        "price": 2988,
+        "regular_price": 5488
+      }
     ],
+    "offers_extracted": 44,
+    "price_line_groups": [],
+    "subject": "もしもの時に備えよう / Disaster Prevention",
+    "text_lines": 423
+  },
+  {
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021106-mail-_New_Items.html",
+    "date": "Tue, 18 Aug 2026 11:11:55 +0200",
+    "html_bytes": 50099,
+    "offer_samples": [
+      {
+        "item_no": "88695",
+        "name": "日立 735L冷蔵庫 R-WXC74W-X",
+        "period": "2026-08-18〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "89260",
+        "name": "シャープ 11kg ドラム式洗濯乾燥機 ES-11K1",
+        "period": "2026-08-18〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "88173",
+        "name": "アラジン グラファイトトースター",
+        "period": "2026-08-18〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "923151",
+        "name": "OTTOCAST P3 PRO AI ボックス",
+        "period": "2026-08-18〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "626707",
+        "name": "GUCCI サングラス GG1897SK-54-002",
+        "period": "2026-08-18〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "563011",
+        "name": "南洋真珠ピアス 18K イエローゴールド",
+        "period": "2026-08-18〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "1851577",
+        "name": "グリムストーンガーゴイル 約2.2m",
+        "period": "2026-08-18〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "88653",
+        "name": "ベストウェイ ファンタスティック アクアリウム プレイセンター",
+        "period": "2026-08-18〜",
+        "price": null,
+        "regular_price": null
+      }
+    ],
+    "offers_extracted": 16,
+    "price_line_groups": [],
+    "subject": "今週の新商品をご紹介 / New Items",
+    "text_lines": 123
+  },
+  {
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021106-mail-_Baby_Fair.html",
+    "date": "Wed, 19 Aug 2026 11:09:03 +0200",
+    "html_bytes": 100749,
+    "offer_samples": [
+      {
+        "item_no": "67490",
+        "name": "メリーズ 素肌さらさらエアスルー パンツ M/L/ビッグ 各サイズ",
+        "period": "2026-08-19〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "82786",
+        "name": "パンパース さらさらケアEXパンツ Lサイズ (9-14kg) 180枚 (60枚x3パック)",
+        "period": "2026-08-19〜",
+        "price": 4180,
+        "regular_price": 4780
+      },
+      {
+        "item_no": "14110",
+        "name": "水99.9%ふんわりプラスおしりふき 70枚x15個パック 1050枚",
+        "period": "2026-08-19〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "62344",
+        "name": "Baby Pure UVクリーム 50g",
+        "period": "2026-08-19〜",
+        "price": 1848,
+        "regular_price": 1880
+      },
+      {
+        "item_no": "59415",
+        "name": "森永 やさいジュレ 24個セット",
+        "period": "2026-08-19〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "44848",
+        "name": "セノビック 84g x4袋 各種",
+        "period": "2026-08-19〜",
+        "price": 1998,
+        "regular_price": 3480
+      },
+      {
+        "item_no": "82855",
+        "name": "ディズニー ぬいぐるみ バッグ 各種",
+        "period": "2026-08-19〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "81352",
+        "name": "あつまれどうぶつの森 キャリー バッグ ぬいぐるみ & キーチェーン 5個セット",
+        "period": "2026-08-19〜",
+        "price": 2898,
+        "regular_price": 3498
+      }
+    ],
+    "offers_extracted": 44,
+    "price_line_groups": [],
+    "subject": "ベビーグッズ特集 / Baby Fair",
+    "text_lines": 459
+  },
+  {
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021106-mail-_Weekend_Pick_Up.html",
+    "date": "Fri, 21 Aug 2026 11:16:41 +0200",
+    "html_bytes": 98734,
+    "offer_samples": [
+      {
+        "item_no": "1713422",
+        "name": "Yardistry グリーンハウス 木製温室 2.4x3.0m",
+        "period": "2026-08-21〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "1933965",
+        "name": "Agio Stinsley 屋外用 ダイニング 7点セット",
+        "period": "2026-08-21〜",
+        "price": 288000,
+        "regular_price": 348000
+      },
+      {
+        "item_no": "1782774",
+        "name": "Thomasville 布製モジュラーソファ6ピース ダークグレイ 収納オットマン付",
+        "period": "2026-08-21〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "78522",
+        "name": "AIDEN & IVY ファブリックセクショナルソファ",
+        "period": "2026-08-21〜",
+        "price": 149800,
+        "regular_price": 189800
+      },
+      {
+        "item_no": "84145",
+        "name": "ACE EXACT カーボン柄スーツケース 機内持込みサイズ",
+        "period": "2026-08-21〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "74223",
+        "name": "Sonicare ホワイトプラス ブラシヘッド 8本",
+        "period": "2026-08-21〜",
+        "price": 9500,
+        "regular_price": 11180
+      },
+      {
+        "item_no": "1730866",
+        "name": "Thermoflask 真空断熱ステンレスボトル 0.71L 2本セット 各色",
+        "period": "2026-08-21〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "73256",
+        "name": "ムーミン 小皿 8枚",
+        "period": "2026-08-21〜",
+        "price": 2999,
+        "regular_price": 3498
+      }
+    ],
+    "offers_extracted": 44,
+    "price_line_groups": [],
+    "subject": "週末のお買得商品 / Weekend Pick Up",
+    "text_lines": 498
+  },
+  {
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021107-mail-_.html",
+    "date": "Sat, 22 Aug 2026 02:06:39 +0200",
+    "html_bytes": 63079,
+    "offer_samples": [
+      {
+        "item_no": "78984",
+        "name": "ピュア 電動キックボード アドヴァンス",
+        "period": "2026-08-22〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "87145",
+        "name": "DJI Power 1000 Mini ポータブル電源 ホワイト 1008Wh",
+        "period": "2026-08-22〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "46451",
+        "name": "SUZUKID SPADA15フォルテ エアープラズマ切断機 100V専用 APC-15S",
+        "period": "2026-08-22〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "80614",
+        "name": "SPICERR ポケッタブル高圧洗浄機",
+        "period": "2026-08-22〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "75574",
+        "name": "PETKIT ペットドライヤーボックス オゾン殺菌モード COPD10PRO",
+        "period": "2026-08-22〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "88528",
+        "name": "LG 空気清浄機 PuriCareTM Pet Gen3 AS657DWT2",
+        "period": "2026-08-22〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "29145",
+        "name": "スコッティ トイレットティシュー フラワーパック 3倍長持ち 12ロール",
+        "period": "2026-08-22〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "58147",
+        "name": "エルモア ティシュー 200組 1ケース5箱入り x 12パック",
+        "period": "2026-08-22〜",
+        "price": null,
+        "regular_price": null
+      }
+    ],
+    "offers_extracted": 23,
+    "price_line_groups": [],
+    "subject": "オンラインで出会える限定セレクション",
+    "text_lines": 150
+  },
+  {
+    "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021107-mail-_Back_to_School.html",
+    "date": "Mon, 24 Aug 2026 11:19:40 +0200",
+    "html_bytes": 101750,
+    "offer_samples": [
+      {
+        "item_no": "70994",
+        "name": "ASUS ノートPC/Vivoboook S/15.6”/Copilot+/Snapdragon X Plus 1TB",
+        "period": "2026-08-24〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "86792",
+        "name": "ACER ノートPC/14.0インチ/Core Ultra5 115U/メモリ 16GB/SSD 512GB/SF",
+        "period": "2026-08-24〜",
+        "price": 126800,
+        "regular_price": 139800
+      },
+      {
+        "item_no": "90273",
+        "name": "NEW ONLINE ONLY",
+        "period": "2026-03-14〜",
+        "price": 126800,
+        "regular_price": null
+      },
+      {
+        "item_no": "90271",
+        "name": "NEW ONLINE ONLY",
+        "period": "2026-08-24〜",
+        "price": 149800,
+        "regular_price": 169800
+      },
+      {
+        "item_no": "77029",
+        "name": "GTRACING エルゴノミックゲーミングチェア",
+        "period": "2026-08-24〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "83664",
+        "name": "Shokz オープンイヤー型イヤホン Shokz Opendots ONE SE",
+        "period": "2026-08-24〜",
+        "price": 13480,
+        "regular_price": 16980
+      },
+      {
+        "item_no": "61657",
+        "name": "Belkin BoostCharge Pro Qi2 2-in-1 ワイヤレス充電パッド 15W",
+        "period": "2026-08-24〜",
+        "price": null,
+        "regular_price": null
+      },
+      {
+        "item_no": "66901",
+        "name": "ビオレ Zero シート 20枚入x4",
+        "period": "2026-08-24〜",
+        "price": 1439,
+        "regular_price": 1799
+      }
+    ],
+    "offers_extracted": 44,
     "price_line_groups": [
       {
         "at": 253,
@@ -641,153 +544,74 @@
         ]
       }
     ],
-    "offers_extracted": 44,
-    "offer_samples": [
-      {
-        "name": "ASUS ノートPC/Vivoboook S/15.6”/Copilot+/Snapdragon X Plus 1TB",
-        "price": null,
-        "regular_price": null,
-        "item_no": "70994",
-        "period": "2026-08-24〜"
-      },
-      {
-        "name": "ACER ノートPC/14.0インチ/Core Ultra5 115U/メモリ 16GB/SSD 512GB/SF",
-        "price": 126800,
-        "regular_price": 139800,
-        "item_no": "86792",
-        "period": "2026-08-24〜"
-      },
-      {
-        "name": "NEW ONLINE ONLY",
-        "price": 126800,
-        "regular_price": null,
-        "item_no": "90273",
-        "period": "2026-03-14〜"
-      },
-      {
-        "name": "NEW ONLINE ONLY",
-        "price": 149800,
-        "regular_price": 169800,
-        "item_no": "90271",
-        "period": "2026-08-24〜"
-      },
-      {
-        "name": "GTRACING エルゴノミックゲーミングチェア",
-        "price": null,
-        "regular_price": null,
-        "item_no": "77029",
-        "period": "2026-08-24〜"
-      },
-      {
-        "name": "Shokz オープンイヤー型イヤホン Shokz Opendots ONE SE",
-        "price": 13480,
-        "regular_price": 16980,
-        "item_no": "83664",
-        "period": "2026-08-24〜"
-      },
-      {
-        "name": "Belkin BoostCharge Pro Qi2 2-in-1 ワイヤレス充電パッド 15W",
-        "price": null,
-        "regular_price": null,
-        "item_no": "61657",
-        "period": "2026-08-24〜"
-      },
-      {
-        "name": "ビオレ Zero シート 20枚入x4",
-        "price": 1439,
-        "regular_price": 1799,
-        "item_no": "66901",
-        "period": "2026-08-24〜"
-      }
-    ]
+    "subject": "お得に新学期の準備をするならコストコで / Back to School",
+    "text_lines": 486
   },
   {
-    "subject": "今週の新商品をご紹介 / New Items",
-    "date": "Tue, 25 Aug 2026 11:12:36 +0200",
     "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260826-021107-mail-_New_Items.html",
+    "date": "Tue, 25 Aug 2026 11:12:36 +0200",
     "html_bytes": 50265,
-    "text_lines": 109,
-    "first_lines": [
-      "CostcoEDM_20260825",
-      "あなたの暮らしに、新しいお気に入りを。",
-      "メールが正しく表示されない方は、こちら をご覧ください。",
-      "Costco",
-      "Costco Wholesale",
-      "auto",
-      "純金 バングルリング",
-      "ITEM #660196",
-      "Shop",
-      "Now >",
-      "黒蝶真珠 18Kホワイトゴールド 0.24ct ピアス",
-      "ITEM #537625",
-      "Shop",
-      "Now >",
-      "ONLINE ONLY",
-      "U-NEXT ギフトコード 50,000ポイント",
-      "ITEM #89251",
-      "Shop",
-      "Now >",
-      "ONLINE ONLY"
-    ],
-    "price_line_groups": [],
-    "offers_extracted": 16,
     "offer_samples": [
       {
-        "name": "純金 バングルリング",
-        "price": null,
-        "regular_price": null,
         "item_no": "660196",
-        "period": "2026-08-25〜"
+        "name": "純金 バングルリング",
+        "period": "2026-08-25〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "黒蝶真珠 18Kホワイトゴールド 0.24ct ピアス",
-        "price": null,
-        "regular_price": null,
         "item_no": "537625",
-        "period": "2026-08-25〜"
+        "name": "黒蝶真珠 18Kホワイトゴールド 0.24ct ピアス",
+        "period": "2026-08-25〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "U-NEXT ギフトコード 50,000ポイント",
-        "price": null,
-        "regular_price": null,
         "item_no": "89251",
-        "period": "2026-08-25〜"
+        "name": "U-NEXT ギフトコード 50,000ポイント",
+        "period": "2026-08-25〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "ソノス Sonos PLAY ポータブルスピーカー",
-        "price": null,
-        "regular_price": null,
         "item_no": "87358",
-        "period": "2026-08-25〜"
+        "name": "ソノス Sonos PLAY ポータブルスピーカー",
+        "period": "2026-08-25〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "クイジナート アイスクリームメーカー コンプレッサー式 ICE-90PCJ",
-        "price": null,
-        "regular_price": null,
         "item_no": "90548",
-        "period": "2026-08-25〜"
+        "name": "クイジナート アイスクリームメーカー コンプレッサー式 ICE-90PCJ",
+        "period": "2026-08-25〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "マルチシェフ 1.2L 3スピードブレンダー MC-123DBL",
-        "price": null,
-        "regular_price": null,
         "item_no": "90547",
-        "period": "2026-08-25〜"
+        "name": "マルチシェフ 1.2L 3スピードブレンダー MC-123DBL",
+        "period": "2026-08-25〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "ブラウン 電動シェーバー シリーズ8 8663CC",
-        "price": null,
-        "regular_price": null,
         "item_no": "89184",
-        "period": "2026-08-25〜"
+        "name": "ブラウン 電動シェーバー シリーズ8 8663CC",
+        "period": "2026-08-25〜",
+        "price": null,
+        "regular_price": null
       },
       {
-        "name": "Bebird スマート 耳かき Note 6 コストコモデル",
-        "price": null,
-        "regular_price": null,
         "item_no": "90723",
-        "period": "2026-08-25〜"
+        "name": "Bebird スマート 耳かき Note 6 コストコモデル",
+        "period": "2026-08-25〜",
+        "price": null,
+        "regular_price": null
       }
-    ]
+    ],
+    "offers_extracted": 16,
+    "price_line_groups": [],
+    "subject": "今週の新商品をご紹介 / New Items",
+    "text_lines": 109
   }
 ]

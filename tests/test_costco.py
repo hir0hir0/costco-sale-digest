@@ -552,7 +552,7 @@ class TestBackfill(unittest.TestCase):
 
 class TestReceipts(unittest.TestCase):
     PURCHASES = [{
-        "date": "2026-08-01", "store": "◯◯", "total": 3000,
+        "date": "2026-08-01", "store": "サンプル倉庫店", "total": 3000,
         "items": [
             {"item_no": "588141", "name": "ハンドソープ 4P", "price": 1998, "coupon": 420},
             {"item_no": "30669", "name": "バナナ", "price": 328},
@@ -599,7 +599,7 @@ class TestReceipts(unittest.TestCase):
         # personas.md の公開ポリシー: 店舗は出さない・購入日は月単位・数量と合計は出さない。
         # purchases.json に何を足しても、公開物に素通しさせない（allowlist）
         (self.store.root / "purchases.json").write_text(json.dumps([{
-            "date": "2026-08-29", "store": "◯◯倉庫店", "total": *****,
+            "date": "2026-08-29", "store": "サンプル倉庫店", "total": 99999,
             "member_no": "1234567890", "payment": "VISA ****4321",
             "items": [{"item_no": "588141", "name": "ハンドソープ 4P",
                        "price": 1998, "coupon": 420, "register": "12-3"}],
@@ -610,7 +610,7 @@ class TestReceipts(unittest.TestCase):
         for blob in ((out / "data.json").read_text(encoding="utf-8"),
                      (out / "index.html").read_text(encoding="utf-8"),
                      json.dumps(self.store.history, ensure_ascii=False)):
-            for secret in ("◯◯", "2026-08-29", "*****", "1234567890", "4321", "12-3"):
+            for secret in ("サンプル倉庫店", "2026-08-29", "99999", "1234567890", "4321", "12-3"):
                 self.assertNotIn(secret, blob)
         rec = json.loads((out / "data.json").read_text(encoding="utf-8"))["purchases"][0]
         self.assertEqual(sorted(rec), ["items", "month"])

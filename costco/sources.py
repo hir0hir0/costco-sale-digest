@@ -560,7 +560,9 @@ def mail_probe(conf: dict, *, limit: int = 6, context: int = 3,
             "capture": str(saved),
             "html_bytes": len(html),
             "text_lines": len(lines),
-            "first_lines": lines[:20],
+            # 本文の冒頭20行は載せない。定型文の逐語コピーになり、_probe.json は
+            # costco_data/ ごと public リポジトリにコミットされる（2026-08-31 の監査）。
+            # 本文が取れたかは html_bytes と text_lines で足りる
             "price_line_groups": groups,
             "offers_extracted": len(got),
             "offer_samples": [
