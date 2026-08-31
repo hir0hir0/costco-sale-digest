@@ -116,15 +116,7 @@ jobs:
         run: |
           python -m costco.cli update ${{ inputs.mail_only && '--mail-only' || '' }}
 
-      # 生HTMLは gitignore しているので、後から見られるよう成果物として残す
-      - name: 取得した生HTMLを保存
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: captures
-          path: captures/costco/
-          if-no-files-found: ignore
-          retention-days: 14
+      # 生HTMLは成果物として上げない。mailprobe の capture はメルマガ本文そのもので、public リポジトリのアーティファクトは誰でも取得できる（2026-08-31 の監査）
 
       - name: 変更をコミット
         run: |
