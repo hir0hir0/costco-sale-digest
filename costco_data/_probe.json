@@ -63,7 +63,6 @@
     ],
     "offers_extracted": 20,
     "price_line_groups": [],
-    "subject": "オンラインで出会える限定セレクション",
     "text_lines": 146
   },
   {
@@ -130,7 +129,6 @@
     ],
     "offers_extracted": 44,
     "price_line_groups": [],
-    "subject": "もしもの時に備えよう / Disaster Prevention",
     "text_lines": 423
   },
   {
@@ -197,7 +195,6 @@
     ],
     "offers_extracted": 16,
     "price_line_groups": [],
-    "subject": "今週の新商品をご紹介 / New Items",
     "text_lines": 123
   },
   {
@@ -264,7 +261,6 @@
     ],
     "offers_extracted": 44,
     "price_line_groups": [],
-    "subject": "ベビーグッズ特集 / Baby Fair",
     "text_lines": 459
   },
   {
@@ -331,7 +327,6 @@
     ],
     "offers_extracted": 44,
     "price_line_groups": [],
-    "subject": "週末のお買得商品 / Weekend Pick Up",
     "text_lines": 498
   },
   {
@@ -398,7 +393,6 @@
     ],
     "offers_extracted": 23,
     "price_line_groups": [],
-    "subject": "オンラインで出会える限定セレクション",
     "text_lines": 150
   },
   {
@@ -544,7 +538,6 @@
         ]
       }
     ],
-    "subject": "お得に新学期の準備をするならコストコで / Back to School",
     "text_lines": 486
   },
   {
@@ -611,7 +604,6 @@
     ],
     "offers_extracted": 16,
     "price_line_groups": [],
-    "subject": "今週の新商品をご紹介 / New Items",
     "text_lines": 109
   }
 ]
