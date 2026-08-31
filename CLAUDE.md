@@ -57,3 +57,9 @@ tests/             python -m unittest discover -s tests（必ず全部通して�
 - 価格が読めなかった商品は載せない（嘘の行を並べない）。捨てた件数は必ず表示する
 - robots.txt に従う・収集は1日1回・メールは読み取り専用
 - 写真は既定でコストコCDNへのリンク参照（複製しない）。costco_sources.json の `images`
+
+## レビュー体制
+
+- `/review-site` … 監査（壊れているものを見つける）
+- `/propose` … 提案（あると便利な機能・より良い見せ方を構想する）
+- 物差しは `docs/review/personas.md`
