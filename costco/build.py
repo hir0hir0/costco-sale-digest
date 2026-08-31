@@ -85,42 +85,37 @@ def site_data(store: Store, on: date | None = None,
         })
         lb = bought.get(o.key)
         if lb:
-            d["last_bought"] = {"on": lb["on"], "price": lb["effective"]}
+            d["last_bought"] = {"month": lb["month"], "price": lb["effective"]}
+            # weighed は総額が重さで決まるので「前回より安い」を名乗らない
             d["below_last_buy"] = bool(o.price is not None
+                                       and not lb.get("weighed")
                                        and o.price < lb["effective"])
         # サイトが使うのは組み立て済みの image_src だけ
         d.pop("image_url", None)
         d.pop("image", None)
         offers.append(d)
 
-    # 購入履歴タブ用。新しい順。掲載中のセールがあれば現在価格を並記する
+    # 購入履歴タブ用。新しい月が先。掲載中のセールがあれば現在価格を並記する。
+    # 粒度は store.scrub_purchases が落とし済み（月単位・店舗なし・数量なし・合計なし）
     now_price = {o["key"]: o["price"] for o in offers if o.get("price") is not None}
     purchases = []
-    for r in sorted(store.load_purchases(), key=lambda x: str(x.get("date", "")),
-                    reverse=True):
+    for r in store.public_purchases():
         items = []
-        for it in r.get("items", []):
-            no = "".join(ch for ch in str(it.get("item_no", "")) if ch.isdigit())
-            price = it.get("price")
-            if not isinstance(price, int):
-                continue
-            coupon = it.get("coupon") if isinstance(it.get("coupon"), int) else 0
-            items.append({
+        for it in r["items"]:
+            no = it["item_no"]
+            d = {
                 "item_no": no,
-                "name": str(it.get("name", "")),
-                "price": price,
-                "coupon": coupon,
-                "effective": price - coupon,
+                "name": it["name"],
+                "price": it["price"],
+                "coupon": it["coupon"],
+                "effective": it["price"] - it["coupon"],
                 "now": now_price.get("no:" + no) if no else None,
-            })
+            }
+            if it.get("weighed"):
+                d["weighed"] = True
+            items.append(d)
         if items:
-            purchases.append({
-                "date": str(r.get("date", "")),
-                "store": str(r.get("store", "")),
-                "total": r.get("total") if isinstance(r.get("total"), int) else
-                         sum(i["effective"] for i in items),
-                "items": items,
-            })
+            purchases.append({"month": r["month"], "items": items})
 
     used = [c for c in CATEGORIES if any(o["category"] == c for o in offers)]
     return {

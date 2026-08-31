@@ -279,7 +279,7 @@
     "name": "サンチュ 根付き",
     "points": [
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 399,
         "regular_price": null,
         "source": "receipt"
@@ -1568,7 +1568,7 @@
     "name": "バナナ 1.36kg",
     "points": [
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 328,
         "regular_price": null,
         "source": "receipt"
@@ -2524,7 +2524,7 @@
     "name": "(判読不明)スティック 10PC",
     "points": [
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 780,
         "regular_price": null,
         "source": "receipt"
@@ -2776,7 +2776,7 @@
     "name": "ソニャりんご",
     "points": [
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 998,
         "regular_price": null,
         "source": "receipt"
@@ -3860,7 +3860,7 @@
         "until": "2026-08-28"
       },
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 1998,
         "regular_price": null,
         "source": "receipt"
@@ -4392,7 +4392,7 @@
     "name": "(判読不明)1L×6",
     "points": [
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 1788,
         "regular_price": null,
         "source": "receipt"
@@ -4920,7 +4920,7 @@
     "name": "栃木産コシヒカリ 5kg",
     "points": [
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 2198,
         "regular_price": null,
         "source": "receipt"
@@ -10370,7 +10370,7 @@
     "name": "国産鶏もも 2.5kg",
     "points": [
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 2468,
         "regular_price": null,
         "source": "receipt"
@@ -10666,7 +10666,7 @@
     "name": "三元豚バラしゃぶしゃぶ",
     "points": [
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 2953,
         "regular_price": null,
         "source": "receipt"
@@ -10677,7 +10677,7 @@
     "name": "四角ピザ パンチェッタ",
     "points": [
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 1580,
         "regular_price": null,
         "source": "receipt"
@@ -10688,10 +10688,11 @@
     "name": "カルビ焼肉",
     "points": [
       {
-        "on": "2026-08-29",
-        "price": 2374,
+        "on": "2026-08-01",
+        "price": 2313,
         "regular_price": null,
-        "source": "receipt"
+        "source": "receipt",
+        "weighed": true
       }
     ]
   },
@@ -10793,7 +10794,7 @@
     "name": "ミニバタークロワッサン 20P",
     "points": [
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 899,
         "regular_price": null,
         "source": "receipt"
@@ -10815,7 +10816,7 @@
     "name": "豚焼肉赤身80%",
     "points": [
       {
-        "on": "2026-08-29",
+        "on": "2026-08-01",
         "price": 1931,
         "regular_price": null,
         "source": "receipt"

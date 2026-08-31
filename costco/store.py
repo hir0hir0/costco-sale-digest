@@ -52,6 +52,86 @@ def _read_json(path: Path, default):
         return default
 
 
+PUBLIC_ITEM_KEYS = ("item_no", "name", "price", "coupon", "weight_g", "unit_price", "weighed")
+
+
+def _month(value: object) -> str:
+    """'YYYY-MM-DD' / 'YYYY-MM' → 'YYYY-MM'（読めなければ空文字）。"""
+    s = str(value or "")
+    return s[:7] if re.fullmatch(r"\d{4}-\d{2}(-\d{2})?", s) else ""
+
+
+def unit_price(it: dict) -> int | None:
+    """明細の ¥/100g。`unit_price` があればそれ、無ければ重さから出す。"""
+    up = it.get("unit_price")
+    if isinstance(up, int) and up > 0:
+        return up
+    w, p = it.get("weight_g"), it.get("price")
+    if isinstance(w, int) and w > 0 and isinstance(p, int):
+        return round(p / w * 100)
+    return None
+
+
+def _collapse(a: dict, b: dict) -> dict:
+    """同月・同一商品の2行を1行にする（数量を残さないため）。
+
+    単価が分かるなら安い方を採る。分からないのに総額が違う場合は量り売り
+    （総額は重さで決まる）とみなし、`weighed` を立てて比較から外す。
+    """
+    ua, ub = unit_price(a), unit_price(b)
+    if ua is not None and ub is not None:
+        keep = dict(a if ua <= ub else b)
+    elif a["price"] - a["coupon"] != b["price"] - b["coupon"]:
+        keep = dict(a if a["price"] - a["coupon"] <= b["price"] - b["coupon"] else b)
+        keep["weighed"] = True
+    else:
+        keep = dict(a)
+    if a.get("weighed") or b.get("weighed"):
+        keep["weighed"] = True
+    if unit_price(keep) is not None:
+        keep.pop("weighed", None)  # 単価で比べられるなら量り売りでも困らない
+    keep["name"] = a.get("name") or b.get("name") or ""
+    return keep
+
+
+def scrub_purchases(purchases: list[dict]) -> list[dict]:
+    """レシートを公開してよい粒度へ落とす（新しい月が先）。
+
+    personas.md の公開ポリシー: 購入日は月単位・購入店舗は出さない・数量は出さない。
+    `costco_data/` は workflow が丸ごとコミットするので、build 時ではなく
+    **取り込み口で**落とす（purchases.json / history.json 自体が公開物）。
+    レシート合計も出さない（1回の買い物の支出額であって価格情報ではない）。
+    ここを通っていないキーは公開データに出さない ＝ `PUBLIC_ITEM_KEYS` が唯一の窓口。
+    """
+    by_month: dict[str, dict[str, dict]] = {}
+    for r in purchases:
+        mo = _month(r.get("month") or r.get("date"))
+        if not mo:
+            continue
+        bucket = by_month.setdefault(mo, {})
+        for it in r.get("items", []):
+            no = re.sub(r"\D", "", str(it.get("item_no", "")))
+            price = it.get("price")
+            if not no or not isinstance(price, int):
+                continue
+            cur = {"item_no": no, "name": str(it.get("name", "")), "price": price,
+                   "coupon": it["coupon"] if isinstance(it.get("coupon"), int) else 0}
+            for k in ("weight_g", "unit_price"):
+                if isinstance(it.get(k), int) and it[k] > 0:
+                    cur[k] = it[k]
+            if it.get("weighed"):
+                cur["weighed"] = True
+            prev = bucket.get(no)
+            bucket[no] = cur if prev is None else _collapse(prev, cur)
+    out = []
+    for mo in sorted(by_month, reverse=True):
+        items = [{k: v[k] for k in PUBLIC_ITEM_KEYS if k in v}
+                 for _, v in sorted(by_month[mo].items())]
+        if items:
+            out.append({"month": mo, "items": items})
+    return out
+
+
 @dataclass
 class MergeResult:
     added: list[Offer] = field(default_factory=list)
@@ -131,7 +211,7 @@ class Store:
         self.meta["last_collected_at"] = seen_on.isoformat()
         return res
 
-    def _record_price(self, o: Offer, on: date) -> tuple[int | None, bool]:
+    def _record_price(self, o: Offer, on: date, extra: dict | None = None) -> tuple[int | None, bool]:
         """価格履歴に観測を1つ入れ、(前回からの下げ幅, 過去最安か) を返す。
 
         履歴は日付順・**1日1点**。同じ日の再観測は点を上書きする。
@@ -172,6 +252,13 @@ class Store:
                 "source": o.source,
             })
 
+        if extra is not None:
+            pt = next((p for p in points if p.get("on") == today), points[-1] if points else None)
+            if pt is not None:
+                for k in ("unit_price", "weighed"):
+                    pt.pop(k, None)  # 取り込み直しで古い印が残らないように
+                pt.update(extra)
+
         if not is_latest:
             return None, False
         drop = (last - o.price) if (last is not None and o.price < last) else None
@@ -186,50 +273,59 @@ class Store:
         """レシートの明細を「店頭で実際に付いていた価格」として履歴に入れる。
 
         一覧(offers)には足さない — レシートはセール情報ではない。
-        同じレシートを何度取り込んでも結果は変わらない（同日上書き）。
+        同じレシートを何度取り込んでも結果は変わらない（同月上書き）。
         戻り値は履歴に入れた明細の数。
+
+        履歴に入る日付は**月初日に丸める**。history.json 自体が公開物なので、
+        build 側で丸めても手遅れになる（公開ポリシーは personas.md）。
         """
         if purchases is None:
             purchases = self.load_purchases()
         n = 0
-        for r in purchases:
+        for r in scrub_purchases(purchases):
             try:
-                d = date.fromisoformat(str(r.get("date", "")))
+                d = date.fromisoformat(r["month"] + "-01")
             except ValueError:
                 continue
-            for it in r.get("items", []):
-                no = re.sub(r"\D", "", str(it.get("item_no", "")))
-                price = it.get("price")
-                if not no or not isinstance(price, int):
-                    continue
-                o = Offer(name=str(it.get("name", "")), item_no=no,
-                          price=price, source="receipt").normalize(d)
-                self._record_price(o, d)
+            for it in r["items"]:
+                o = Offer(name=it["name"], item_no=it["item_no"],
+                          price=it["price"], source="receipt").normalize(d)
+                up = unit_price(it)
+                extra = {"unit_price": up} if up is not None else (
+                    {"weighed": True} if it.get("weighed") else {})
+                self._record_price(o, d, extra)
                 n += 1
         return n
 
+    def public_purchases(self) -> list[dict]:
+        """公開してよい粒度へ落としたレシート。サイトが読むのはこれだけ。"""
+        return scrub_purchases(self.load_purchases())
+
     def last_purchases(self) -> dict:
-        """商品キー → 最後に買った記録 {on, price, coupon, effective}。"""
+        """商品キー → 最後に買った記録 {month, price, coupon, effective}。"""
         out: dict[str, dict] = {}
-        for r in self.load_purchases():
-            day = str(r.get("date", ""))
-            for it in r.get("items", []):
-                no = re.sub(r"\D", "", str(it.get("item_no", "")))
-                price = it.get("price")
-                if not no or not isinstance(price, int):
-                    continue
-                coupon = it.get("coupon") if isinstance(it.get("coupon"), int) else 0
-                cur = out.get("no:" + no)
-                if cur is None or day >= cur["on"]:
-                    out["no:" + no] = {"on": day, "price": price, "coupon": coupon,
-                                       "effective": price - coupon}
+        for r in self.public_purchases():
+            mo = r["month"]
+            for it in r["items"]:
+                cur = out.get("no:" + it["item_no"])
+                if cur is None or mo >= cur["month"]:
+                    rec = {"month": mo, "price": it["price"], "coupon": it["coupon"],
+                           "effective": it["price"] - it["coupon"]}
+                    up = unit_price(it)
+                    if up is not None:
+                        rec["unit_price"] = up
+                    elif it.get("weighed"):
+                        rec["weighed"] = True
+                    out["no:" + it["item_no"]] = rec
         return out
 
     # ------------------------------------------------------------ 参照
     def price_stats(self, key: str) -> dict:
         """サイト表示用の履歴サマリ。履歴が無ければ空の形を返す。"""
         entry = self.history.get(key) or {}
-        points = [p for p in entry.get("points", []) if isinstance(p.get("price"), int)]
+        # weighed（量り売りで総額が重さ次第）の点は他の点と比べられないので外す
+        points = [p for p in entry.get("points", [])
+                  if isinstance(p.get("price"), int) and not p.get("weighed")]
         if not points:
             return {"points": [], "count": 0, "lowest": None, "highest": None, "prev": None}
         prices = [p["price"] for p in points]

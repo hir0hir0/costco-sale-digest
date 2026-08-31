@@ -1,24 +1,86 @@
 [
   {
-    "date": "2026-08-29",
-    "store": "◯◯倉庫店",
-    "total": *****,
-    "note": "レシート写真から取り込み。名前に（判読不明）とあるものは商品番号のみ確実",
     "items": [
-      {"item_no": "93326", "name": "ミニバタークロワッサン 20P", "price": 899},
-      {"item_no": "88880", "name": "国産鶏もも 2.5kg", "price": 2468},
-      {"item_no": "65997", "name": "栃木産コシヒカリ 5kg", "price": 2198},
-      {"item_no": "515685", "name": "（判読不明）スティック 10PC", "price": 780},
-      {"item_no": "62295", "name": "（判読不明）1L×6", "price": 1788},
-      {"item_no": "90072", "name": "三元豚バラしゃぶしゃぶ", "price": 2953, "coupon": 150},
-      {"item_no": "99604", "name": "豚焼肉赤身80%", "price": 1931},
-      {"item_no": "90223", "name": "カルビ焼肉", "price": 2313, "coupon": 300},
-      {"item_no": "90223", "name": "カルビ焼肉", "price": 2374, "coupon": 300},
-      {"item_no": "90150", "name": "四角ピザ パンチェッタ", "price": 1580, "coupon": 300},
-      {"item_no": "153845", "name": "サンチュ 根付き", "price": 399},
-      {"item_no": "53899", "name": "ソニャりんご", "price": 998},
-      {"item_no": "588141", "name": "MUSE ハンドソープ 4P", "price": 1998, "coupon": 420},
-      {"item_no": "30669", "name": "バナナ 1.36kg", "price": 328}
-    ]
+      {
+        "coupon": 0,
+        "item_no": "153845",
+        "name": "サンチュ 根付き",
+        "price": 399
+      },
+      {
+        "coupon": 0,
+        "item_no": "30669",
+        "name": "バナナ 1.36kg",
+        "price": 328
+      },
+      {
+        "coupon": 0,
+        "item_no": "515685",
+        "name": "（判読不明）スティック 10PC",
+        "price": 780
+      },
+      {
+        "coupon": 0,
+        "item_no": "53899",
+        "name": "ソニャりんご",
+        "price": 998
+      },
+      {
+        "coupon": 420,
+        "item_no": "588141",
+        "name": "MUSE ハンドソープ 4P",
+        "price": 1998
+      },
+      {
+        "coupon": 0,
+        "item_no": "62295",
+        "name": "（判読不明）1L×6",
+        "price": 1788
+      },
+      {
+        "coupon": 0,
+        "item_no": "65997",
+        "name": "栃木産コシヒカリ 5kg",
+        "price": 2198
+      },
+      {
+        "coupon": 0,
+        "item_no": "88880",
+        "name": "国産鶏もも 2.5kg",
+        "price": 2468
+      },
+      {
+        "coupon": 150,
+        "item_no": "90072",
+        "name": "三元豚バラしゃぶしゃぶ",
+        "price": 2953
+      },
+      {
+        "coupon": 300,
+        "item_no": "90150",
+        "name": "四角ピザ パンチェッタ",
+        "price": 1580
+      },
+      {
+        "coupon": 300,
+        "item_no": "90223",
+        "name": "カルビ焼肉",
+        "price": 2313,
+        "weighed": true
+      },
+      {
+        "coupon": 0,
+        "item_no": "93326",
+        "name": "ミニバタークロワッサン 20P",
+        "price": 899
+      },
+      {
+        "coupon": 0,
+        "item_no": "99604",
+        "name": "豚焼肉赤身80%",
+        "price": 1931
+      }
+    ],
+    "month": "2026-08"
   }
 ]

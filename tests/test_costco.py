@@ -590,10 +590,64 @@ class TestReceipts(unittest.TestCase):
         build_site(self.store, out, on=BASE)
         data = json.loads((out / "data.json").read_text(encoding="utf-8"))
         o = next(x for x in data["offers"] if x["item_no"] == "588141")
-        self.assertEqual(o["last_bought"], {"on": "2026-08-01", "price": 1578})
+        self.assertEqual(o["last_bought"], {"month": "2026-08", "price": 1578})
         self.assertTrue(o["below_last_buy"])
         html = (out / "index.html").read_text(encoding="utf-8")
         self.assertIn("前回購入より安い", html)
+
+    def test_public_data_never_leaks_store_day_or_total(self):
+        # personas.md の公開ポリシー: 店舗は出さない・購入日は月単位・数量と合計は出さない。
+        # purchases.json に何を足しても、公開物に素通しさせない（allowlist）
+        (self.store.root / "purchases.json").write_text(json.dumps([{
+            "date": "2026-08-29", "store": "◯◯倉庫店", "total": *****,
+            "member_no": "1234567890", "payment": "VISA ****4321",
+            "items": [{"item_no": "588141", "name": "ハンドソープ 4P",
+                       "price": 1998, "coupon": 420, "register": "12-3"}],
+        }], ensure_ascii=False), encoding="utf-8")
+        self.store.merge_receipts()
+        out = Path(self.tmp.name) / "site2"
+        build_site(self.store, out, on=BASE)
+        for blob in ((out / "data.json").read_text(encoding="utf-8"),
+                     (out / "index.html").read_text(encoding="utf-8"),
+                     json.dumps(self.store.history, ensure_ascii=False)):
+            for secret in ("◯◯", "2026-08-29", "*****", "1234567890", "4321", "12-3"):
+                self.assertNotIn(secret, blob)
+        rec = json.loads((out / "data.json").read_text(encoding="utf-8"))["purchases"][0]
+        self.assertEqual(sorted(rec), ["items", "month"])
+        self.assertEqual(rec["month"], "2026-08")
+
+    def test_same_month_duplicate_item_collapses_to_one_row(self):
+        # 同月に同じ商品が複数行あると数量が復元できてしまうので1行に潰す。
+        # 金額が違う＝量り売り（総額は重さ次第）なので比較から外す
+        (self.store.root / "purchases.json").write_text(json.dumps([{
+            "month": "2026-08",
+            "items": [{"item_no": "90223", "name": "カルビ焼肉", "price": 2374, "coupon": 300},
+                      {"item_no": "90223", "name": "カルビ焼肉", "price": 2313, "coupon": 300}],
+        }], ensure_ascii=False), encoding="utf-8")
+        items = self.store.public_purchases()[0]["items"]
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["price"], 2313)
+        self.assertTrue(items[0]["weighed"])
+        self.store.merge_receipts()
+        # weighed の点は他の点と比べられないので、底値・前回比較に混ぜない
+        self.assertEqual(self.store.price_stats("no:90223")["points"], [])
+
+    def test_unit_price_makes_weighed_items_comparable(self):
+        # 単価が分かっていれば量り売りでも比べられる。安い方（¥/100g）を採る
+        (self.store.root / "purchases.json").write_text(json.dumps([{
+            "month": "2026-08",
+            "items": [{"item_no": "90223", "name": "カルビ焼肉", "price": 2374,
+                       "coupon": 0, "weight_g": 500},
+                      {"item_no": "90223", "name": "カルビ焼肉", "price": 2313,
+                       "coupon": 0, "weight_g": 450}],
+        }], ensure_ascii=False), encoding="utf-8")
+        items = self.store.public_purchases()[0]["items"]
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["price"], 2374)      # 475円/100g < 514円/100g
+        self.assertNotIn("weighed", items[0])
+        self.store.merge_receipts()
+        pt = self.store.history["no:90223"]["points"][0]
+        self.assertEqual(pt["unit_price"], 475)
 
 
 class TestStaleHiding(unittest.TestCase):

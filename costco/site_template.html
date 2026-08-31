@@ -98,8 +98,6 @@
   .rc-head{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
     border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:4px; }
   .rc-date{ font-size:15px; font-weight:700; }
-  .rc-store{ color:var(--sub); font-size:12px; }
-  .rc-total{ margin-left:auto; font-weight:800; font-variant-numeric:tabular-nums; }
   .rc-row{ display:flex; align-items:baseline; gap:8px; padding:6px 0;
     border-bottom:1px dashed var(--line); font-size:14px; }
   .rc-row:last-child{ border-bottom:0; }
@@ -109,7 +107,6 @@
   .rc-price{ font-weight:600; font-variant-numeric:tabular-nums; white-space:nowrap; }
   .rc-now{ font-size:11px; white-space:nowrap; color:var(--sub); }
   .rc-now.cheap{ color:var(--good); font-weight:700; }
-  .msum{ display:flex; gap:7px; flex-wrap:wrap; margin-bottom:10px; }
   .name{ font-size:15px; font-weight:600; margin:0; word-break:break-word; }
   .pricerow{ display:flex; align-items:baseline; gap:9px; flex-wrap:wrap; }
   .price{ font-size:24px; font-weight:800; letter-spacing:-.02em; }
@@ -334,7 +331,7 @@ function card(o){
   if (o.warehouse && o.warehouse !== "all") meta.push(esc(o.warehouse));
   if (o.lowest != null && o.history.length > 1) meta.push("過去最安 " + yen(o.lowest));
   if (o.last_bought)
-    meta.push(`前回購入 ${yen(o.last_bought.price)} (${o.last_bought.on.slice(5).replace("-", "/")})`);
+    meta.push(`前回購入 ${yen(o.last_bought.price)} (${o.last_bought.month.replace("-", "/")})`);
   if (o.source_url) meta.push(`<a href="${esc(o.source_url)}" target="_blank" rel="noopener">出典</a>`);
   else if (o.source_label) meta.push(esc(o.source_label));
 
@@ -369,25 +366,16 @@ function renderPurchases(){
     return { ...r, items };
   }).filter(r => r.items.length);
 
-  // 月別合計（検索で絞っていないときだけ）
+  // 月別合計は出さない。同一商品の明細を1行に潰している（数量を公開しない）ので、
+  // 明細から足した額は実際に払った額と一致しない。合わない数字は出さない
   let head = "";
-  if (!q) {
-    const bym = {};
-    (DATA.purchases || []).forEach(r => {
-      const m = r.date.slice(0, 7);
-      bym[m] = bym[m] || { total: 0, n: 0 };
-      bym[m].total += r.total; bym[m].n += 1;
-    });
-    head = `<div class="msum">` + Object.keys(bym).sort().reverse().map(m =>
-      `<span class="stat">${m.replace("-", "/")}　<b>${yen(bym[m].total)}</b> / ${bym[m].n}回</span>`
-    ).join("") + `</div>`;
-  }
 
   const cards = receipts.map(r => {
     const rows = r.items.map(i => {
       let now = "";
       if (i.now != null) {
-        const cheap = i.now < i.effective;
+        // 量り売り（総額が重さで決まる）は安い高いを比べられないので印を出さない
+        const cheap = !i.weighed && i.now < i.effective;
         now = `<span class="rc-now${cheap ? " cheap" : ""}">いま${yen(i.now)}${cheap ? "▼" : ""}</span>`;
       }
       const cpn = i.coupon ? `<span class="rc-cpn">−${yen(i.coupon)}</span>` : "";
@@ -397,12 +385,10 @@ function renderPurchases(){
         ${now}${cpn}<span class="rc-price">${yen(shown)}</span>
       </div>`;
     }).join("");
-    const [y, mo, d] = r.date.split("-");
+    // 見出しは月だけ。日付・店舗・点数・合計は公開しない（personas.md 公開ポリシー）
     return `<article class="rc">
       <div class="rc-head">
-        <span class="rc-date">${y}/${mo}/${d}</span>
-        <span class="rc-store">${esc(r.store)}・${r.items.length}点</span>
-        <span class="rc-total">${yen(r.total)}</span>
+        <span class="rc-date">${esc(r.month).replace("-", "/")}</span>
       </div>${rows}</article>`;
   }).join("");
 
