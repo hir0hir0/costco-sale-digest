@@ -2,7 +2,7 @@
   "url": "https://tokubai.co.jp/%E4%B8%89%E5%92%8C/372468",
   "status": 200,
   "bytes": 62696,
-  "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260911-024229-probe-_E4_B8_89_E5_92_8C_372468.html",
+  "capture": "/home/runner/work/costco-sale-digest/costco-sale-digest/captures/costco/20260911-025012-probe-_E4_B8_89_E5_92_8C_372468.html",
   "title": "三和 ららぽーと豊洲店のチラシ・特売情報 | くふう トクバイ",
   "text_lines": 257,
   "text_chars": 2339,
@@ -40,5 +40,167 @@
   "offers_from_text": 0,
   "offer_samples": [],
   "links_total": 125,
-  "links_with_sale_words": []
+  "links_with_sale_words": [],
+  "link_samples": [
+    {
+      "url": "https://tokubai.co.jp/",
+      "text": ""
+    },
+    {
+      "url": "https://tokubai.co.jp/search_index",
+      "text": "お店をさがす"
+    },
+    {
+      "url": "https://tokubai.co.jp/settings",
+      "text": "メール・お店設定"
+    },
+    {
+      "url": "https://tokubai.co.jp/user/follow_shops",
+      "text": "お店をさがす"
+    },
+    {
+      "url": "https://tokubai.co.jp/sessions/login_tokubai?rt=%2F%25E4%25B8%2589%25E5%2592%258C%2F372468",
+      "text": "ログイン"
+    },
+    {
+      "url": "https://tokubai.co.jp/prefectures/13",
+      "text": "東京都"
+    },
+    {
+      "url": "https://tokubai.co.jp/prefectures/13/areas/217/supermarket",
+      "text": "月島・勝どきのスーパー・食料品店"
+    },
+    {
+      "url": "https://tokubai.co.jp/prefectures/13/areas/222/supermarket",
+      "text": "豊洲のスーパー・食料品店"
+    },
+    {
+      "url": "https://tokubai.co.jp/prefectures/13/areas/1153/supermarket",
+      "text": "江東区のスーパー・食料品店"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E4%B8%89%E5%92%8C/372468",
+      "text": ""
+    },
+    {
+      "url": "https://tokubai.co.jp/%E4%B8%89%E5%92%8C/372468?available_for=tomorrow",
+      "text": "9月12日(土)"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E4%B8%89%E5%92%8C/372468?available_for=day_after_tomorrow",
+      "text": "9月13日(日)"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E4%B8%89%E5%92%8C/372468/leaflets/105560122",
+      "text": "チラシ"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E4%B8%89%E5%92%8C/372468/leaflets/105560470",
+      "text": "クリックして チラシを見る 09月10日更新"
+    },
+    {
+      "url": "https://tokubai.co.jp/message_board?chain_id=1198&filter_type=chain",
+      "text": "このお店の“おいしい”口コミを見る arrowright"
+    },
+    {
+      "url": "https://tokubai.co.jp/webview/message_board/posts/2840",
+      "text": "家族がかきフライ好きで、スーパーに置いてあったら、高確率で買います!お酒のおつま"
+    },
+    {
+      "url": "https://tokubai.co.jp/webview/message_board/posts/1164",
+      "text": "三和 あづみの団子 いそべ巻き user naobnbn"
+    },
+    {
+      "url": "https://tokubai.co.jp/webview/message_board/posts/1162",
+      "text": "三和 あづみの団子 みたらし user naobnbn"
+    },
+    {
+      "url": "https://tokubai.co.jp/business_categories/supermarket",
+      "text": "スーパー・食料品店"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E4%B8%89%E5%92%8C",
+      "text": "三和"
+    },
+    {
+      "url": "https://tokubai.co.jp/372468/location_faults/new",
+      "text": "住所・地図情報の間違いを報告"
+    },
+    {
+      "url": "https://tokubai.co.jp/372468/content_faults/new",
+      "text": "店舗情報の間違いを報告する"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E4%B8%89%E5%92%8C/372468/archive/2026-09-10",
+      "text": "9月10日(木)のチラシ・特売情報"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E6%96%87%E5%8C%96%E5%A0%82/4106",
+      "text": "文化堂 豊洲店"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E6%88%90%E5%9F%8E%E7%9F%B3%E4%BA%95/6514",
+      "text": "成城石井 晴海トリトン店"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E3%82%A4%E3%82%AA%E3%83%B3/6762",
+      "text": "イオン 東雲店"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E3%83%9E%E3%83%AB%E3%82%A8%E3%83%84%E3%83%97%E3%83%81/968",
+      "text": "マルエツプチ 晴海店"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E3%83%95%E3%83%BC%E3%83%89%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB/7949",
+      "text": "フードスタイル 月島店"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E3%82%A4%E3%83%88%E3%83%BC%E3%83%A8%E3%83%BC%E3%82%AB%E3%83%89%E3%83%BC/9000",
+      "text": "イトーヨーカドー 木場店"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E3%83%AF%E3%82%A4%E3%82%BA%EF%BC%8A%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AB/13786",
+      "text": "ワイズ*ディスカ 辰巳店"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E3%82%AA%E3%82%AA%E3%82%BC%E3%82%AD/21937",
+      "text": "オオゼキ 門仲牡丹店"
+    },
+    {
+      "url": "https://tokubai.co.jp/%E3%83%9E%E3%83%AB%E3%82%A8%E3%83%84/3591",
+      "text": "マルエツ 勝どき六丁目店"
+    },
+    {
+      "url": "https://tokubai.co.jp/prefectures/13/areas/217",
+      "text": "月島・勝どき"
+    },
+    {
+      "url": "https://tokubai.co.jp/prefectures/13/areas/222",
+      "text": "豊洲"
+    },
+    {
+      "url": "https://tokubai.co.jp/prefectures/13/areas/1153",
+      "text": "江東区"
+    },
+    {
+      "url": "https://tokubai.co.jp/prefectures/13/cities/%E6%B1%9F%E6%9D%B1%E5%8C%BA",
+      "text": "江東区"
+    },
+    {
+      "url": "https://tokubai.co.jp/transit/rail_lines/station_groups/1687",
+      "text": "越中島駅"
+    },
+    {
+      "url": "https://tokubai.co.jp/transit/rail_lines/station_groups/5181",
+      "text": "月島駅"
+    },
+    {
+      "url": "https://tokubai.co.jp/transit/rail_lines/station_groups/5182",
+      "text": "豊洲駅"
+    },
+    {
+      "url": "https://tokubai.co.jp/transit/rail_lines/station_groups/6578",
+      "text": "市場前駅"
+    }
+  ]
 }
