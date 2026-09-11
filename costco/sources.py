@@ -743,4 +743,18 @@ def probe(url: str) -> dict:
             {"url": u, "text": t} for u, t in links
             if any(w.lower() in (u + " " + t).lower() for w in SALE_WORDS)
         ][:20],
+        # 未知サイトの構造調査用。同一ホストのリンクを重複を除いて先頭から
+        "link_samples": _dedup_links(links, page.url)[:40],
     }
+
+
+def _dedup_links(links: list[tuple[str, str]], base_url: str) -> list[dict]:
+    host = urllib.parse.urlparse(base_url).netloc
+    seen: set[str] = set()
+    out: list[dict] = []
+    for u, t in links:
+        if urllib.parse.urlparse(u).netloc != host or u in seen:
+            continue
+        seen.add(u)
+        out.append({"url": u, "text": t[:40]})
+    return out
